@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 
 .header .container{
-    margin-left: 35%;
-    margin-top: 3%;
+    padding-top: 2%;
+    margin: auto;
+    width: 60%;
+    text-align: center;
 }
 .header .container p{
     font-size: 25px; 
