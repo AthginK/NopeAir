@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 
+.header .container{
+    margin-left: 35%;
+    margin-top: 3%;
+}
+.header .container p{
+    font-size: 25px; 
+    margin-top: -2%;
+    margin-left: 32%;
+}
+
+
+
+
+
 .box {
     text-align: center;
     border-radius: 10px;
