@@ -111,6 +111,18 @@
     font-size: 17px;
 }
 
+.btn.search {
+    background-color: #B486FF;
+    color: white;
+    border-radius: 15px;
+    margin-top: -1.5%;
+    margin-left: 75%;
+    font-family: 'Prompt', sans-serif;
+    font-size: 17px;
+    font-weight: 580;
+    height: 50px;
+}
+
 /* .button:hover {
     background-color: black;
     box-shadow: 0px 15px 20px rgba(77, 77, 77, 0.4);
