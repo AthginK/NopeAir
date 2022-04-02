@@ -24,25 +24,28 @@
     }
 }
 
-
+#Home {
+    box-sizing: border-box;
+    height: 100%;
+}
 .box {
     text-align: center;
-    border-radius: 10px;
-    width: 1000px;
-    height: 350px;
-    margin: 0 auto;
+    border-radius: 0px 60px 60px 60px;
+    width: 80%;
+    height: 40%;
+    /* margin: 0 auto;
     margin-top: 5%;
-    margin-bottom: auto;
-    background-color: white;
+    margin-bottom: auto; */
+    background-color: antiquewhite;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-sizing: border-box;
 }
-
 .main .button {
     text-align:center;
     width: 140px;
-    height: 45px;
+    height: 100%;
     font-family: 'Prompt', sans-serif;
-    font-size: 11px;
+    font-size: 15px;
     letter-spacing: 2.5px;
     font-weight: 500;
     color: #000;
@@ -50,6 +53,7 @@
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+    display: inline;
 }
 /* .button {
     text-align:center;
@@ -70,10 +74,10 @@
 }*/
 .roundTrip{
     background-color: #B486FF ;
-    border-radius: 54px 0px 0px 0px;
+    border-radius: 60px 0px 0px 0px;
 }
 .oneWay{
-    border-radius: 0px 54px 0px 0px;
+    border-radius: 0px 60px 0px 0px;
     background-color: #E1E1E1 ;
 }
 
