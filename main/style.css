@@ -29,36 +29,13 @@
     margin: auto;
     padding-top: 5%;
 }
-.main {
-    margin-top: 3%;
-}
 .box {
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 0px 60px 60px 60px;
     width: 80%;
     height: 40%;
     background-color: antiquewhite;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     box-sizing: border-box;
-}
-.dropdown {
-    margin-left: 2%;
-}
-.main .container-fluid .button{
-    text-align:center;
-    width: 140px;
-    height: 100%;
-    font-family: 'Prompt', sans-serif;
-    font-size: 15px;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #000;
-    border: none;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-    display: inline;
 }
 /* .button {
     text-align:center;
@@ -119,7 +96,3 @@
     color: #fff;
     transform: translateY(-7px);
 } */
-
-.btn {
-    background-color: transparent;
-}
