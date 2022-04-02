@@ -99,7 +99,7 @@
 .place {
     border: solid 0.5px #8A8A8A;
     width: 25%;
-    height: 35%;
+    height: auto;
     margin: 3% 0% 5% 4%;
     float: left;
     border-radius: 20px;
@@ -107,7 +107,7 @@
 .date {
     border: solid 0.5px #8A8A8A;
     width: 34%;
-    height: 35%;
+    height: auto;
     margin: 3% 0% 5% 4%;
     float: left;
     border-radius: 20px;
@@ -134,7 +134,7 @@
 .dest {
     margin: 4% 0 0 5%;
 }
-.prov, .country {
+.h1.prov, .country {
     margin: 0 0 1% 10%;
 }
 
