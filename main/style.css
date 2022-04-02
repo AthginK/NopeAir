@@ -28,8 +28,12 @@
     box-sizing: border-box;
     height: 100%;
 }
+.main {
+    margin-top: 3%;
+}
 .box {
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 0px 60px 60px 60px;
     width: 80%;
     height: 40%;
@@ -40,7 +44,10 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     box-sizing: border-box;
 }
-.main .button {
+.dropdown {
+    margin-left: 2%;
+}
+.main .container-fluid .button{
     text-align:center;
     width: 140px;
     height: 100%;
@@ -87,3 +94,7 @@
     color: #fff;
     transform: translateY(-7px);
 } */
+
+.btn {
+    background-color: transparent;
+}
