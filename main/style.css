@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 
-.header .container{
+.header .container {
     padding-top: 2%;
     margin: auto;
     width: 60%;
     text-align: center;
 }
 
-.header .container .col-sm-12{
+.header .container .col-sm-12 {
     text-align: center;
 }
 
-.header .container p{
-    font-size: 25px; 
+.header .container p {
+    font-size: 25px;
     margin-top: -2%;
     position: relative;
     left: 16%;
 }
 
 @media only screen and (max-width: 1600px) {
-    .header .container p{
+    .header .container p {
         left: 20%;
     }
 }
@@ -30,6 +30,7 @@
     /* padding-top: 5%; */
     padding: 5% 0 0 0;
 }
+
 .box {
     border-radius: 0px 60px 60px 60px;
     width: 100%;
@@ -38,6 +39,7 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     box-sizing: border-box;
 }
+
 /* .button {
     text-align:center;
     width: 140px;
@@ -55,12 +57,12 @@
     cursor: pointer;
     outline: none; 
 }*/
-.btn.roundTrip{
-    background-color: #B486FF ;
+.btn.roundTrip {
+    background-color: #B486FF;
     border-radius: 60px 0px 0px 0px;
     color: #000;
     display: inline;
-    text-align:center;
+    text-align: center;
     width: 15%;
     height: 5%;
     font-family: 'Prompt', sans-serif;
@@ -73,12 +75,12 @@
     outline: none;
 }
 
-.btn.oneWay{
+.btn.oneWay {
     border-radius: 0px 60px 0px 0px;
-    background-color: #E1E1E1 ;
+    background-color: #E1E1E1;
     color: #000;
     display: inline;
-    text-align:center;
+    text-align: center;
     width: 15%;
     height: 5%;
     font-family: 'Prompt', sans-serif;
@@ -101,6 +103,12 @@
     margin: 5% 2%;
     float: left;
 }
+
+.btn.pass {
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
 /* .button:hover {
     background-color: black;
     box-shadow: 0px 15px 20px rgba(77, 77, 77, 0.4);
