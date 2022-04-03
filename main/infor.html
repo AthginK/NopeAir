@@ -59,9 +59,8 @@
                     <span>
                         <button class="btn titles" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            titles &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="\image\downward-arrow.svg" style="width: 15px;height: 15px;">
-                            titles &nbsp;&nbsp;&nbsp;&nbsp;<img src="\image\downward-arrow.svg"
-                                style="width: 50px;height: 15px;">
+                            titles &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="\image\downward-arrow.svg"
+                                style="width: 15px;height: 15px;">
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">MR</a>
@@ -73,14 +72,24 @@
                         <input type="text" class="Lastname" placeholder="&nbsp;&nbsp;Lastname">
                     </span>
                 </div>
-                <input type="date">
+
+                <input type="date" class="birthDate">
+                <h5 style="margin:2% 0 0 3%;">Contact Information</h5>
+                <input type="text" class="MobilePhone" placeholder="&nbsp;&nbsp;Mobile Phone">
+                <input type="text" class="Email" placeholder="&nbsp;&nbsp;Email">
             </div>
         </div>
     </div>
-    <span>
-        <a href="" class="previous">Previous</a>
-        <button type="button" class="btn next">Next</button>
-    </span>
+    <div class="row" id="rowMove">
+        <div class="col-6">
+            <a href="" class="prev">Previous</a>
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn next">Next</button>
+        </div>
+        
+    </div>
+    
 </body>
 
 </html>

@@ -186,7 +186,7 @@
     transform: translateY(-7px);
 } */
 
-input[type="date"] {
+.showDate {
     background: transparent;
     border: none;
     margin: 6% 0 10% 10%;
@@ -204,8 +204,8 @@ input[type="date"] {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
 }
 
-.previous {
-    margin: 3% 0 2% 20%;
+.prev {
+    margin: 5% 0 0 20%;
     font-size: 17px;
     font-family: 'Prompt', sans-serif;
     color: black;
@@ -215,7 +215,7 @@ input[type="date"] {
     background-color: #B486FF;
     color: white;
     border-radius: 15px;
-    margin: 3% 0 2% 80%;
+    margin: 0 0 0 60%;
     font-family: 'Prompt', sans-serif;
     font-size: 17px;
     font-weight: 580;
@@ -225,10 +225,48 @@ input[type="date"] {
 
 .Firstname, .Lastname {
     border: none;
-    margin: 3% 0 10% 10%;
+    margin: 3% 0 0 10%;
     font-size: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
     border-radius: 15px;
     width: 30%;
     height: 12%;
+}
+
+.birthDate {
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
+    border-radius: 15px;
+    height: 12%;
+    width: 50%;
+    margin: 3% 0 2% 3%;
+    font-size: 18px;
+    font-weight: 630;
+}
+
+.MobilePhone {
+    border: none;
+    margin: 1% 0 0 3%;
+    font-size: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
+    border-radius: 15px;
+    width: 40%;
+    height: 12%;
+}
+
+.Email {
+    border: none;
+    margin: 1% 0 0 3%;
+    font-size: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
+    border-radius: 15px;
+    width: 50%;
+    height: 12%;
+}
+
+#rowMove {
+    margin: 3% 0 2% 0;
+}
+#rowInfo {
+    margin: 3% 0 2% 0;
 }
