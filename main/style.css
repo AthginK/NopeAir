@@ -167,3 +167,12 @@ input[type="date"] {
     font-size: 25px;
     font-weight: 630;
 }
+
+.btn.titles {
+    margin-top: 3%;
+    margin-left: 3%;
+    font-family: 'Prompt', sans-serif;
+    font-size: 17px;
+    background-color: white;
+    border-radius: 15px;
+}
