@@ -247,14 +247,14 @@
     border-radius: 15px;
     height: 12%;
     width: 50%;
-    margin: 4% 0 2% 3%;
+    margin: 0% 0 2% 3%;
     font-size: 18px;
     font-weight: 630;
 }
 
 .MobilePhone {
     border: none;
-    margin: 2% 0 0 3%;
+    margin: 1% 0 0 3%;
     font-size: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
     border-radius: 15px;
@@ -264,7 +264,7 @@
 
 .Email {
     border: none;
-    margin: 2% 0 0 3%;
+    margin: 1% 0 0 3%;
     font-size: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
     border-radius: 15px;
@@ -273,8 +273,5 @@
 }
 
 #rowMove {
-    margin: 3% 0 2% 0;
-}
-#rowInfo {
     margin: 3% 0 2% 0;
 }
