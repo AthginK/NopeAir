@@ -281,6 +281,10 @@
     border-radius: 20px;
     width: 90%;
     height: 120%;
+.box.payment.passenger {
+    border-radius: 25px;
+    width: 100%;
+    height: 13%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     box-sizing: border-box;
 }
@@ -295,4 +299,15 @@
     font-weight: 580;
     height: 40px;
     width: 150px;
+#PassPay_age, #PassPay_dob, #PassPay_email {
+    font-family: 'Prompt', sans-serif;
+    font-size: 20px;
+    padding: 0 2%;
+    margin: 1% 0;
+}
+
+#PassPay_age_info, #PassPay_dob_info, #PassPay_email_info {
+    font-family: 'Prompt', sans-serif;
+    font-size: 16px;
+    padding: 0 2%;
 }
