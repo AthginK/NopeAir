@@ -282,6 +282,7 @@
     width: 90%;
     height: 120%;
 }
+
 .box.payment.passenger {
     border-radius: 25px;
     width: 100%;
@@ -289,6 +290,7 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     box-sizing: border-box;
     margin-bottom: 5%;
+    margin-top: 3%;
 }
 
 .btn.services {
@@ -302,6 +304,7 @@
     height: 40px;
     width: 150px;
 }
+
 #PassPay_age, #PassPay_dob, #PassPay_email {
     font-family: 'Prompt', sans-serif;
     font-size: 20px;
