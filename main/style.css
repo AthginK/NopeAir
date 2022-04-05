@@ -276,6 +276,11 @@
     margin: 3% 0 2% 0;
 }
 
+.box.services {
+    margin-top: 3%;
+    border-radius: 20px;
+    width: 90%;
+    height: 120%;
 .box.payment.passenger {
     border-radius: 25px;
     width: 100%;
@@ -285,6 +290,16 @@
     margin-bottom: 5%;
 }
 
+.btn.services {
+    background-color: #B486FF;
+    color: white;
+    border-radius: 15px;
+    margin-top: 4%;
+    font-family: 'Prompt', sans-serif;
+    font-size: 17px;
+    font-weight: 580;
+    height: 40px;
+    width: 150px;
 #PassPay_age, #PassPay_dob, #PassPay_email {
     font-family: 'Prompt', sans-serif;
     font-size: 20px;
