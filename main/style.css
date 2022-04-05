@@ -275,3 +275,24 @@
 #rowMove {
     margin: 3% 0 2% 0;
 }
+
+.box.services {
+    margin-top: 3%;
+    border-radius: 20px;
+    width: 90%;
+    height: 120%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-sizing: border-box;
+}
+
+.btn.services {
+    background-color: #B486FF;
+    color: white;
+    border-radius: 15px;
+    margin-top: 4%;
+    font-family: 'Prompt', sans-serif;
+    font-size: 17px;
+    font-weight: 580;
+    height: 40px;
+    width: 150px;
+}
