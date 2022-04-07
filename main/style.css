@@ -146,12 +146,7 @@
     border-radius: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-.stepBar {
-    background-color: #B486FF;
-    width: 100%;
-    height: 8%;
-    margin-bottom: 3%;
-}
+
 #flightFrom, #flightTo, #flightPerson, #flightPrice {
     float: left;
     font-size: 20px;
@@ -169,6 +164,12 @@
     box-sizing: border-box;
 }
 
+.stepBar {
+    width: 100%;
+    height: 8%;
+    margin-bottom: 3%;
+}
+
 #searchBar, #selectBar, #infoBar, #extraBar, #payBar {
     background-color: aquamarine;
     float: left;
@@ -177,6 +178,9 @@
     font-weight: 500;
     text-align: center;
     padding: 1%;
+    margin: 0 0.1%;
+    border-radius: 5px 45px 45px 5px;
+    border: 1px solid #ACACAC;
 }
 
 /* .button:hover {
