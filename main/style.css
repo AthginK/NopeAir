@@ -459,9 +459,10 @@
     width: 100%;
     height: 20%;
     border-radius: 15px;
+    display: block;
 }
 
-.triangleUp {
+.SeatTriangleUp {
     width: 0px;
     height: 0px;
     border-top: 20px solid transparent;
@@ -469,4 +470,61 @@
     border-bottom: 20px solid #CFB1FF;
     border-left: 20px solid transparent;
     margin-left: 15%;
+    display: block;
+}
+
+.selectBaggageShow {
+    background-color: #CFB1FF;
+    width: 100%;
+    height: 20%;
+    border-radius: 15px;
+    display: none;
+}
+
+.BaggageTriangleUp {
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #CFB1FF;
+    border-left: 20px solid transparent;
+    margin-left: 49%;
+    display: none;
+}
+
+.selectSpecialShow {
+    background-color: #CFB1FF;
+    width: 100%;
+    height: 20%;
+    border-radius: 15px;
+    display: none;
+}
+
+.SpecialTriangleUp {
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #CFB1FF;
+    border-left: 20px solid transparent;
+    margin-left: 83%;
+    display: none;
+}
+
+.selectFirstShow {
+    background-color: #CFB1FF;
+    width: 100%;
+    height: 20%;
+    border-radius: 15px;
+    display: none;
+}
+.FirstTriangleUp {
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #CFB1FF;
+    border-left: 20px solid transparent;
+    margin-left: 15%;
+    display: none;
 }
