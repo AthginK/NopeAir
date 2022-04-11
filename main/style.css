@@ -418,6 +418,7 @@
     -webkit-appearance: none;
     margin: 0;
 }
+
 .SecCode {
     border: none;
     margin: 3% 0 3% 3%;
@@ -429,11 +430,13 @@
     height: 5%;
     font-family: 'Prompt', sans-serif;
 }
+
 .SecCode::-webkit-outer-spin-button,
 .SecCode::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 .exMonth {
     border: none;
     margin: 3% 0 3% 3%;
@@ -445,6 +448,7 @@
     height: 5%;
     font-family: 'Prompt', sans-serif;
 }
+
 .exYear {
     border: none;
     margin: 3% 0 3% 3%;
@@ -634,4 +638,41 @@
     font-size: 16px;
     border: 2px;
     border-color: black;
+}
+
+#bodySuccess {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.card {
+    width: 30%;
+    background: white;
+    padding: 60px;
+    border-radius: 4px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+i {
+    color: #B486FF;
+    font-size: 100px;
+    line-height: 200px;
+    margin-left: -15px;
+}
+
+#Success {
+    color: #B486FF;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 5%;
+}
+
+#txtSuccess {
+    font-family: 'Prompt', sans-serif;
+    font-size: 17px;
+    margin: 0;
 }
