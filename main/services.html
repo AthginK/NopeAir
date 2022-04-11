@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS-->
     <link href="style.css" rel="stylesheet">
+
+    <!-- Java script -->
+    <script src="scrip.js"></script>
+
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -74,7 +78,7 @@
                             <h4 style="margin-top: 0%;"><b>Seat Selection</b></h4>
                             <p style="margin-top: 4%;font-size: 14px;">Advanced seat selection for your comfort.<br>
                                 Select our Nope Premium Seat for extra services</p>
-                            <button type="button" class="btn services">Select</button>
+                            <button type="button" class="btn services" onclick="SelectSeat()" id="SeatBtn">Close</button>
                         </center>
                     </div>
                 </div>
@@ -85,7 +89,7 @@
                             <h4 style="margin-top: 0%;"><b>Nope Baggage</b></h4>
                             <p style="margin-top: 4%;font-size: 14px;">1 x +15 kg Nope Baggage (DMK-CNX),<br>
                                 1 x +15 kg Nope Baggage (CNX-DMK)</p>
-                            <button type="button" class="btn services">Edit</button>
+                            <button type="button" class="btn services" onclick="SelectBaggage()" id="BaggageBtn">Edit</button>
                         </center>
                     </div>
                 </div>
@@ -96,7 +100,7 @@
                             <h4 style="margin-top: 0%;"><b>Nope Special Baggage</b></h4>
                             <p style="margin-top: 4%;font-size: 14px;">Bike, special baggage and items
                                 that<br>require special handling.</p>
-                            <button type="button" class="btn services">Add</button>
+                            <button type="button" class="btn services" onclick="SelectSpecial()" id="SpecialBtn">Add</button>
                         </center>
                     </div>
                 </div>
@@ -109,7 +113,7 @@
                             <h4 style="margin-top: 2%;"><b>Nope First</b></h4>
                             <p style="margin-top: 4%;font-size: 14px;">Be the first to board and enjoy
                                 relaxing<br>moment onboard with Nope First</p>
-                            <button type="button" class="btn services">Add</button>
+                            <button type="button" class="btn services" onclick="SelectFirst()" id="FirstBtn">Add</button>
                         </center>
                     </div>
                 </div>
