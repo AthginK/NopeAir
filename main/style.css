@@ -464,9 +464,9 @@
 .triangleUp {
     width: 0px;
     height: 0px;
-    border-top: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 15px solid #CFB1FF;
-    border-left: 10px solid transparent;
-    margin-left: 16%;
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #CFB1FF;
+    border-left: 20px solid transparent;
+    margin-left: 15%;
 }
