@@ -12,6 +12,7 @@ function RoundTrip_display() {
 }
 
 // <------------------------Extra service------------------------->
+//เปิด ปิด
 function SelectSeat() {
     var btn = document.getElementById('SeatBtn').innerHTML;
     if (btn == "Close") {
@@ -120,7 +121,76 @@ function SelectFirst() {
         document.getElementById('FirstRow').style.margin = '7% 0 0 0';
     }
 }
+//เปลี่ยนราคา
+//Baggage
+function DENoSelectBagg() {
+    document.getElementById('DEbaggPrice').innerHTML = "<b>0.00</b>";
+    document.getElementById('selectBaggDE').innerHTML = "No selection";
+}
+function DETwentyKGBagg() {
+    document.getElementById('DEbaggPrice').innerHTML = "<b>200.00</b>";
+    document.getElementById('selectBaggDE').innerHTML = "+20 kg Nope Baggage";
+}
+function DEThirtyKGBagg() {
+    document.getElementById('DEbaggPrice').innerHTML = "<b>300.00</b>";
+    document.getElementById('selectBaggDE').innerHTML = "+30 kg Nope Baggage";
+}
+function DEFortyKGBagg() {
+    document.getElementById('DEbaggPrice').innerHTML = "<b>400.00</b>";
+    document.getElementById('selectBaggRE').innerHTML = "+40 kg Nope Baggage";
+}
 
+function RENoSelectBagg() {
+    document.getElementById('REbaggPrice').innerHTML = "<b>0.00</b>";
+    document.getElementById('selectBaggRE').innerHTML = "No selection";
+}
+function RETwentyKGBagg() {
+    document.getElementById('REbaggPrice').innerHTML = "<b>200.00</b>";
+    document.getElementById('selectBaggRE').innerHTML = "+20 kg Nope Baggage";
+}
+function REThirtyKGBagg() {
+    document.getElementById('REbaggPrice').innerHTML = "<b>300.00</b>";
+    document.getElementById('selectBaggRE').innerHTML = "+30 kg Nope Baggage";
+}
+function REFortyKGBagg() {
+    document.getElementById('REbaggPrice').innerHTML = "<b>400.00</b>";
+    document.getElementById('selectBaggRE').innerHTML = "+40 kg Nope Baggage";
+}
+
+//Special Service
+function DENoSelectNopeSpe() {
+    document.getElementById('DEspecPrice').innerHTML = "<b>0.00</b>";
+    document.getElementById('selectSpeDE').innerHTML = "No selection";
+}
+function DETwentyKGNopeSpe() {
+    document.getElementById('DEspecPrice').innerHTML = "<b>200.00</b>";
+    document.getElementById('selectSpeDE').innerHTML = "+20 kg Nope Baggage";
+}
+function DEThirtyKGNopeSpe() {
+    document.getElementById('DEspecPrice').innerHTML = "<b>300.00</b>";
+    document.getElementById('selectSpeDE').innerHTML = "+30 kg Nope Baggage";
+}
+function DEFortyKGNopeSpe() {
+    document.getElementById('DEspecPrice').innerHTML = "<b>400.00</b>";
+    document.getElementById('selectSpeDE').innerHTML = "+40 kg Nope Baggage";
+}
+
+function RENoSelectNopeSpe() {
+    document.getElementById('REspecPrice').innerHTML = "<b>0.00</b>";
+    document.getElementById('selectSpeRE').innerHTML = "No selection";
+}
+function RETwentyKGNopeSpe() {
+    document.getElementById('REspecPrice').innerHTML = "<b>200.00</b>";
+    document.getElementById('selectSpeRE').innerHTML = "+20 kg Nope Baggage";
+}
+function REThirtyKGNopeSpe() {
+    document.getElementById('REspecPrice').innerHTML = "<b>300.00</b>";
+    document.getElementById('selectSpeRE').innerHTML = "+30 kg Nope Baggage";
+}
+function REFortyKGNopeSpe() {
+    document.getElementById('REspecPrice').innerHTML = "<b>400.00</b>";
+    document.getElementById('selectSpeRE').innerHTML = "+40 kg Nope Baggage";
+}
 // <--------------------Payment-------------------------->
 function creditShow() {
     var credit = document.getElementById("creditDebitShow").style.display;
