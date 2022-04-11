@@ -212,6 +212,7 @@ function FirstNoRE() {
     var check = document.querySelector('input[name="nameRE"]:checked').value;
     document.getElementById('FirstPriceRE').innerHTML = check;
 }
+
 // <--------------------Payment-------------------------->
 function creditShow() {
     var credit = document.getElementById("creditDebitShow").style.display;
