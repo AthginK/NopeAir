@@ -354,6 +354,8 @@
     box-sizing: border-box;
     margin-top: 3%;
     padding: 2% 0% 2% 4%;
+    background-color: white;
+    cursor: pointer;
 }
 
 .payMethod {
@@ -362,7 +364,98 @@
     font-size: 16px;
 }
 
+.creditDebitShow {
+    background-color: #CFB1FF;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: none;
+    margin: 1% 0 0 0;
+    padding: 20px 15px;
+    font-size: 15px;
+    font-family: 'Prompt', sans-serif;
+}
 
+.atmShow {
+    background-color: #CFB1FF;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: none;
+    margin: 1% 0 0 0;
+    padding: 20px 15px;
+    font-size: 15px;
+    font-family: 'Prompt', sans-serif;
+}
+
+.qrShow {
+    background-color: #CFB1FF;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: none;
+    margin: 1% 0 0 0;
+    padding: 20px 15px;
+    font-size: 15px;
+    font-family: 'Prompt', sans-serif;
+}
+
+.cardNum {
+    border: none;
+    margin: 3% 0 3% 3%;
+    padding: 0% 0% 0% 1%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    ;
+    border-radius: 10px;
+    width: 50%;
+    height: 5%;
+    font-family: 'Prompt', sans-serif;
+}
+
+
+.cardNum::-webkit-outer-spin-button,
+.cardNum::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.SecCode {
+    border: none;
+    margin: 3% 0 3% 3%;
+    padding: 0% 0% 0% 1%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    ;
+    border-radius: 10px;
+    width: 15%;
+    height: 5%;
+    font-family: 'Prompt', sans-serif;
+}
+.SecCode::-webkit-outer-spin-button,
+.SecCode::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.exMonth {
+    border: none;
+    margin: 3% 0 3% 3%;
+    padding: 0% 0% 0% 1%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    ;
+    border-radius: 10px;
+    width: 10%;
+    height: 5%;
+    font-family: 'Prompt', sans-serif;
+}
+.exYear {
+    border: none;
+    margin: 3% 0 3% 3%;
+    padding: 0% 0% 0% 1%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    ;
+    border-radius: 10px;
+    width: 30%;
+    height: 5%;
+    font-family: 'Prompt', sans-serif;
+}
 
 .stepBar {
     width: 100%;
@@ -518,6 +611,7 @@
     border-radius: 15px;
     display: none;
 }
+
 .FirstTriangleUp {
     width: 0px;
     height: 0px;

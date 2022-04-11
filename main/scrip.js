@@ -103,20 +103,109 @@ function SelectSpecial() {
         document.getElementById('selectSpecialShow').style.display = 'block';
         document.getElementById('SpecialRow').style.margin = '7% 0 0 0';
     }
+}
+
+function SelectFirst() {
+    var btn = document.getElementById('FirstBtn').innerHTML;
+    if (btn == "Close") {
+        document.getElementById('FirstBtn').innerHTML = "Add";
+        document.getElementById('FirstUp').style.display = 'none';
+        document.getElementById('selectFirstShow').style.display = 'none';
+        document.getElementById('FirstRow').style.margin = '0';
+    }
+    else {
+        document.getElementById('FirstBtn').innerHTML = "Close"
+        document.getElementById('FirstUp').style.display = 'block';
+        document.getElementById('selectFirstShow').style.display = 'block';
+        document.getElementById('FirstRow').style.margin = '7% 0 0 0';
+    }
+}
+
+// <--------------------Payment-------------------------->
+function creditShow() {
+    var credit = document.getElementById("creditDebitShow").style.display;
+    var atm = document.getElementById("atmShow").style.display;
+    var qr = document.getElementById("qrShow").style.display;
+    // ถ้า atm เปิดอยู่ให้ปิด
+    if (atm == "block") {
+        document.getElementById("atmShow").style.display = "none";
+        document.getElementById('atmBox').style.backgroundColor = "white";
+        document.getElementById('atmBox').style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px";
+    }
+    // ถ้า qr เปิดอยู่ให้ปิด
+    if (qr == "block") {
+        document.getElementById("qrShow").style.display = "none";
+        document.getElementById('qrBox').style.backgroundColor = "white";
+        document.getElementById('qrBox').style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px";
+    }
+    if (credit == "none") {
+        document.getElementById("creditDebitShow").style.display = "block";
+        document.getElementById('creditBox').style.backgroundColor = "#CFB1FF";
+        document.getElementById('creditBox').style.boxShadow = "none";
+    }
+    else {
+        document.getElementById("creditDebitShow").style.display = "none";
+        document.getElementById('creditBox').style.backgroundColor = "white";
+        document.getElementById('creditBox').style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px";
+    }
+}
+
+function atmShow() {
+    var credit = document.getElementById("creditDebitShow").style.display;
+    var atm = document.getElementById("atmShow").style.display;
+    var qr = document.getElementById("qrShow").style.display;
+
+    // ถ้า qr เปิดอยู่ให้ปิด
+    if (qr == "block") {
+        document.getElementById("qrShow").style.display = "none";
+        document.getElementById('qrBox').style.backgroundColor = "white";
+        document.getElementById('qrBox').style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px";
+    }
+    // ถ้า credit เปิดอยู่ให้ปิด
+    if (credit == "block") {
+        document.getElementById("creditDebitShow").style.display = "none";
+        document.getElementById('creditBox').style.backgroundColor = "white";
+        document.getElementById('creditBox').style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px";
     }
 
-    function SelectFirst() {
-        var btn = document.getElementById('FirstBtn').innerHTML;
-        if (btn == "Close") {
-            document.getElementById('FirstBtn').innerHTML = "Add";
-            document.getElementById('FirstUp').style.display = 'none';
-            document.getElementById('selectFirstShow').style.display = 'none';
-            document.getElementById('FirstRow').style.margin = '0';
-        }
-        else {
-            document.getElementById('FirstBtn').innerHTML = "Close"
-            document.getElementById('FirstUp').style.display = 'block';
-            document.getElementById('selectFirstShow').style.display = 'block';
-            document.getElementById('FirstRow').style.margin = '7% 0 0 0';
-        }
+    if (atm == "none") {
+        document.getElementById("atmShow").style.display = "block";
+        document.getElementById('atmBox').style.backgroundColor = "#CFB1FF";
+        document.getElementById('atmBox').style.boxShadow = "none";
     }
+    else {
+        document.getElementById("atmShow").style.display = "none";
+        document.getElementById('atmBox').style.backgroundColor = "white";
+        document.getElementById('atmBox').style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px";
+    }
+}
+
+function qrShow() {
+    var credit = document.getElementById("creditDebitShow").style.display;
+    var atm = document.getElementById("atmShow").style.display;
+    var qr = document.getElementById("qrShow").style.display;
+
+    // ถ้า credit เปิดอยู่ให้ปิด
+    if (credit == "block") {
+        document.getElementById("creditDebitShow").style.display = "none";
+        document.getElementById('creditBox').style.backgroundColor = "white";
+        document.getElementById('creditBox').style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px";
+    }
+    // ถ้า atm เปิดอยู่ให้ปิด
+    if (atm == "block") {
+        document.getElementById("atmShow").style.display = "none";
+        document.getElementById('atmBox').style.backgroundColor = "white";
+        document.getElementById('atmBox').style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px";
+    }
+    
+    if (qr == "none") {
+        document.getElementById("qrShow").style.display = "block";
+        document.getElementById('qrBox').style.backgroundColor = "#CFB1FF";
+        document.getElementById('qrBox').style.boxShadow = "none";
+    }
+    else {
+        document.getElementById("qrShow").style.display = "none";
+        document.getElementById('qrBox').style.backgroundColor = "white";
+        document.getElementById('qrBox').style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px";
+    }
+}
