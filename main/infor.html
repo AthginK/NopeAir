@@ -61,17 +61,16 @@
             <div class="box info">
                 <form action="List.php" method="post">
                     <div class="dropdown">
-                            <button class="btn titles" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false" name="title">
-                                titles &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="\image\downward-arrow.svg"
-                                    style="width: 15px;height: 15px;">
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">MR</a>
-                                <a class="dropdown-item" href="#">MS</a>
-                                <a class="dropdown-item" href="#">MRS</a>
-                                <a class="dropdown-item" href="#">MONK</a>
-                            </div>
+                        <select class="btn titles" name="title" id="title">
+                            <option value="">--Select--</option>
+                            <option value="Mr.">Mr.</option>
+                            <option value="Mrs.">Mrs.</option>
+                            <option value="Ms.">Ms.</option>
+                            <option value="Monk">Monk</option>
+                        </select>
+
+                        </button>
+
                         <input type="text" class="Firstname" name="firstname" placeholder="&nbsp;&nbsp;Firstname">
                         <input type="text" class="Lastname" name="lastname" placeholder="&nbsp;&nbsp;Lastname">
                     </div>
@@ -80,6 +79,7 @@
                     <h5 style="margin:1% 0 0 3%;">Contact Information</h5>
                     <input type="text" class="MobilePhone" name="tel" placeholder="&nbsp;&nbsp;Mobile Phone">
                     <input type="text" class="Email" name="email" placeholder="&nbsp;&nbsp;Email">
+                    <input type="submit" value="Submit">
                 </form>
             </div>
         </div>
@@ -90,7 +90,7 @@
         </div>
         <div class="col-6">
             <a href="services.html">
-               <button type="submit" class="btn next">Next</button> 
+                <button type="button" class="btn next">Next</button>
             </a>
         </div>
 
