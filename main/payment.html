@@ -90,150 +90,140 @@
                         <span id="date_of_birth"></span>
                     </div>
 
-                    <div class="col-sm-3" id="PassPay_email">
-                        Email
+                    <div class="col-sm-3" id="PassPay_dob_info">
+                        <span id="email"></span>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-4" id="PassPay_age_info" style="margin-left: 2%;">
-                        <div class="row">
-                            <div class="col-sm-6" id="PassPay_Fname"><span id="title"></span>&nbsp;<span
-                                    id="firstname"></span></div>
-                            <div class="col-sm-6" id="PassPay_lname"><span id="lastname"></span></div>
-                            <div class="col-sm-3" id="PassPay_email_info">
-                                <span id="email"></span>
-                            </div>
-                        </div>
-                    </div>
 
-                    <h4><b><img src="\image\payment.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Payments</b></h4>
+            </div>
 
-                    <div class="box payment method" onclick="creditShow()" id="creditBox">
-                        <p class="payMethod">CREDIT / DEBIT CARD<img src="\image\downward-arrow.svg"
-                                style="width: 15px;height: 15px;float: right;margin-right: 2%;"></p>
-                    </div>
+            <h4><b><img src="\image\payment.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Payments</b></h4>
 
-                    <div class="creditDebitShow" id="creditDebitShow">
-                        <p>You have selected credit card/ debit card payment</p>
-                        <Label style="font-size: 20px; font-family: 'Prompt', sans-serif;">Card number</Label>
-                        <input type="number" class="cardNum" id="cardNum" name="cardNum" placeholder="Card Number"><br>
+            <div class="box payment method" onclick="creditShow()" id="creditBox">
+                <p class="payMethod">CREDIT / DEBIT CARD<img src="\image\downward-arrow.svg"
+                        style="width: 15px;height: 15px;float: right;margin-right: 2%;"></p>
+            </div>
 
-                        <Label style="font-size: 20px; font-family: 'Prompt', sans-serif;">Expiration date</Label>
-                        <select class="exMonth" id="title" name="title">
-                            <option value="">--Month--</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                        </select>
+            <div class="creditDebitShow" id="creditDebitShow">
+                <p>You have selected credit card/ debit card payment</p>
+                <Label style="font-size: 20px; font-family: 'Prompt', sans-serif;">Card number</Label>
+                <input type="number" class="cardNum" id="cardNum" name="cardNum" placeholder="Card Number"><br>
 
-                        <select class="exYear" id="title" name="title">
-                            <option value="">--Year--</option>
-                            <option value="2022">2022</option>
-                            <option value="2023">2023</option>
-                            <option value="2024">2024</option>
-                            <option value="2025">2025</option>
-                            <option value="2026">2026</option>
-                            <option value="2027">2027</option>
-                            <option value="2028">2028</option>
-                            <option value="2029">2029</option>
-                            <option value="2030">2030</option>
-                            <option value="2031">2031</option>
-                            <option value="2032">2032</option>
-                            <option value="2033">2033</option>
-                            <option value="2034">2034</option>
-                            <option value="2035">2035</option>
-                            <option value="2036">2036</option>
-                            <option value="2037">2037</option>
-                            <option value="2038">2038</option>
-                            <option value="2039">2039</option>
-                            <option value="2040">2040</option>
-                            <option value="2041">2041</option>
-                            <option value="2042">2042</option>
-                            <option value="2043">2043</option>
-                            <option value="2044">2044</option>
-                            <option value="2045">2045</option>
-                            <option value="2046">2046</option>
-                            <option value="2047">2047</option>
-                        </select>
-                        <br>
-                        <Label style="font-size: 20px; font-family: 'Prompt', sans-serif;">Security code</Label>
-                        <input type="number" class="SecCode" id="SecCode" name="SecCode"
-                            placeholder="Security code"><br>
+                <Label style="font-size: 20px; font-family: 'Prompt', sans-serif;">Expiration date</Label>
+                <select class="exMonth" id="title" name="title">
+                    <option value="">--Month--</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
 
-                        <p>Conditions</p>
-                        <ul>• This fee is charged per passenger per flight.</ul>
-                        <ul>• For Connecting Flight, this fee is charged per passenger per booking.</ul>
-                        <ul>• NokAir will randomly perform a credit/debit card physical verification at check-in
-                            counter, IF
-                            your
-                            online transaction was made from credit/debit card which was issued</ul>
-                        <p>from Bank outside Thailand.Unless your credit/debit card was successfully pass process
-                            Verified by
-                            Visa or MasterCard Secure Code or J-Secure or One Time Password from your issued bank.
-                            Otherwise,
-                            Nok Air reserved the rights to deny boarding.</p>
-                    </div>
+                <select class="exYear" id="title" name="title">
+                    <option value="">--Year--</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                    <option value="2032">2032</option>
+                    <option value="2033">2033</option>
+                    <option value="2034">2034</option>
+                    <option value="2035">2035</option>
+                    <option value="2036">2036</option>
+                    <option value="2037">2037</option>
+                    <option value="2038">2038</option>
+                    <option value="2039">2039</option>
+                    <option value="2040">2040</option>
+                    <option value="2041">2041</option>
+                    <option value="2042">2042</option>
+                    <option value="2043">2043</option>
+                    <option value="2044">2044</option>
+                    <option value="2045">2045</option>
+                    <option value="2046">2046</option>
+                    <option value="2047">2047</option>
+                </select>
+                <br>
+                <Label style="font-size: 20px; font-family: 'Prompt', sans-serif;">Security code</Label>
+                <input type="number" class="SecCode" id="SecCode" name="SecCode" placeholder="Security code"><br>
 
-                    <div class="box payment method" onclick="atmShow()" id="atmBox">
-                        <p class="payMethod">COUNTER PAYMENT / ATM<img src="\image\downward-arrow.svg"
-                                style="width: 15px;height: 15px;float: right;margin-right: 2%;"></p>
-                    </div>
+                <p>Conditions</p>
+                <ul>• This fee is charged per passenger per flight.</ul>
+                <ul>• For Connecting Flight, this fee is charged per passenger per booking.</ul>
+                <ul>• NokAir will randomly perform a credit/debit card physical verification at check-in
+                    counter, IF
+                    your
+                    online transaction was made from credit/debit card which was issued</ul>
+                <p>from Bank outside Thailand.Unless your credit/debit card was successfully pass process
+                    Verified by
+                    Visa or MasterCard Secure Code or J-Secure or One Time Password from your issued bank.
+                    Otherwise,
+                    Nok Air reserved the rights to deny boarding.</p>
+            </div>
 
-                    <div class="atmShow" id="atmShow">
-                        <p>You have selected counter / atm payment</p>
+            <div class="box payment method" onclick="atmShow()" id="atmBox">
+                <p class="payMethod">COUNTER PAYMENT / ATM<img src="\image\downward-arrow.svg"
+                        style="width: 15px;height: 15px;float: right;margin-right: 2%;"></p>
+            </div>
 
-                        <p>Conditions</p>
-                        <ul>• Maximum 3 transactions/day/phone number.</ul>
-                        <ul>• Service fee to be collected by mobile operator.</ul>
-                        <ul>• Support only AIS, DTAC and TRUE mobile operator.</ul>
-                        <ul>• For payment in Thailand with THB currency only.</ul>
-                        <ul>• Payment fee charge per passenger for payment over counter.</ul>
-                        <ul>• Payment fee charge per transaction for payment over ATM.</ul>
-                        <ul>• Payment fee will collect at payment channel.</ul>
-                    </div>
+            <div class="atmShow" id="atmShow">
+                <p>You have selected counter / atm payment</p>
 
-                    <div class="box payment method" onclick="qrShow()" id="qrBox">
-                        <p class="payMethod">QR PAYMENT<img src="\image\downward-arrow.svg"
-                                style="width: 15px;height: 15px;float: right;margin-right: 2%;"></p>
-                    </div>
+                <p>Conditions</p>
+                <ul>• Maximum 3 transactions/day/phone number.</ul>
+                <ul>• Service fee to be collected by mobile operator.</ul>
+                <ul>• Support only AIS, DTAC and TRUE mobile operator.</ul>
+                <ul>• For payment in Thailand with THB currency only.</ul>
+                <ul>• Payment fee charge per passenger for payment over counter.</ul>
+                <ul>• Payment fee charge per transaction for payment over ATM.</ul>
+                <ul>• Payment fee will collect at payment channel.</ul>
+            </div>
 
-                    <div class="qrShow" id="qrShow">
-                        <p>You have selected QR payment</p>
+            <div class="box payment method" onclick="qrShow()" id="qrBox">
+                <p class="payMethod">QR PAYMENT<img src="\image\downward-arrow.svg"
+                        style="width: 15px;height: 15px;float: right;margin-right: 2%;"></p>
+            </div>
 
-                        <p>Conditions</p>
-                        <ul>• Maximum 3 transactions/day/phone number.</ul>
-                        <ul>• For payment in Thailand with THB currency only.</ul>
-                        <ul>• This fee is charged per transaction.</ul>
-                        <ul>• Must register for Mobile Banking Account via your Bank BEFORE make a booking.</ul>
-                    </div>
+            <div class="qrShow" id="qrShow">
+                <p>You have selected QR payment</p>
+
+                <p>Conditions</p>
+                <ul>• Maximum 3 transactions/day/phone number.</ul>
+                <ul>• For payment in Thailand with THB currency only.</ul>
+                <ul>• This fee is charged per transaction.</ul>
+                <ul>• Must register for Mobile Banking Account via your Bank BEFORE make a booking.</ul>
+            </div>
+        </div>
+        <form action="insert.php" method="post">
+            <div class="form-group" style="display: none;">
+                <input type="number" class="form-control" name="title" id="f-title">
+                <input type="text" class="form-control" name="firstname" id="f-firstname">
+                <input type="text" class="form-control" name="lastname" id="f-lastname">
+                <input type="text" class="form-control" name="email" id="f-email">
+                <input type="text" class="form-control" name="tel" id="tel">
+                <input type="date" class="form-control" name="date_of_birth" id="f-date_of_birth">
+            </div>
+            <div class="row" id="rowMove">
+                <div class="col-6">
+                    <a href="services.html" class="prev">Previous</a>
                 </div>
-                <form action="insert.php" method="post">
-                    <div class="form-group" style="display: none;">
-                        <input type="number" class="form-control" name="title" id="f-title">
-                        <input type="text" class="form-control" name="firstname" id="f-firstname">
-                        <input type="text" class="form-control" name="lastname" id="f-lastname">
-                        <input type="text" class="form-control" name="email" id="f-email">
-                        <input type="text" class="form-control" name="tel" id="tel">
-                        <input type="date" class="form-control" name="date_of_birth" id="f-date_of_birth">
-                    </div>
-                    <div class="row" id="rowMove">
-                        <div class="col-6">
-                            <a href="services.html" class="prev">Previous</a>
-                        </div>
-                        <div class="col-6">
-                            <input type="submit" class="btn next" value="Next">
-                        </div>
-                    </div>
-                </form>
+                <div class="col-6">
+                    <input type="submit" class="btn next" value="Next">
+                </div>
+            </div>
+        </form>
 </body>
 
 </html>
