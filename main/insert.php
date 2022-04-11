@@ -25,7 +25,7 @@
 
 
         if(mysqli_query($conn, $sql)){
-                header('Location: http://localhost/main/NopeAir/main/services.html');
+                header('Location: http://localhost/main/NopeAir/main/payment.html');
         } else{
             echo "ERROR: Hush! Sorry $sql. " 
                 . mysqli_error($conn);

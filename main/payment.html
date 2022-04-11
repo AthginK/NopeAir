@@ -39,40 +39,56 @@
             <p style="font-family: 'Yellowtail', cursive;">@Ponam</p>
         </div>
     </div>
+        <div class="main">
+            <div class="container-fluid" id="info" style="padding: 0%;">
 
-    <div class="main">
-        <div class="container-fluid" id="info" style="padding: 0%;">
-
-            <div class="flight info">
-                <div class="col-sm-3" id="flightFrom">From</div>
-                <div class="col-sm-3" id="flightTo">To</div>
-                <div class="col-sm-3" id="flightPerson">Person</div>
-                <div class="col-sm-3" id="flightPrice">Price</div>
-            </div>
-
-            <div class="root">
-                <div class="stepBar">
-                    <ul class="progressbar">
-                        <li class="active">Search</li>
-                        <li class="active">Select Flight</li>
-                        <li class="active">Passenger Info</li>
-                        <li class="active">Extra Services</li>
-                        <li class="active">Payment</li>
-                    </ul>
+                <div class="flight info">
+                    <div class="col-sm-3" id="flightFrom">From</div>
+                    <div class="col-sm-3" id="flightTo">To</div>
+                    <div class="col-sm-3" id="flightPerson">Person</div>
+                    <div class="col-sm-3" id="flightPrice">Price</div>
                 </div>
-            </div><br>
 
-            <h4><b><img src="\image\user.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Passengers</b></h4>
-
-            <div class="box payment passenger">
-                <div class="row">
-                    <div class="col-sm-4" id="PassPay_age" style="margin-left: 2%;">
-                        Adult
+                <div class="root">
+                    <div class="stepBar">
+                        <ul class="progressbar">
+                            <li class="active">Search</li>
+                            <li class="active">Select Flight</li>
+                            <li class="active">Passenger Info</li>
+                            <li class="active">Extra Services</li>
+                            <li class="active">Payment</li>
+                        </ul>
                     </div>
+                </div><br>
 
-                    <div class="col-sm-3" id="PassPay_dob">
-                        Date of birth
+                <h4><b><img src="\image\user.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Passengers</b></h4>
+
+                <div class="box payment passenger">
+                    <div class="row">
+                        <div class="col-sm-4" id="PassPay_age" style="margin-left: 2%;">
+                            Adult
+                        </div>
+
+                        <div class="col-sm-3" id="PassPay_dob">
+                            Date of birth
+                        </div>
+
+                        <div class="col-sm-3" id="PassPay_email">
+                            Email
+                        </div>
                     </div>
+                    <div class="row">
+                        <div class="col-sm-4" id="PassPay_age_info" style="margin-left: 2%;">
+                            <div class="row">
+                                <div class="col-sm-6" id="PassPay_Fname"><span id="title"></span>&nbsp;<span
+                                        id="firstname"></span></div>
+                                <div class="col-sm-6" id="PassPay_lname"><span id="lastname"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3" id="PassPay_dob_info">
+                            <span id="date_of_birth"></span>
+                        </div>
 
                     <div class="col-sm-3" id="PassPay_email">
                         Email
@@ -84,20 +100,27 @@
                             <div class="col-sm-6" id="PassPay_Fname"><span id="title"></span>&nbsp;<span
                                     id="firstname"></span></div>
                             <div class="col-sm-6" id="PassPay_lname"><span id="lastname"></span></div>
+                        <div class="col-sm-3" id="PassPay_email_info">
+                            <span id="email"></span>
                         </div>
                     </div>
-
-                    <div class="col-sm-3" id="PassPay_dob_info">
-                        <span id="date_of_birth"></span>
-                    </div>
-
-                    <div class="col-sm-3" id="PassPay_email_info">
-                        <span id="email"></span>
-                    </div>
                 </div>
-            </div>
 
-            <h4><b><img src="\image\payment.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Payments</b></h4>
+                <h4><b><img src="\image\payment.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Payments</b></h4>
+
+                <div class="box payment method">
+                    <p class="payMethod">CREDIT / DEBIT CARD<img src="\image\downward-arrow.svg"
+                            style="width: 15px;height: 15px;float: right;margin-right: 2%;"></p>
+
+                </div>
+                <div class="box payment method">
+                    <p class="payMethod">COUNTER PAYMENT / ATM<img src="\image\downward-arrow.svg"
+                            style="width: 15px;height: 15px;float: right;margin-right: 2%;"></p>
+
+                </div>
+                <div class="box payment method">
+                    <p class="payMethod">QR PAYMENT<img src="\image\downward-arrow.svg"
+                            style="width: 15px;height: 15px;float: right;margin-right: 2%;"></p>
 
             <div class="box payment method" onclick="creditShow()" id="creditBox">
                 <p class="payMethod">CREDIT / DEBIT CARD<img src="\image\downward-arrow.svg"
@@ -203,19 +226,24 @@
                 <ul>• Must register for Mobile Banking Account via your Bank BEFORE make a booking.</ul>
             </div>
         </div>
-    </div>
-    <div class="row" id="rowMove">
-        <div class="col-6">
-            <a href="services.html" class="prev">Previous</a>
+    <form action="insert.php" method="post">
+        <div class="form-group" style="display: none;">
+            <input type="number" class="form-control" name="title" id="f-title">
+            <input type="text" class="form-control" name="firstname" id="f-firstname">
+            <input type="text" class="form-control" name="lastname" id="f-lastname">
+            <input type="text" class="form-control" name="email" id="f-email">
+            <input type="text" class="form-control" name="tel" id="tel">
+            <input type="date" class="form-control" name="date_of_birth" id="f-date_of_birth">
         </div>
-        <div class="col-6">
-            <a href="">
-                <button type="button" class="btn next">Next</button>
-            </a>
+        <div class="row" id="rowMove">
+            <div class="col-6">
+                <a href="services.html" class="prev">Previous</a>
+            </div>
+            <div class="col-6">
+                <input type="submit" class="btn next" value="Next">
+            </div>
         </div>
-
-    </div>
-
+    </form>
 </body>
 
 </html>
