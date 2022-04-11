@@ -123,7 +123,7 @@
                     <p>Seat</p>
                 </div>
             </div>
-
+<!-- --------------------------------Baggage------------------------------------ -->
             <div class="row" style="margin-top: 0%;" id="BaggageRow">
                 <div class="BaggageTriangleUp" id="BaggageUp"></div>
                 <div class="selectBaggageShow" id="selectBaggageShow">
@@ -143,23 +143,23 @@
                             <div class="col-3">
                                 <div class="dropdown">
                                     <span>
-                                        <button class="btn baggage" type="button" id="dropdownMenuButton"
+                                        <button class="btn baggage" type="button" id="selectBaggDE"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             No selection <img src="\image\downward-arrow.svg"
                                                 style="width: 15px;height: 15px;">
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">No selection</a>
-                                            <a class="dropdown-item" href="#">+20 kg Nope Baggage</a>
-                                            <a class="dropdown-item" href="#">+30 kg Nope Baggage</a>
-                                            <a class="dropdown-item" href="#">+40 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="DENoSelectBagg()">No selection</a>
+                                            <a class="dropdown-item" onclick="DETwentyKGBagg()">+20 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="DEThirtyKGBagg()">+30 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="DEFortyKGBagg()">+40 kg Nope Baggage</a>
                                         </div>
                                     </span>
                                 </div>
                             </div>
                         </div>
                         <p style="padding-left: 2%;">Your price:</p>
-                        <p style="padding: 0 0 2% 2%;"><b>0.00</b></p>
+                        <p style="padding: 0 0 2% 2%;" id="DEbaggPrice"><b>0.00</b></p>
                     </div>
                     <div class="serviceInfo">
                         <h5 style="padding: 2% 0 0 2%;"><b>Return</b></h5>
@@ -174,27 +174,27 @@
                             <div class="col-3">
                                 <div class="dropdown">
                                     <span>
-                                        <button class="btn baggage" type="button" id="dropdownMenuButton"
+                                        <button class="btn baggage" type="button" id="selectBaggRE"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             No selection <img src="\image\downward-arrow.svg"
                                                 style="width: 15px;height: 15px;">
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">No selection</a>
-                                            <a class="dropdown-item" href="#">+20 kg Nope Baggage</a>
-                                            <a class="dropdown-item" href="#">+30 kg Nope Baggage</a>
-                                            <a class="dropdown-item" href="#">+40 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="RENoSelectBagg()">No selection</a>
+                                            <a class="dropdown-item" onclick="RETwentyKGBagg()">+20 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="REThirtyKGBagg()">+30 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="REFortyKGBagg()">+40 kg Nope Baggage</a>
                                         </div>
                                     </span>
                                 </div>
                             </div>
                         </div>
                         <p style="padding-left: 2%;">Your price:</p>
-                        <p style="padding: 0 0 2% 2%;"><b>0.00</b></p>
+                        <p style="padding: 0 0 2% 2%;" id="REbaggPrice"><b>0.00</b></p>
                     </div>
                 </div>
             </div>
-
+<!-- --------------------------------Special Service------------------------------------ -->
             <div class="row" style="margin-top: 0%;" id="SpecialRow">
                 <div class="SpecialTriangleUp" id="SpecialUp"></div>
                 <div class="selectSpecialShow" id="selectSpecialShow">
@@ -224,23 +224,23 @@
                             <div class="col-3">
                                 <div class="dropdown">
                                     <span>
-                                        <button class="btn baggage" type="button" id="dropdownMenuButton"
+                                        <button class="btn baggage" type="button" id="selectSpeDE"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             No selection <img src="\image\downward-arrow.svg"
                                                 style="width: 15px;height: 15px;">
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">No selection</a>
-                                            <a class="dropdown-item" href="#">+20 kg Nope Baggage</a>
-                                            <a class="dropdown-item" href="#">+30 kg Nope Baggage</a>
-                                            <a class="dropdown-item" href="#">+40 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="DENoSelectNopeSpe()">No selection</a>
+                                            <a class="dropdown-item" onclick="DETwentyKGNopeSpe()">+20 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="DEThirtyKGNopeSpe()">+30 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="DEFortyKGNopeSpe()">+40 kg Nope Baggage</a>
                                         </div>
                                     </span>
                                 </div>
                             </div>
                         </div>
                         <p style="padding-left: 2%;">Your price:</p>
-                        <p style="padding: 0 0 2% 2%;"><b>0.00</b></p>
+                        <p style="padding: 0 0 2% 2%;" id="DEspecPrice"><b>0.00</b></p>
                     </div>
                     <div class="serviceInfo">
                         <h5 style="padding: 2% 0 0 2%;"><b>Return</b></h5>
@@ -255,27 +255,27 @@
                             <div class="col-3">
                                 <div class="dropdown">
                                     <span>
-                                        <button class="btn baggage" type="button" id="dropdownMenuButton"
+                                        <button class="btn baggage" type="button" id="selectSpeRE"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             No selection <img src="\image\downward-arrow.svg"
                                                 style="width: 15px;height: 15px;">
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">No selection</a>
-                                            <a class="dropdown-item" href="#">+20 kg Nope Baggage</a>
-                                            <a class="dropdown-item" href="#">+30 kg Nope Baggage</a>
-                                            <a class="dropdown-item" href="#">+40 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="RENoSelectNopeSpe()">No selection</a>
+                                            <a class="dropdown-item" onclick="RETwentyKGNopeSpe()">+20 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="REThirtyKGNopeSpe()">+30 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="REFortyKGNopeSpe()">+40 kg Nope Baggage</a>
                                         </div>
                                     </span>
                                 </div>
                             </div>
                         </div>
                         <p style="padding-left: 2%;">Your price:</p>
-                        <p style="padding: 0 0 2% 2%;"><b>0.00</b></p>
+                        <p style="padding: 0 0 2% 2%;" id="REspecPrice"><b>0.00</b></p>
                     </div>
                 </div>
             </div>
-
+<!-- --------------------------------Nope First------------------------------------ -->
             <div class="row" style="margin-top: 10%;" text-align="center">
                 <div class="col-4">
                     <div class="box services">
