@@ -78,7 +78,8 @@
                             <h4 style="margin-top: 0%;"><b>Seat Selection</b></h4>
                             <p style="margin-top: 4%;font-size: 14px;">Advanced seat selection for your comfort.<br>
                                 Select our Nope Premium Seat for extra services</p>
-                            <button type="button" class="btn services" onclick="SelectSeat()" id="SeatBtn">Close</button>
+                            <button type="button" class="btn services" onclick="SelectSeat()"
+                                id="SeatBtn">Close</button>
                         </center>
                     </div>
                 </div>
@@ -89,7 +90,8 @@
                             <h4 style="margin-top: 0%;"><b>Nope Baggage</b></h4>
                             <p style="margin-top: 4%;font-size: 14px;">1 x +15 kg Nope Baggage (DMK-CNX),<br>
                                 1 x +15 kg Nope Baggage (CNX-DMK)</p>
-                            <button type="button" class="btn services" onclick="SelectBaggage()" id="BaggageBtn">Edit</button>
+                            <button type="button" class="btn services" onclick="SelectBaggage()"
+                                id="BaggageBtn">Edit</button>
                         </center>
                     </div>
                 </div>
@@ -100,7 +102,8 @@
                             <h4 style="margin-top: 0%;"><b>Nope Special Baggage</b></h4>
                             <p style="margin-top: 4%;font-size: 14px;">Bike, special baggage and items
                                 that<br>require special handling.</p>
-                            <button type="button" class="btn services" onclick="SelectSpecial()" id="SpecialBtn">Add</button>
+                            <button type="button" class="btn services" onclick="SelectSpecial()"
+                                id="SpecialBtn">Add</button>
                         </center>
                     </div>
                 </div>
@@ -109,9 +112,9 @@
             <div class="row" id="SeatRow" style="margin-top: 7%;">
                 <div class="SeatTriangleUp" id="seatUp"></div>
                 <div class="selectSeatShow" id="selectSeatShow">
-                    <p>Seat</p>
-                    <p>Seat</p>
-                    <p>Seat</p>
+                    <h4 style="margin: 2% 0 0 3%;"><b>Seat Selection</b></h4>
+                    <div class="col-4"></div>
+                    <div class="col-8"></div>
                     <p>Seat</p>
                     <p>Seat</p>
                     <p>Seat</p>
@@ -124,26 +127,152 @@
             <div class="row" style="margin-top: 0%;" id="BaggageRow">
                 <div class="BaggageTriangleUp" id="BaggageUp"></div>
                 <div class="selectBaggageShow" id="selectBaggageShow">
-                    <p>Baggage</p>
-                    <p>Baggage</p>
-                    <p>Baggage</p>
-                    <p>Baggage</p>
-                    <p>Baggage</p>
-                    <p>Baggage</p>
-                    <p>Baggage</p>
-                    <p>Baggage</p>
+                    <h4 style="margin: 2% 0 0 3%;"><b>Nope Baggage</b></h4>
+                    <p style="margin: 1% 0 0 3%;">Add baggage allowance to your trip. Worry-free and enjoy saving when
+                        book your extra baggage allowance now.</p>
+                    <div class="serviceInfo">
+                        <h5 style="margin: 2%;"><b>Depart</b></h5>
+                        <div class="row" style="margin-left: 1%;">
+                            <div class="col-6">
+                                <p>Don Mueang (Bangkok) (DMK) - Chiang Rai (CEI)</p>
+                                <hr>
+                            </div>
+                            <div class="col-3">
+                                <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
+                            </div>
+                            <div class="col-3">
+                                <div class="dropdown">
+                                    <span>
+                                        <button class="btn baggage" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            No selection <img src="\image\downward-arrow.svg"
+                                                style="width: 15px;height: 15px;">
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">No selection</a>
+                                            <a class="dropdown-item" href="#">+20 kg Nope Baggage</a>
+                                            <a class="dropdown-item" href="#">+30 kg Nope Baggage</a>
+                                            <a class="dropdown-item" href="#">+40 kg Nope Baggage</a>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="margin-left: 2%;">Your price:</p>
+                        <p style="margin-left: 2%;"><b>0.00</b></p>
+                    </div>
+                    <div class="serviceInfo">
+                        <h5 style="margin: 2%;"><b>Return</b></h5>
+                        <div class="row" style="margin-left: 1%;">
+                            <div class="col-6">
+                                <p>Don Mueang (Bangkok) (DMK) - Chiang Rai (CEI)</p>
+                                <hr>
+                            </div>
+                            <div class="col-3">
+                                <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
+                            </div>
+                            <div class="col-3">
+                                <div class="dropdown">
+                                    <span>
+                                        <button class="btn baggage" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            No selection <img src="\image\downward-arrow.svg"
+                                                style="width: 15px;height: 15px;">
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">No selection</a>
+                                            <a class="dropdown-item" href="#">+20 kg Nope Baggage</a>
+                                            <a class="dropdown-item" href="#">+30 kg Nope Baggage</a>
+                                            <a class="dropdown-item" href="#">+40 kg Nope Baggage</a>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="margin-left: 2%;">Your price:</p>
+                        <p style="margin-left: 2%;"><b>0.00</b></p>
+                    </div>
                 </div>
             </div>
 
             <div class="row" style="margin-top: 0%;" id="SpecialRow">
                 <div class="SpecialTriangleUp" id="SpecialUp"></div>
                 <div class="selectSpecialShow" id="selectSpecialShow">
-                    <p>Special</p>
-                    <p>Special</p>
-                    <p>Special</p>
-                    <p>Special</p>
-                    <p>Special</p>
-                    <p>Special</p>
+                    <h4 style="margin: 2% 0 0 3%;"><b>Nope Special Baggage</b></h4>
+                    <p style="margin: 1% 0 0 3%;">Bike and special baggage items that require special handling. Such
+                        items as following;</p>
+                    <ul style="margin-left: 3%;">
+                        <li>Sports Equipment (Surfboard , Golf, Diving , Fishing, Archery Equipment, etc.)</li>
+                        <li>Musical Instruments (Guitars, Drums, Keyboard instrument, zither, etc.)</li>
+                        <li>Bulky Items (LCD TV, Computer, Electronic Equipment, Handicrafts, etc.)</li>
+                        <li>Include other special equipment.</li>
+                    </ul>
+                    <p style="margin: 1% 0 0 3%;">Please contact our check-in airport staff two hours prior to the
+                        departure time if there are more than one special baggage.</p>
+                    <p style="margin: 1% 0 0 3%;">You may bring one special baggage per person.</p>
+                    <p style="margin: 1% 0 0 3%;">Please note: the fee is per one item only.</p>
+                    <div class="serviceInfo">
+                        <h5 style="margin: 2%;"><b>Depart</b></h5>
+                        <div class="row" style="margin-left: 1%;">
+                            <div class="col-6">
+                                <p>Don Mueang (Bangkok) (DMK) - Chiang Rai (CEI)</p>
+                                <hr>
+                            </div>
+                            <div class="col-3">
+                                <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
+                            </div>
+                            <div class="col-3">
+                                <div class="dropdown">
+                                    <span>
+                                        <button class="btn baggage" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            No selection <img src="\image\downward-arrow.svg"
+                                                style="width: 15px;height: 15px;">
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">No selection</a>
+                                            <a class="dropdown-item" href="#">+20 kg Nope Baggage</a>
+                                            <a class="dropdown-item" href="#">+30 kg Nope Baggage</a>
+                                            <a class="dropdown-item" href="#">+40 kg Nope Baggage</a>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="margin-left: 2%;">Your price:</p>
+                        <p style="margin-left: 2%;"><b>0.00</b></p>
+                    </div>
+                    <div class="serviceInfo">
+                        <h5 style="margin: 2%;"><b>Return</b></h5>
+                        <div class="row" style="margin-left: 1%;">
+                            <div class="col-6">
+                                <p>Don Mueang (Bangkok) (DMK) - Chiang Rai (CEI)</p>
+                                <hr>
+                            </div>
+                            <div class="col-3">
+                                <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
+                            </div>
+                            <div class="col-3">
+                                <div class="dropdown">
+                                    <span>
+                                        <button class="btn baggage" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            No selection <img src="\image\downward-arrow.svg"
+                                                style="width: 15px;height: 15px;">
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">No selection</a>
+                                            <a class="dropdown-item" href="#">+20 kg Nope Baggage</a>
+                                            <a class="dropdown-item" href="#">+30 kg Nope Baggage</a>
+                                            <a class="dropdown-item" href="#">+40 kg Nope Baggage</a>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="margin-left: 2%;">Your price:</p>
+                        <p style="margin-left: 2%;"><b>0.00</b></p>
+                    </div>
                 </div>
             </div>
 
@@ -155,7 +284,8 @@
                             <h4 style="margin-top: 2%;"><b>Nope First</b></h4>
                             <p style="margin-top: 4%;font-size: 14px;">Be the first to board and enjoy
                                 relaxing<br>moment onboard with Nope First</p>
-                            <button type="button" class="btn services" onclick="SelectFirst()" id="FirstBtn">Add</button>
+                            <button type="button" class="btn services" onclick="SelectFirst()"
+                                id="FirstBtn">Add</button>
                         </center>
                     </div>
                 </div>
@@ -166,13 +296,68 @@
             <div class="row" style="margin-top: 0%;" id="FirstRow">
                 <div class="FirstTriangleUp" id="FirstUp"></div>
                 <div class="selectFirstShow" id="selectFirstShow">
-                    <p>First</p>
-                    <p>First</p>
-                    <p>First</p>
-                    <p>First</p>
-                    <p>First</p>
-                    <p>First</p>
-                    <p>First</p>
+                    <div class="serviceInfo">
+                        <h5 style="margin: 2%;"><b>Depart</b></h5>
+                        <div class="row" style="margin-left: 1%;">
+                            <div class="col-5">
+                                <p>Don Mueang (Bangkok) (DMK) - Chiang Rai (CEI)</p>
+                                <hr>
+                            </div>
+                            <div class="col-3">
+                                <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
+                            </div>
+                            <div class="col-2">
+                                <input type="radio"> Yes
+                            </div>
+                            <div class="col-2">
+                                <input type="radio"> No
+                            </div>
+                        </div>
+                        <div class="row" style="margin-left: 1%;">
+                            <div class="col-5">
+                                <p>Nope First</p>
+                                <hr>
+                            </div>
+                            <div class="col-3"></div>
+                            <div class="col-2"></div>
+                            <div class="col-2"></div>
+                        </div>
+                        <p style="margin-left: 2%;">Extra Service price:</p>
+                        <p style="margin-left: 2%;"><b>200.00</b></p>
+                        <p style="margin-left: 2%;">Your price:</p>
+                        <p style="margin-left: 2%;"><b>0.00</b></p>
+                    </div>
+                    <div class="serviceInfo">
+                        <h5 style="margin: 2%;"><b>Return</b></h5>
+                        <div class="row" style="margin-left: 1%;">
+                            <div class="col-5">
+                                <p>Don Mueang (Bangkok) (DMK) - Chiang Rai (CEI)</p>
+                                <hr>
+                            </div>
+                            <div class="col-3">
+                                <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
+                            </div>
+                            <div class="col-2">
+                                <input type="radio"> Yes
+                            </div>
+                            <div class="col-2">
+                                <input type="radio"> No
+                            </div>
+                        </div>
+                        <div class="row" style="margin-left: 1%;">
+                            <div class="col-5">
+                                <p>Nope First</p>
+                                <hr>
+                            </div>
+                            <div class="col-3"></div>
+                            <div class="col-2"></div>
+                            <div class="col-2"></div>
+                        </div>
+                        <p style="margin-left: 2%;">Extra Service price:</p>
+                        <p style="margin-left: 2%;"><b>200.00</b></p>
+                        <p style="margin-left: 2%;">Your price:</p>
+                        <p style="margin-left: 2%;"><b>0.00</b></p>
+                    </div>
                 </div>
             </div>
         </div>
