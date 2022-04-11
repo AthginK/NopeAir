@@ -14,13 +14,28 @@ function RoundTrip_display() {
 // <------------------------Extra service------------------------->
 function SelectSeat() {
     var btn = document.getElementById('SeatBtn').innerHTML;
-    if (btn=="Close"){
+    if (btn == "Close") {
         document.getElementById('SeatBtn').innerHTML = "Select";
         document.getElementById('seatUp').style.display = 'none';
         document.getElementById('selectSeatShow').style.display = 'none';
         document.getElementById('SeatRow').style.margin = '0';
     }
     else {
+        var bagg = document.getElementById('BaggageBtn').innerHTML;
+        var special = document.getElementById('SpecialBtn').innerHTML;
+        // ถ้าBaggageหรือSpecialเปิดอยู่ให้ปิดก่อน
+        if (bagg == "Close") {
+            document.getElementById('BaggageBtn').innerHTML = "Edit";
+            document.getElementById('BaggageUp').style.display = 'none';
+            document.getElementById('selectBaggageShow').style.display = 'none';
+            document.getElementById('BaggageRow').style.margin = '0';
+        }
+        if (special == "Close") {
+            document.getElementById('SpecialBtn').innerHTML = "Add";
+            document.getElementById('SpecialUp').style.display = 'none';
+            document.getElementById('selectSpecialShow').style.display = 'none';
+            document.getElementById('SpecialRow').style.margin = '0';
+        }
         document.getElementById('SeatBtn').innerHTML = "Close";
         document.getElementById('seatUp').style.display = 'block';
         document.getElementById('selectSeatShow').style.display = 'block';
@@ -30,13 +45,28 @@ function SelectSeat() {
 
 function SelectBaggage() {
     var btn = document.getElementById('BaggageBtn').innerHTML;
-    if (btn=="Close"){
+    if (btn == "Close") {
         document.getElementById('BaggageBtn').innerHTML = "Edit";
         document.getElementById('BaggageUp').style.display = 'none';
         document.getElementById('selectBaggageShow').style.display = 'none';
         document.getElementById('BaggageRow').style.margin = '0';
     }
     else {
+        var seat = document.getElementById('SeatBtn').innerHTML;
+        var special = document.getElementById('SpecialBtn').innerHTML;
+        // ถ้าSeatหรือSpecialเปิดอยู่ให้ปิดก่อน
+        if (seat == "Close") {
+            document.getElementById('SeatBtn').innerHTML = "Select";
+            document.getElementById('seatUp').style.display = 'none';
+            document.getElementById('selectSeatShow').style.display = 'none';
+            document.getElementById('SeatRow').style.margin = '0';
+        }
+        if (special == "Close") {
+            document.getElementById('SpecialBtn').innerHTML = "Add";
+            document.getElementById('SpecialUp').style.display = 'none';
+            document.getElementById('selectSpecialShow').style.display = 'none';
+            document.getElementById('SpecialRow').style.margin = '0';
+        }
         document.getElementById('BaggageBtn').innerHTML = "Close";
         document.getElementById('BaggageUp').style.display = 'block';
         document.getElementById('selectBaggageShow').style.display = 'block';
@@ -46,32 +76,47 @@ function SelectBaggage() {
 
 function SelectSpecial() {
     var btn = document.getElementById('SpecialBtn').innerHTML;
-    if (btn=="Close"){
+    if (btn == "Close") {
         document.getElementById('SpecialBtn').innerHTML = "Add";
         document.getElementById('SpecialUp').style.display = 'none';
         document.getElementById('selectSpecialShow').style.display = 'none';
         document.getElementById('SpecialRow').style.margin = '0';
     }
     else {
+        var seat = document.getElementById('SeatBtn').innerHTML;
+        var bagg = document.getElementById('BaggageBtn').innerHTML;
+        // ถ้าSeatหรือBaggageเปิดอยู่ให้ปิดก่อน
+        if (seat == "Close") {
+            document.getElementById('SeatBtn').innerHTML = "Select";
+            document.getElementById('seatUp').style.display = 'none';
+            document.getElementById('selectSeatShow').style.display = 'none';
+            document.getElementById('SeatRow').style.margin = '0';
+        }
+        if (bagg == "Close") {
+            document.getElementById('BaggageBtn').innerHTML = "Edit";
+            document.getElementById('BaggageUp').style.display = 'none';
+            document.getElementById('selectBaggageShow').style.display = 'none';
+            document.getElementById('BaggageRow').style.margin = '0';
+        }
         document.getElementById('SpecialBtn').innerHTML = "Close";
         document.getElementById('SpecialUp').style.display = 'block';
         document.getElementById('selectSpecialShow').style.display = 'block';
         document.getElementById('SpecialRow').style.margin = '7% 0 0 0';
     }
-}
+    }
 
-function SelectFirst() {
-    var btn = document.getElementById('FirstBtn').innerHTML;
-    if (btn=="Close"){
-        document.getElementById('FirstBtn').innerHTML = "Add";
-        document.getElementById('FirstUp').style.display = 'none';
-        document.getElementById('selectFirstShow').style.display = 'none';
-        document.getElementById('FirstRow').style.margin = '0';
+    function SelectFirst() {
+        var btn = document.getElementById('FirstBtn').innerHTML;
+        if (btn == "Close") {
+            document.getElementById('FirstBtn').innerHTML = "Add";
+            document.getElementById('FirstUp').style.display = 'none';
+            document.getElementById('selectFirstShow').style.display = 'none';
+            document.getElementById('FirstRow').style.margin = '0';
+        }
+        else {
+            document.getElementById('FirstBtn').innerHTML = "Close"
+            document.getElementById('FirstUp').style.display = 'block';
+            document.getElementById('selectFirstShow').style.display = 'block';
+            document.getElementById('FirstRow').style.margin = '7% 0 0 0';
+        }
     }
-    else {
-        document.getElementById('FirstBtn').innerHTML = "Close"
-        document.getElementById('FirstUp').style.display = 'block';
-        document.getElementById('selectFirstShow').style.display = 'block';
-        document.getElementById('FirstRow').style.margin = '7% 0 0 0';
-    }
-}
