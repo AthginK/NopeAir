@@ -25,7 +25,7 @@
 
 
         if(mysqli_query($conn, $sql)){
-            echo "<h3>The user data is stored in a database successfully.</h3>";   
+                header('Location: http://localhost/main/NopeAir/main/services.html');
         } else{
             echo "ERROR: Hush! Sorry $sql. " 
                 . mysqli_error($conn);
