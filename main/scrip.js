@@ -137,7 +137,7 @@ function DEThirtyKGBagg() {
 }
 function DEFortyKGBagg() {
     document.getElementById('DEbaggPrice').innerHTML = "<b>400.00</b>";
-    document.getElementById('selectBaggRE').innerHTML = "+40 kg Nope Baggage";
+    document.getElementById('selectBaggDE').innerHTML = "+40 kg Nope Baggage";
 }
 
 function RENoSelectBagg() {
