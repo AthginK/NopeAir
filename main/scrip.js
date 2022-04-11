@@ -191,6 +191,27 @@ function REFortyKGNopeSpe() {
     document.getElementById('REspecPrice').innerHTML = "<b>400.00</b>";
     document.getElementById('selectSpeRE').innerHTML = "+40 kg Nope Baggage";
 }
+
+// Nope First
+function FirstYesDE() {
+    var check = document.querySelector('input[name="nameDE"]:checked').value;
+    document.getElementById('FirstPriceDE').innerHTML = check;
+}
+
+function FirstNoDE() {
+    var check = document.querySelector('input[name="nameDE"]:checked').value;
+    document.getElementById('FirstPriceDE').innerHTML = check;
+}
+
+function FirstYesRE() {
+    var check = document.querySelector('input[name="nameRE"]:checked').value;
+    document.getElementById('FirstPriceRE').innerHTML = check;
+}
+
+function FirstNoRE() {
+    var check = document.querySelector('input[name="nameRE"]:checked').value;
+    document.getElementById('FirstPriceRE').innerHTML = check;
+}
 // <--------------------Payment-------------------------->
 function creditShow() {
     var credit = document.getElementById("creditDebitShow").style.display;
