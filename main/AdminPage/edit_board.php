@@ -51,7 +51,7 @@
         <?php
         
 
-        if(isset($_POST['edit_btn']))
+        if(isset($_POST['edit_']))
         {
             $flight_id = $_POST['edit_id'];
 
