@@ -702,8 +702,42 @@ i {
 .nopePreFont {
     width: 40px;
     height: 40px;
-    background-color: red;
+    background-color: #000a55;
     border-radius: 5px;
-    margin: 15% 2% 0 10%;
+    float: left;
+}
+.nopeHappy {
+    width: 40px;
+    height: 40px;
+    background-color: #586cff;
+    border-radius: 5px;
+    float: left;
+}
+.nopeSelect {
+    width: 40px;
+    height: 40px;
+    background-color: #f5ff8a;
+    border-radius: 5px;
+    float: left;
+}
+.nopePre {
+    width: 40px;
+    height: 40px;
+    background-color: #0017c9;
+    border-radius: 5px;
+    float: left;
+}
+.nopeBooked {
+    width: 40px;
+    height: 40px;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    float: left;
+}
+.nopeBlock {
+    width: 40px;
+    height: 40px;
+    background-color: #acacac;
+    border-radius: 5px;
     float: left;
 }
