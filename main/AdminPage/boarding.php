@@ -60,7 +60,7 @@
                     <td><?php echo $row['flight_id'];?></td>
                     <td><?php echo $row['from_place'];?></td>
                     <td><?php echo $row['to_place'];?></td>
-                    <td><?php echo $row['date'];?></td>
+                    <td><?php echo $row['flight_date'];?></td>
                     <td><?php echo $row['departure'];?></td>
                     <td><?php echo $row['departure'];?></td>
                     <td><?php echo $row['arrival'];?></td>
