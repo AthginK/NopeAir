@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <!--connect database-->
     <?php
 
         include 'connect.php';
@@ -52,10 +53,12 @@
         </div>
     </div>
 
+    
     <div class="main">
         <div class="container-fluid" id="home">
             <button type="button" id="rT" class="btn roundTrip active" onclick="RoundTrip_display()">Round Trip</button>
             <button type="button" id="oW" class="btn oneWay" onclick="Oneway_display()">One Way</button>
+
 
             <div class="box">
                 <div class="dropdown">
@@ -72,12 +75,14 @@
                     </span>
                 </div>
 
-
+                <form action="selectFlight_rT.php" method="post">
+                <!--round trip-->
                 <div class="roundtrip_select" id="roundtrip_select" style="display: block;">
                     <div class="place">
                         <p class="dest">From</p>
                         
-                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name="From" onchange="calcular1(value)">
+                        <!--select From-->
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='rT_from' onchange="calcular1(value)">
 
                         <?php
                         while ($rows = $result1 -> fetch_assoc()){
@@ -94,7 +99,8 @@
                     <div class="place">
                         <p class="dest">To</p>
 
-                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name="To" onchange="calcular2(value)">
+                        <!--select To-->
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='rT_to' onchange="calcular2(value)">
 
                         <?php
                         while ($rows = $result2 -> fetch_assoc()){
@@ -112,20 +118,27 @@
                     <div class="date">
                         <div class="departDate">
                             <p class="dateText">Departure</p>
-                            <input type="date" class="showDate">
+                            <input type="date" name='de_date' class="showDate">
                         </div>
                         <div class="returnDate">
                             <p class="dateText">Return</p>
-                            <input type="date" class="showDate">
+                            <input type="date" name='re_date' class="showDate">
                         </div>
                     </div>
-                </div>
+                    <span>
+                        <button type="submit" style='' class="btn search">Search Flights</button>
+                    </span>       
+                </div>        
+                </form >
 
+                <form action="selectFlight_oW.php" method="post">
+                <!--one way-->
                 <div class="oneway_select" id="oneway_select" style="display: none;">
                     <div class="place" id="oneway_place_from">
                         <p class="dest">From</p>
                     
-                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name="From" onchange="calcular3(value)">
+                        <!--select From-->
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='oW_from' onchange="calcular3(value)">
 
                             <?php
                             while ($rows = $result3 -> fetch_assoc()){
@@ -141,7 +154,9 @@
                     </div>
                     <div class="place" id="oneway_place_to">
                         <p class="dest">To</p>
-                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name="To" onchange="calcular4(value)">
+                        
+                        <!--select To-->
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='oW_to' onchange="calcular4(value)">
 
                         <?php
                         while ($rows = $result4 -> fetch_assoc()){
@@ -158,104 +173,18 @@
                     <div class="date" id="oneway_date">
                         <div class="departDate">
                             <p class="dateText">Departure</p>
-                            <input type="date" class="showDate">
+                            <input type="date" name='oW_date' class="showDate">
                         </div>
                     </div>
+                    <span>
+                        <button type="submit" class="btn search ow">Search Flights</button>
+                    </span>
                 </div>
-
+                </form>
             </div>
         </div>
     </div>
-    <span>
-        <a href="selectFlight.html">
-            <button type="button" class="btn search">Search Flights</button>
-        </a>
-
-    </span>
 </body>
 
-<script>
-    /* Show country code & city (RoundTrip FROM)*/
-        function calcular1(val) {
-            var country = val
-        if (country == 'Bangkok') {
-            var cc = 'BKK, Thailand';
-        }
-        else if (country == 'Chiang Mai') {
-            var cc = 'CNX, Thailand';
-        }
-        else if (country == 'Phuket') {
-            var cc = 'HKT, Thailand';
-        }
-        else if (country == 'Hat Yai') {
-            var cc = 'HDY, Thailand';
-        };
-
-    /*prints the result*/
-        var results = document.getElementById('FromCountry');
-        results.innerHTML = cc;
-        }
-
-    /* Show country code & city (RoundTrip TO)*/
-    function calcular2(val) {
-        var country = val
-        if (country == 'Bangkok') {
-            var cc = 'BKK, Thailand';
-        }
-        else if (country == 'Chiang Mai') {
-            var cc = 'CNX, Thailand';
-        }
-        else if (country == 'Phuket') {
-            var cc = 'HKT, Thailand';
-        }
-        else if (country == 'Hat Yai') {
-            var cc = 'HDY, Thailand';
-        };
-    /*prints the result*/
-        var results = document.getElementById('ToCountry');
-        results.innerHTML = cc;
-        }
-
-    /* Show country code & city (OneWay FROM)*/
-    function calcular3(val) {
-            var country = val
-        if (country == 'Bangkok') {
-            var cc = 'BKK, Thailand';
-        }
-        else if (country == 'Chiang Mai') {
-            var cc = 'CNX, Thailand';
-        }
-        else if (country == 'Phuket') {
-            var cc = 'HKT, Thailand';
-        }
-        else if (country == 'Hat Yai') {
-            var cc = 'HDY, Thailand';
-        };
-
-    /*prints the result*/
-        var results = document.getElementById('FromCountry2');
-        results.innerHTML = cc;
-        }
-
-    /* Show country code & city (OneWay TO)*/
-    function calcular4(val) {
-        var country = val
-        if (country == 'Bangkok') {
-            var cc = 'BKK, Thailand';
-        }
-        else if (country == 'Chiang Mai') {
-            var cc = 'CNX, Thailand';
-        }
-        else if (country == 'Phuket') {
-            var cc = 'HKT, Thailand';
-        }
-        else if (country == 'Hat Yai') {
-            var cc = 'HDY, Thailand';
-        };
-    /*prints the result*/
-        var results = document.getElementById('ToCountry2');
-        results.innerHTML = cc;
-        }
-</script>
 
 </html>

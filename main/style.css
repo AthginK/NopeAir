@@ -114,12 +114,15 @@
     background-color: #B486FF;
     color: white;
     border-radius: 15px;
-    margin-top: -1.5%;
-    margin-left: 75%;
+    margin-left: 80%;
     font-family: 'Prompt', sans-serif;
     font-size: 17px;
     font-weight: 580;
     height: 50px;
+}
+
+.btn.search.ow {
+    margin-top: -1%;
 }
 
 .dest {
