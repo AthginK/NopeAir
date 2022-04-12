@@ -23,7 +23,6 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>No.</th>
                     <th>Flight ID</th>
                     <th>From</th>
                     <th>To</th>
@@ -58,7 +57,6 @@
                 {
             ?>
                 <tr>
-                    <td>1</td>
                     <td><?php echo $row['flight_id'];?></td>
                     <td><?php echo $row['from_place'];?></td>
                     <td><?php echo $row['to_place'];?></td>
