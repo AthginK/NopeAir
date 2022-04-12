@@ -53,7 +53,7 @@
                         <td>Success</td>
                         <td>
                             <a href="" class="btn btn-success" onclick="sendEmail(); reset(); return false;">Send Email</a>
-                            <a href="delete.php?id=<?php echo $row['pass_id']; ?>" class="btn btn-danger">Delete</a>
+                            <a href="delete_pass.php?id=<?php echo $row['pass_id']; ?>" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 <?php
