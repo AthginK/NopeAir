@@ -1,13 +1,14 @@
 <?php
  
-include("./connect.php");
+ include 'connect.php';
    
 $username = $_POST["username"];
 $password = $_POST["password"];
 
 if ($_SERVER["REQUEST_METHOD"]== "POST") {
 
-    // SQL script for selecting by username    
+    // SQL script for selecting by username
+    $sql = "SELECT * FROM admin WHERE username='$username'"; 
     
     if($result = mysqli_query($conn, $sql)){       
         foreach($result as $user) {       
