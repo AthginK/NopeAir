@@ -11,6 +11,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--connect database-->
+    <?php
+
+        include 'connect.php';
+
+        $rtf =  $_POST['rT_from'];
+        $rtt =  $_POST['rT_to'];
+
+        $sql = "SELECT * from flight WHERE from_place = '$rtf' AND to_place = 'rtt'";
+        $result = $conn -> query($sql);
+        while ($row = $result -> fetch_assoc())
+
+    ?>
+
     <title>NopeAir - Select Flight</title>
 </head>
 
@@ -63,9 +77,16 @@
                 <div class="col-2">Flight Information</div>
             </div>
 
+            <!-- Flight Detail -->
             <div class="box flight">
-
+                <p>
+                <?php
+                    ;
+                ?>
+                </p>
             </div><br><br>
+
+
             <h4><b><img src="\image\airplane.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Return</b></h4>
             <div class="row" style="margin-left: 3%;">
                 <div class="col-2">&nbsp;Departure</div>

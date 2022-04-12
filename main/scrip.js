@@ -306,3 +306,86 @@ function qrShow() {
         document.getElementById('qrBox').style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px";
     }
 }
+
+
+/* Show country code & city (RoundTrip FROM)*/
+function calcular1(val) {
+    var country = val
+if (country == 'Bangkok') {
+    var cc = 'BKK, Thailand';
+}
+else if (country == 'Chiang Mai') {
+    var cc = 'CNX, Thailand';
+}
+else if (country == 'Phuket') {
+    var cc = 'HKT, Thailand';
+}
+else if (country == 'Hat Yai') {
+    var cc = 'HDY, Thailand';
+};
+
+/*prints the result*/
+var results = document.getElementById('FromCountry');
+results.innerHTML = cc;
+}
+
+/* Show country code & city (RoundTrip TO)*/
+function calcular2(val) {
+var country = val
+if (country == 'Bangkok') {
+    var cc = 'BKK, Thailand';
+}
+else if (country == 'Chiang Mai') {
+    var cc = 'CNX, Thailand';
+}
+else if (country == 'Phuket') {
+    var cc = 'HKT, Thailand';
+}
+else if (country == 'Hat Yai') {
+    var cc = 'HDY, Thailand';
+};
+/*prints the result*/
+var results = document.getElementById('ToCountry');
+results.innerHTML = cc;
+}
+
+/* Show country code & city (OneWay FROM)*/
+function calcular3(val) {
+    var country = val
+if (country == 'Bangkok') {
+    var cc = 'BKK, Thailand';
+}
+else if (country == 'Chiang Mai') {
+    var cc = 'CNX, Thailand';
+}
+else if (country == 'Phuket') {
+    var cc = 'HKT, Thailand';
+}
+else if (country == 'Hat Yai') {
+    var cc = 'HDY, Thailand';
+};
+
+/*prints the result*/
+var results = document.getElementById('FromCountry2');
+results.innerHTML = cc;
+}
+
+/* Show country code & city (OneWay TO)*/
+function calcular4(val) {
+var country = val
+if (country == 'Bangkok') {
+    var cc = 'BKK, Thailand';
+}
+else if (country == 'Chiang Mai') {
+    var cc = 'CNX, Thailand';
+}
+else if (country == 'Phuket') {
+    var cc = 'HKT, Thailand';
+}
+else if (country == 'Hat Yai') {
+    var cc = 'HDY, Thailand';
+};
+/*prints the result*/
+var results = document.getElementById('ToCountry2');
+results.innerHTML = cc;
+}
