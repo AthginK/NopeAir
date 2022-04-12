@@ -16,16 +16,13 @@
 
         include 'connect.php';
 
-        $rtf =  $_POST['rT_from'];
-        $rtt =  $_POST['rT_to'];
-        $ded =  $_POST['de_date'];
-        $red =  $_POST['re_date'];
+        $owf =  $_POST['oW_from'];
+        $owt =  $_POST['oW_to'];
+        $owd =  $_POST['oW_date'];
 
-        $sql1 = "SELECT * from flight WHERE from_place = '$rtf' AND to_place = '$rtt' AND flight_date = '$ded'";
-        $result1 = $conn -> query($sql1);
+        $sql = "SELECT * from flight WHERE from_place = '$owf' AND to_place = '$owt' AND flight_date = '$owd'";
+        $result = $conn -> query($sql);
 
-        $sql2 = "SELECT * from flight WHERE from_place = '$rtt' AND to_place = '$rtf' AND flight_date = '$red'";
-        $result2 = $conn -> query($sql2);
 
     ?>
 
@@ -83,7 +80,7 @@
 
             <!-- Flight Detail -->
                 <?php
-                    while ($rows = $result1 -> fetch_assoc()){
+                    while ($rows = $result -> fetch_assoc()){
                         $depart = $rows['departure'];
                         $arrive = $rows['arrival'];
                         $time = $rows['flight_time'];
@@ -97,43 +94,13 @@
                                     <div class='row'><img src='\image\aeroplane.svg'></div>
                                     <div class='row'>$time m</div>
                                 </div>
-                                <div class='btn next price'>$price</div>
+                                <button value='$price' class='btn next price'>$price</button>
                             </div>
                         </div>";
                     }
                 ?>
 
             <br><br>
-
-
-            <h4><b><img src="\image\airplane.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Return</b></h4>
-            <div class="row" style="margin-left: 3%;">
-                <div class="col-2">&nbsp;Departure</div>
-                <div class="col-2">Arrival</div>
-                <div class="col-2">Flight Information</div>
-            </div>
-
-            <!-- Flight Detail -->
-            <?php
-                    while ($rows = $result2 -> fetch_assoc()){
-                        $depart = $rows['departure'];
-                        $arrive = $rows['arrival'];
-                        $time = $rows['flight_time'];
-                        $price = $rows['price'];
-                        echo "
-                        <div class='box flight'>
-                            <div class='row' style='margin-left: 3%; padding: 1.5% 0% 0% 0%;'>
-                                <div class='col-2'>$depart&nbsp;&nbsp;<img src='\image\iconmonstr-arrow-right-thin.svg'></div>
-                                <div class='col-2'>$arrive</div>
-                                <div class='col-2' style='margin-left: 1%;'>
-                                    <div class='row'><img src='\image\aeroplane.svg'></div>
-                                    <div class='row'>$time m</div>
-                                </div>
-                                <div class='btn next price'>$price</div>
-                            </div>
-                        </div>";
-                    }
-                ?>
 
         </div>
     </div>
