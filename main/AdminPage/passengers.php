@@ -50,8 +50,8 @@
                     die("Error". mysqli_connect_error());
                 }
                 //Select database//
-                $sel = "SELECT * FROM airline";
-                $query = $con->query($sel);
+                $sel = "SELECT * FROM passenger";
+                $query = $conn->query($sel);
                 while ($row = $query -> fetch_assoc())
                 {
             ?>
