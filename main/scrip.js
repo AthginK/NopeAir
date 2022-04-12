@@ -408,3 +408,11 @@ function handleSubmit () {
 
     return;
 }
+
+function getFlight (id) {
+    localStorage.setItem("flight1", id);
+}
+
+function getFlight2 (id) {
+    localStorage.setItem("flight2", id);
+}
