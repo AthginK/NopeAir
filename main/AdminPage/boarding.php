@@ -71,7 +71,7 @@
                     <td><?php echo $row['price'];?></td>
                     <td>Management</td>
                     <td>
-                        <a href="" class="btn btn-warning">Edit</a>
+                        <a href="edit_board.php" class="btn btn-warning">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
