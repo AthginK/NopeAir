@@ -67,9 +67,10 @@
                     <td><?php echo $row['arrival'];?></td>
                     <td><?php echo $row['flight_time'];?></td>
                     <td><?php echo $row['airplane_id'];?></td>
+                    <td><?php echo $row['price'];?></td>
                     <td>Management</td>
                     <td>
-                        <a href="" class="btn btn-success">Edit</a>
+                        <a href="" class="btn btn-warning">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
