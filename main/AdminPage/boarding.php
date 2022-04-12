@@ -32,6 +32,8 @@
                     <th>Flight Time</th>
                     <th>Airplane ID</th>
                     <th>Price</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -62,7 +64,6 @@
                     <td><?php echo $row['to_place'];?></td>
                     <td><?php echo $row['date'];?></td>
                     <td><?php echo $row['departure'];?></td>
-                    <td><?php echo $row['departure'];?></td>
                     <td><?php echo $row['arrival'];?></td>
                     <td><?php echo $row['flight_time'];?></td>
                     <td><?php echo $row['airplane_id'];?></td>
@@ -70,6 +71,8 @@
                     <td>Management</td>
                     <td>
                         <a href="edit_board.php" class="btn btn-warning">Edit</a>
+                    </td>
+                    <td>
                         <a href="" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
