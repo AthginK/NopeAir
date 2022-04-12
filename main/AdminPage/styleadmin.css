@@ -85,3 +85,45 @@ form .btn {
   font-size: 17px;
   font-weight: 580;
 }
+
+<<<<<<< HEAD
+
+.btn.pass {
+  background-color: #B486FF;
+  color: white;
+  border-radius: 15px;
+  margin-left: 0%;
+  font-family: 'Prompt', sans-serif;
+  font-size: 17px;
+  font-weight: 580;
+  height: 150px;
+  width: 200px;
+  border: #4A4A4A solid;
+}
+.btn.boarding {
+  background-color: #231141;
+  color: white;
+  border-radius: 15px;
+  margin-left: 50%;
+  font-family: 'Prompt', sans-serif;
+  font-size: 17px;
+  font-weight: 580;
+  height: 150px;
+  width: 200px;
+  border: #4A4A4A solid;
+=======
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.9rem 2.5rem;
+  text-align: center;
+  background-color: #B486FF;
+  border-radius: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  font-size: 17px;
+  font-weight: 580;
+>>>>>>> 6651d231a88cebe18d16181591f29bc5e6eae9db
+}
