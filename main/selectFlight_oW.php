@@ -85,6 +85,7 @@
                         $arrive = $rows['arrival'];
                         $time = $rows['flight_time'];
                         $price = $rows['price'];
+                        $id = $rows['flight_id']
                         echo "
                         <div class='box flight'>
                             <div class='row' style='margin-left: 3%; padding: 1.5% 0% 0% 0%;'>
@@ -94,7 +95,7 @@
                                     <div class='row'><img src='\image\aeroplane.svg'></div>
                                     <div class='row'>$time m</div>
                                 </div>
-                                <button value='$price' class='btn next price'>$price</button>
+                                <button value='$id' class='btn next price'>$price</button>
                             </div>
                         </div>";
                     }
