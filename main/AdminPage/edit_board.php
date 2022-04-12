@@ -53,7 +53,7 @@
 
         if(isset($_POST['edit_btn']))
         {
-            $id = $_POST['edit_id'];
+            $flight_id = $_POST['edit_id'];
 
             $query = "SELECT * FROM flight WHERE flight_id='$flight_id' ";
             $query_run = mysqli_query($connection, $query);
