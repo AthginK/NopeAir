@@ -34,39 +34,40 @@
                     <div class="card-body">
 
                         <form action="code.php" method="POST">
-
+                            <input type="hidden" name="edit_board" value="<?php echo $row['id'] ?>">
+                            
                             <div class="form-group mb-3">
                                 <label for="">From</label>
-                                <input type="text" name="from_place" class="form-control" >
+                                <input type="text" name="edit_form" value="<?php echo $row['from_place'] ?>" class="form-control" >
                             </div>
                             
                             <div class="form-group mb-3">
                                 <label for="">To</label>
-                                <input type="text" name="to_place" class="form-control" >
+                                <input type="text" name="to_place" value="<?php echo $row['to_place'] ?>" class="form-control" >
                             </div>
                             <div class="form-group mb-3">
                                 <label for="">Date</label>
-                                <input type="text" name="date" class="form-control" >
+                                <input type="text" name="date" value="<?php echo $row['flight_date'] ?>" class="form-control" >
                             </div>
                             <div class="form-group mb-3">
                                 <label for="">Departure</label>
-                                <input type="text" name="departure" class="form-control" >
+                                <input type="text" name="departure" value="<?php echo $row['departure'] ?>" class="form-control" >
                             </div>
                             <div class="form-group mb-3">
                                 <label for="">Arrival</label>
-                                <input type="text" name="arrival" class="form-control" >
+                                <input type="text" name="arrival" value="<?php echo $row['arrival'] ?>" class="form-control" >
                             </div>
                             <div class="form-group mb-3">
                                 <label for="">Flight Time</label>
-                                <input type="text" name="flight_time" class="form-control" >
+                                <input type="text" name="flight_time" value="<?php echo $row['flight_time'] ?>" class="form-control" >
                             </div>
                             <div class="form-group mb-3">
                                 <label for="">Airplane ID</label>
-                                <input type="text" name="airplane_id" class="form-control" >
+                                <input type="text" name="airplane_id" value="<?php echo $row['airplane_id'] ?>" class="form-control" >
                             </div>
                             <div class="form-group mb-3">
                                 <label for="">Price</label>
-                                <input type="text" name="price" class="form-control" >
+                                <input type="text" name="price" value="<?php echo $row['price'] ?>" class="form-control" >
                             </div>
                             <div class="form-group mb-3">
                                 <button type="submit" name="update_flight" class="btn btn-primary">Update Data</button>
