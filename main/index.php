@@ -22,8 +22,14 @@
 
         include 'connect.php';
 
-        $sql = "SELECT DISTINCT from_place from flight";
-        $result = $conn -> query($sql);
+        $sql1 = "SELECT DISTINCT from_place from flight";
+        $result1 = $conn -> query($sql1);
+
+        $sql2 = "SELECT DISTINCT to_place from flight";
+        $result2 = $conn -> query($sql2);
+
+        $result3 = $conn -> query($sql1);
+        $result4 = $conn -> query($sql2);
 
     ?>
 
@@ -71,24 +77,38 @@
                     <div class="place">
                         <p class="dest">From</p>
                         
-                        <select class="h1 prov" name="From" id="">
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name="From" onchange="calcular1(value)">
 
                         <?php
-                        while ($rows = $result -> fetch_assoc()){
+                        while ($rows = $result1 -> fetch_assoc()){
                             $from_place = $rows['from_place'];
-                            echo "<option class='h1 prov' value='$from_place'>$from_place</option>";
+                            echo "<option class='prov' value='$from_place'>$from_place</option>";
                         }
                         ?>
 
                         </select>
-                        <!--<p class="h1 prov" id="FromProv"><b>Bangkok</b></p>
-                        <p class="country" id="FromCountry">BKK, Thailand</p>-->
+                        <!--<p class="h1 prov" id="FromProv"><b>Bangkok</b></p>-->
+                        <p class="country" id="FromCountry">BKK, Thailand</p>
+
                     </div>
                     <div class="place">
                         <p class="dest">To</p>
-                        <p class="h1 prov" id="ToProv"><b>Tokyo</b></p>
-                        <p class="country" id="ToCountry">TYO, Japan</p>
+
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name="To" onchange="calcular2(value)">
+
+                        <?php
+                        while ($rows = $result2 -> fetch_assoc()){
+                            $to_place = $rows['to_place'];
+                            echo "<option class='prov' value='$to_place'>$to_place</option>";
+                        }
+                        ?>
+
+                        </select>
+
+                        <!--<p class="h1 prov" id="ToProv"><b>Tokyo</b></p>-->
+                        <p class="country" id="ToCountry">CNX, Thailand</p>
                     </div>
+
                     <div class="date">
                         <div class="departDate">
                             <p class="dateText">Departure</p>
@@ -104,13 +124,36 @@
                 <div class="oneway_select" id="oneway_select" style="display: none;">
                     <div class="place" id="oneway_place_from">
                         <p class="dest">From</p>
-                        <p class="h1 prov" id="FromProv"><b>Bangkok</b></p>
-                        <p class="country" id="FromCountry">BKK, Thailand</p>
+                    
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name="From" onchange="calcular3(value)">
+
+                            <?php
+                            while ($rows = $result3 -> fetch_assoc()){
+                                $from_place = $rows['from_place'];
+                                echo "<option class='prov' value='$from_place'>$from_place</option>";
+                            }
+                            ?>
+
+                        </select>
+                        
+                        <!--<p class="h1 prov" id="FromProv"><b>Bangkok</b></p>-->
+                        <p class="country" id="FromCountry2">BKK, Thailand</p>
                     </div>
                     <div class="place" id="oneway_place_to">
                         <p class="dest">To</p>
-                        <p class="h1 prov" id="ToProv"><b>Tokyo</b></p>
-                        <p class="country" id="ToCountry">TYO, Japan</p>
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name="To" onchange="calcular4(value)">
+
+                        <?php
+                        while ($rows = $result4 -> fetch_assoc()){
+                            $to_place = $rows['to_place'];
+                            echo "<option class='prov' value='$to_place'>$to_place</option>";
+                        }
+                        ?>
+
+                        </select>
+
+                        <!--<p class="h1 prov" id="ToProv"><b>Tokyo</b></p>-->
+                        <p class="country" id="ToCountry2">CNX, Thailand</p>
                     </div>
                     <div class="date" id="oneway_date">
                         <div class="departDate">
@@ -130,5 +173,89 @@
 
     </span>
 </body>
+
+<script>
+    /* Show country code & city (RoundTrip FROM)*/
+        function calcular1(val) {
+            var country = val
+        if (country == 'Bangkok') {
+            var cc = 'BKK, Thailand';
+        }
+        else if (country == 'Chiang Mai') {
+            var cc = 'CNX, Thailand';
+        }
+        else if (country == 'Phuket') {
+            var cc = 'HKT, Thailand';
+        }
+        else if (country == 'Hat Yai') {
+            var cc = 'HDY, Thailand';
+        };
+
+    /*prints the result*/
+        var results = document.getElementById('FromCountry');
+        results.innerHTML = cc;
+        }
+
+    /* Show country code & city (RoundTrip TO)*/
+    function calcular2(val) {
+        var country = val
+        if (country == 'Bangkok') {
+            var cc = 'BKK, Thailand';
+        }
+        else if (country == 'Chiang Mai') {
+            var cc = 'CNX, Thailand';
+        }
+        else if (country == 'Phuket') {
+            var cc = 'HKT, Thailand';
+        }
+        else if (country == 'Hat Yai') {
+            var cc = 'HDY, Thailand';
+        };
+    /*prints the result*/
+        var results = document.getElementById('ToCountry');
+        results.innerHTML = cc;
+        }
+
+    /* Show country code & city (OneWay FROM)*/
+    function calcular3(val) {
+            var country = val
+        if (country == 'Bangkok') {
+            var cc = 'BKK, Thailand';
+        }
+        else if (country == 'Chiang Mai') {
+            var cc = 'CNX, Thailand';
+        }
+        else if (country == 'Phuket') {
+            var cc = 'HKT, Thailand';
+        }
+        else if (country == 'Hat Yai') {
+            var cc = 'HDY, Thailand';
+        };
+
+    /*prints the result*/
+        var results = document.getElementById('FromCountry2');
+        results.innerHTML = cc;
+        }
+
+    /* Show country code & city (OneWay TO)*/
+    function calcular4(val) {
+        var country = val
+        if (country == 'Bangkok') {
+            var cc = 'BKK, Thailand';
+        }
+        else if (country == 'Chiang Mai') {
+            var cc = 'CNX, Thailand';
+        }
+        else if (country == 'Phuket') {
+            var cc = 'HKT, Thailand';
+        }
+        else if (country == 'Hat Yai') {
+            var cc = 'HDY, Thailand';
+        };
+    /*prints the result*/
+        var results = document.getElementById('ToCountry2');
+        results.innerHTML = cc;
+        }
+</script>
 
 </html>

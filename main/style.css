@@ -126,9 +126,11 @@
     margin: 3% 0 0 5%;
 }
 
-.h1.prov,
+
+.btn-lg.prov,
 .country {
     margin: 0 0 1% 10%;
+    border: none;
 }
 
 .departDate,
