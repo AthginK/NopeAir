@@ -23,6 +23,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th>No.</th>
                     <th>Flight ID</th>
                     <th>From</th>
                     <th>To</th>
