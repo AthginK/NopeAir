@@ -94,7 +94,7 @@
                                     <div class='row'><img src='\image\aeroplane.svg'></div>
                                     <div class='row'>$time m</div>
                                 </div>
-                                <div class='btn next price'>$price</div>
+                                <button value='$price' class='btn next price'>$price</button>
                             </div>
                         </div>";
                     }
