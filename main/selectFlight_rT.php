@@ -11,6 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--script-->
+    <script type="text/javascript" src="scrip.js"></script>
     <!--connect database-->
     <?php
 
@@ -88,6 +90,7 @@
                         $arrive = $rows['arrival'];
                         $time = $rows['flight_time'];
                         $price = $rows['price'];
+                        $id = $rows['flight_id'];
                         echo "
                         <div class='box flight'>
                             <div class='row' style='margin-left: 3%; padding: 1.5% 0% 0% 0%;'>
@@ -97,7 +100,7 @@
                                     <div class='row'><img src='\image\aeroplane.svg'></div>
                                     <div class='row'>$time m</div>
                                 </div>
-                                <div class='btn next price'>$price</div>
+                                <button id='$id' onclick='getFlight(this.id)' class='btn next price'>$price</button>
                             </div>
                         </div>";
                     }
@@ -120,6 +123,7 @@
                         $arrive = $rows['arrival'];
                         $time = $rows['flight_time'];
                         $price = $rows['price'];
+                        $id = $rows['flight_id'];
                         echo "
                         <div class='box flight'>
                             <div class='row' style='margin-left: 3%; padding: 1.5% 0% 0% 0%;'>
@@ -129,7 +133,7 @@
                                     <div class='row'><img src='\image\aeroplane.svg'></div>
                                     <div class='row'>$time m</div>
                                 </div>
-                                <div class='btn next price'>$price</div>
+                                <button id='$id' onclick='getFlight2(this.id)' class='btn next price'>$price</button>
                             </div>
                         </div>";
                     }
