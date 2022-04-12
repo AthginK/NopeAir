@@ -680,3 +680,30 @@ i {
     font-size: 17px;
     margin: 0;
 }
+
+.btn.select {
+    background-color: #B486FF;
+    color: white;
+    border-radius: 15px;
+    margin: 3%;
+    font-family: 'Prompt', sans-serif;
+    font-size: 17px;
+    font-weight: 580;
+    height: 40px;
+    width: 120px;
+}
+
+.seatInfo {
+    background-color: white;
+    margin: 5% 0 0 5%;
+    border-radius: 15px;
+}
+
+.nopePreFont {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 5px;
+    margin: 15% 2% 0 10%;
+    float: left;
+}

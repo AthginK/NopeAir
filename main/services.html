@@ -108,22 +108,51 @@
                     </div>
                 </div>
             </div>
-
+            <!-- --------------------------------Seat------------------------------------ -->
             <div class="row" id="SeatRow" style="margin-top: 7%;">
                 <div class="SeatTriangleUp" id="seatUp"></div>
                 <div class="selectSeatShow" id="selectSeatShow">
                     <h4 style="margin: 2% 0 0 3%;"><b>Seat Selection</b></h4>
-                    <div class="col-4"></div>
-                    <div class="col-8"></div>
-                    <p>Seat</p>
-                    <p>Seat</p>
-                    <p>Seat</p>
-                    <p>Seat</p>
-                    <p>Seat</p>
-                    <p>Seat</p>
+                    <div class="col-5">
+                        <div class="seatInfo">
+                            <h5 style="padding: 2% 0 0 2%;"><b>Depart</b></h5>
+                            <p style="padding-left: 2%;">Don Mueang (Bangkok) (DMK) - Chiang Rai (CEI)</p>
+                            <center><button type="button" class="btn select">Select</button></center>
+                        </div>
+                        <div class="seatInfo">
+                            <h5 style="padding: 2% 0 0 2%;"><b>Return</b></h5>
+                            <p style="padding-left: 2%;">Don Mueang (Bangkok) (DMK) - Chiang Rai (CEI)</p>
+                            <center><button type="button" class="btn select">Select</button></center>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="nopePreFont"></div>
+                                <div class="nopePreFontText" style="float: left;">
+                                    <p><b>Nok Premium Seat Front Row</b></p>
+                                    <p>500.00</p>
+                                </div>
+
+                                <div class="nopeHappy"></div>
+                                <div class="nopeSelect"></div>
+                            </div>
+                            <div class="col-6">
+                                <div class="nopePre"></div>
+                                <div class="nopeBooked"></div>
+                                <div class="nopeBlock"></div>
+                            </div>
+                        </div>
+                        <p style="margin-left: 5%;"><b>Seat Description</b></p>
+                        <p style="margin-left: 5%;"><b>Nope Air's in-flight seats are divided into 3 types, namely Private Seat (unoccupied
+                                seat), Nope Premium Seat and Nope Happy Seat.</b></p>
+                        <p style="margin-left: 5%;">Note: <b>Private Seat</b> is seat with no-one sitting next to you. We guarantee that the
+                            seats next to you are adjacent to each other in the same row and side. No one else
+                            will sit with you. For example, selecting seat no. 2C, there will be no-one seating next
+                            to you at seat no. 2B.</p>
+                    </div>
+                    <div class="col-7"></div>
                 </div>
             </div>
-<!-- --------------------------------Baggage------------------------------------ -->
+            <!-- --------------------------------Baggage------------------------------------ -->
             <div class="row" style="margin-top: 0%;" id="BaggageRow">
                 <div class="BaggageTriangleUp" id="BaggageUp"></div>
                 <div class="selectBaggageShow" id="selectBaggageShow">
@@ -194,7 +223,7 @@
                     </div>
                 </div>
             </div>
-<!-- --------------------------------Special Service------------------------------------ -->
+            <!-- --------------------------------Special Service------------------------------------ -->
             <div class="row" style="margin-top: 0%;" id="SpecialRow">
                 <div class="SpecialTriangleUp" id="SpecialUp"></div>
                 <div class="selectSpecialShow" id="selectSpecialShow">
@@ -231,9 +260,12 @@
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <a class="dropdown-item" onclick="DENoSelectNopeSpe()">No selection</a>
-                                            <a class="dropdown-item" onclick="DETwentyKGNopeSpe()">+20 kg Nope Baggage</a>
-                                            <a class="dropdown-item" onclick="DEThirtyKGNopeSpe()">+30 kg Nope Baggage</a>
-                                            <a class="dropdown-item" onclick="DEFortyKGNopeSpe()">+40 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="DETwentyKGNopeSpe()">+20 kg Nope
+                                                Baggage</a>
+                                            <a class="dropdown-item" onclick="DEThirtyKGNopeSpe()">+30 kg Nope
+                                                Baggage</a>
+                                            <a class="dropdown-item" onclick="DEFortyKGNopeSpe()">+40 kg Nope
+                                                Baggage</a>
                                         </div>
                                     </span>
                                 </div>
@@ -262,9 +294,12 @@
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <a class="dropdown-item" onclick="RENoSelectNopeSpe()">No selection</a>
-                                            <a class="dropdown-item" onclick="RETwentyKGNopeSpe()">+20 kg Nope Baggage</a>
-                                            <a class="dropdown-item" onclick="REThirtyKGNopeSpe()">+30 kg Nope Baggage</a>
-                                            <a class="dropdown-item" onclick="REFortyKGNopeSpe()">+40 kg Nope Baggage</a>
+                                            <a class="dropdown-item" onclick="RETwentyKGNopeSpe()">+20 kg Nope
+                                                Baggage</a>
+                                            <a class="dropdown-item" onclick="REThirtyKGNopeSpe()">+30 kg Nope
+                                                Baggage</a>
+                                            <a class="dropdown-item" onclick="REFortyKGNopeSpe()">+40 kg Nope
+                                                Baggage</a>
                                         </div>
                                     </span>
                                 </div>
@@ -275,7 +310,7 @@
                     </div>
                 </div>
             </div>
-<!-- --------------------------------Nope First------------------------------------ -->
+            <!-- --------------------------------Nope First------------------------------------ -->
             <div class="row" style="margin-top: 10%;" text-align="center">
                 <div class="col-4">
                     <div class="box services">
@@ -307,10 +342,12 @@
                                 <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
                             </div>
                             <div class="col-2">
-                                <input type="radio" name="nameDE" style="height:16px; width:16px;" value="<b>200.00</b>" onclick="FirstYesDE()"> Yes
+                                <input type="radio" name="nameDE" style="height:16px; width:16px;" value="<b>200.00</b>"
+                                    onclick="FirstYesDE()"> Yes
                             </div>
                             <div class="col-2">
-                                <input type="radio" name="nameDE" style="height:16px; width:16px;" value="<b>0.00</b>" onclick="FirstNoDE()" checked> No
+                                <input type="radio" name="nameDE" style="height:16px; width:16px;" value="<b>0.00</b>"
+                                    onclick="FirstNoDE()" checked> No
                             </div>
                         </div>
                         <div class="row" style="margin-left: 1%;">
@@ -338,10 +375,12 @@
                                 <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
                             </div>
                             <div class="col-2">
-                                <input type="radio" name="nameRE" style="height:16px; width:16px;" value="<b>200.00</b>" onclick="FirstYesRE()"> Yes
+                                <input type="radio" name="nameRE" style="height:16px; width:16px;" value="<b>200.00</b>"
+                                    onclick="FirstYesRE()"> Yes
                             </div>
                             <div class="col-2">
-                                <input type="radio" name="nameRE" style="height:16px; width:16px;" value="<b>0.00</b>" onclick="FirstNoRE()" checked> No
+                                <input type="radio" name="nameRE" style="height:16px; width:16px;" value="<b>0.00</b>"
+                                    onclick="FirstNoRE()" checked> No
                             </div>
                         </div>
                         <div class="row" style="margin-left: 1%;">
