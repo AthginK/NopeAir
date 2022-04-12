@@ -57,7 +57,6 @@
                 {
             ?>
                 <tr>
-                    <td>1</td>
                     <td><?php echo $row['flight_id'];?></td>
                     <td><?php echo $row['from_place'];?></td>
                     <td><?php echo $row['to_place'];?></td>
@@ -70,7 +69,7 @@
                     <td><?php echo $row['price'];?></td>
                     <td>Management</td>
                     <td>
-                        <a href="" class="btn btn-warning">Edit</a>
+                        <a href="edit_board.php" class="btn btn-warning">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
