@@ -682,3 +682,64 @@ i {
     font-size: 17px;
     margin: 0;
 }
+
+.btn.select {
+    background-color: #B486FF;
+    color: white;
+    border-radius: 15px;
+    margin: 3%;
+    font-family: 'Prompt', sans-serif;
+    font-size: 17px;
+    font-weight: 580;
+    height: 40px;
+    width: 120px;
+}
+
+.seatInfo {
+    background-color: white;
+    margin: 5% 0 0 5%;
+    border-radius: 15px;
+}
+
+.nopePreFont {
+    width: 40px;
+    height: 40px;
+    background-color: #000a55;
+    border-radius: 5px;
+    float: left;
+}
+.nopeHappy {
+    width: 40px;
+    height: 40px;
+    background-color: #586cff;
+    border-radius: 5px;
+    float: left;
+}
+.nopeSelect {
+    width: 40px;
+    height: 40px;
+    background-color: #f5ff8a;
+    border-radius: 5px;
+    float: left;
+}
+.nopePre {
+    width: 40px;
+    height: 40px;
+    background-color: #0017c9;
+    border-radius: 5px;
+    float: left;
+}
+.nopeBooked {
+    width: 40px;
+    height: 40px;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    float: left;
+}
+.nopeBlock {
+    width: 40px;
+    height: 40px;
+    background-color: #acacac;
+    border-radius: 5px;
+    float: left;
+}

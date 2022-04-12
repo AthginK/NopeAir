@@ -19,6 +19,12 @@
 </head>
 
 <body>
+    <?php
+        if(isset($_GET['delete'])){
+            $id = $_GET['delete'];
+            $mysql -> query("DELETE FROM passenger WHERE passenger_id = $id") or die($mysql->error());
+        }
+    ?>
     <div class="container">
         <table class="table">
             <thead>
@@ -60,12 +66,12 @@
                     <td><?php echo $row['title'];?></td>
                     <td><?php echo $row['firstname'];?></td>
                     <td><?php echo $row['lastname'];?></td>
-                    <td><?php echo $row['email'];?></td>
+                    <td id="email"><?php echo $row['email'];?></td>
                     <td><?php echo $row['tel'];?></td>
                     <td>Success</td>
                     <td>
-                        <a href="" class="btn btn-success">Send Email</a>
-                        <a href="" class="btn btn-danger">Edit</a>
+                        <a href="" class="btn btn-success" onclick="sendEmail(); reset(); return false;">Send Email</a>
+                        <a href="passengers.php?delete=<?php echo $row['passenger_id'];?>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <?php
@@ -74,6 +80,23 @@
             </tbody>
         </table>
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "jame@gmail.com",
+                Password : "password",
+                To : 'jams2020.t@gmail.com',
+                From :document.getElementById("email").value,
+                Subject : "This is the subject",
+                Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+        }
+    </script>
 </body>
 
 </html>
