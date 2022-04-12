@@ -58,6 +58,7 @@
                 while ($row = $query -> fetch_assoc())
                 {
             ?>
+            <form action="edit_board.php" method="post">
                 <tr>
                     <td><?php echo $row['flight_id'];?></td>
                     <td><?php echo $row['from_place'];?></td>
@@ -70,12 +71,13 @@
                     <td><?php echo $row['price'];?></td>
                     <td>Management</td>
                     <td>
-                        <a href="edit_board.php" class="btn btn-warning">Edit</a>
+                        <button name='flight_id' value='<?php echo $row['flight_id']?>' class="btn btn-warning">Edit</button>
                     </td>
                     <td>
                         <a href="" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
+            </form>
                 <?php
                 }
                 ?>

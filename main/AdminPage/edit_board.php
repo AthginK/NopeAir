@@ -42,29 +42,20 @@
                 else {
                     die("Error". mysqli_connect_error());
                 }
+
+                $flight_id = $_POST['flight_id'];
+
                 //Select database//
-                $sel = "SELECT * FROM flight";
+                $sel = "SELECT * FROM flight WHERE flight_id = '$flight_id'";
                 $query = $conn->query($sel);
+
+
+
                 while ($row = $query -> fetch_assoc())
                 {
             ?>
-        <?php
-        
-
-        if(isset($_POST['edit_']))
-        {
-            $flight_id = $_POST['edit_id'];
-
-            $query = "SELECT * FROM flight WHERE flight_id='$flight_id' ";
-            $query_run = mysqli_query($connection, $query);
-
-
-        
-
-        foreach($query_run as $row)
-            {?>
                         <form action="code.php" method="POST">
-                            <input type="hidden" name="edit_board" value="<?php echo $row['id'] ?>">
+                            <input type="hidden" name="edit_board" value="<?php echo $row['flight_id'] ?>">
                             
                             <div class="form-group mb-3">
                                 <label for="">From</label>
@@ -105,8 +96,6 @@
                             </form>
                 <?php 
                 }
-            } 
-         }
 
         ?>
 
