@@ -85,3 +85,29 @@ form .btn {
   font-size: 17px;
   font-weight: 580;
 }
+
+
+.btn.pass {
+  background-color: #B486FF;
+  color: white;
+  border-radius: 15px;
+  margin-left: 0%;
+  font-family: 'Prompt', sans-serif;
+  font-size: 17px;
+  font-weight: 580;
+  height: 150px;
+  width: 200px;
+  border: #4A4A4A solid;
+}
+.btn.boarding {
+  background-color: #231141;
+  color: white;
+  border-radius: 15px;
+  margin-left: 50%;
+  font-family: 'Prompt', sans-serif;
+  font-size: 17px;
+  font-weight: 580;
+  height: 150px;
+  width: 200px;
+  border: #4A4A4A solid;
+}
