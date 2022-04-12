@@ -34,10 +34,7 @@
                     <div class="card-body">
 
                         <form action="code.php" method="POST">
-                            <div class="form-group mb-3">
-                                <label for="">Flight ID</label>
-                                <input type="text" name="stud_id" class="form-control" >
-                            </div>
+
                             <div class="form-group mb-3">
                                 <label for="">From</label>
                                 <input type="text" name="from_place" class="form-control" >
@@ -72,7 +69,7 @@
                                 <input type="text" name="price" class="form-control" >
                             </div>
                             <div class="form-group mb-3">
-                                <button type="submit" name="update_stud_data" class="btn btn-primary">Update Data</button>
+                                <button type="submit" name="update_flight" class="btn btn-primary">Update Data</button>
                             </div>
 
                         </form>

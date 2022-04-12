@@ -2,15 +2,19 @@
 session_start();
 $con = mysqli_connect("localhost","root","","phptutorials");
 
-if(isset($_POST['update_stud_data']))
+if(isset($_POST['update_flight']))
 {
-    $id = $_POST['stud_id'];
+    $to_place = $_POST['to_place'];
+    $date = $_POST['date'];
+    $departure = $_POST['departure'];
+    $arrival = $_POST['arrival'];
+    $flight_time = $_POST['flight_time'];
+    $airplane_id = $_POST['airplane_id'];
+    $price = $_POST['price'];
 
-    $name = $_POST['name'];
-    $class = $_POST['class'];
-    $phone = $_POST['phone'];
 
-    $query = "UPDATE student SET stud_name='$name', stud_class='$class', stud_phone='$phone' WHERE id='$id' ";
+    $query = "UPDATE flight SET  to_place='$to_place', flight_date='$flight_date', departure='$departure', 
+            arrival='$arrival', flight_time='$flight_time', airplane_id='$airplane_id', price='$price' WHERE flight_id='$flight_id' ";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
