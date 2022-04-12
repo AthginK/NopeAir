@@ -19,12 +19,6 @@
 </head>
 
 <body>
-    <?php
-        if(isset($_GET['delete'])){
-            $id = $_GET['delete'];
-            $mysql -> query("DELETE FROM passenger WHERE passenger_id = $id") or die($mysql->error());
-        }
-    ?>
     <div class="container">
         <table class="table">
             <thead>
@@ -62,7 +56,7 @@
                 {
             ?>
                 <tr>
-                    <td>1</td>
+                    <td><?php echo $row['pass_id'];?></td>
                     <td><?php echo $row['title'];?></td>
                     <td><?php echo $row['firstname'];?></td>
                     <td><?php echo $row['lastname'];?></td>
@@ -71,7 +65,7 @@
                     <td>Success</td>
                     <td>
                         <a href="" class="btn btn-success" onclick="sendEmail(); reset(); return false;">Send Email</a>
-                        <a href="passengers.php?delete=<?php echo $row['passenger_id'];?>" class="btn btn-danger">Delete</a>
+                        <a href="passengers.php?delete=<?php echo $row['pass_id'];?>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <?php
@@ -80,8 +74,18 @@
             </tbody>
         </table>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
+    
+    <!-- Delete Row -->
+    <?php
+        if(isset($_GET['delete'])){
+            $id = $_GET['delete'];
+            $mysql -> query("DELETE FROM passenger WHERE pass_id = $id") or die($mysql->error());
+        }
+    ?>
+
+    <!-- Sending Email -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <script>
         function sendEmail(){
             Email.send({
