@@ -1,3 +1,12 @@
+<?php
+include "connect.php";
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $delete = mysqli_query($conn, "DELETE FROM datadel WHERE id = $id");
+}
+?>
+
 <html lang="en">
 
 <head>
@@ -34,70 +43,65 @@
                 </tr>
             </thead>
             <tbody>
-            <?php   
-                $servername = "localhost"; 
-                $username = "root"; 
-                $password = "";   
+                <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
                 $database = "airline";
-            
+
                 // Create a connection 
-                $conn = mysqli_connect($servername, 
-                    $username, $password, $database);
-                if($conn) {
+                $conn = mysqli_connect(
+                    $servername,
+                    $username,
+                    $password,
+                    $database
+                );
+                if ($conn) {
                     //echo "success";
-                } 
-                else {
-                    die("Error". mysqli_connect_error());
+                } else {
+                    die("Error" . mysqli_connect_error());
                 }
                 //Select database//
                 $sel = "SELECT * FROM passenger";
                 $query = $conn->query($sel);
-                while ($row = $query -> fetch_assoc())
-                {
-            ?>
-                <tr>
-                    <td><?php echo $row['pass_id'];?></td>
-                    <td><?php echo $row['title'];?></td>
-                    <td><?php echo $row['firstname'];?></td>
-                    <td><?php echo $row['lastname'];?></td>
-                    <td id="email"><?php echo $row['email'];?></td>
-                    <td><?php echo $row['tel'];?></td>
-                    <td>Success</td>
-                    <td>
-                        <a href="" class="btn btn-success" onclick="sendEmail(); reset(); return false;">Send Email</a>
-                        <a href="passengers.php?delete=<?php echo $row['pass_id'];?>" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
+                while ($row = $query->fetch_assoc()) {
+                ?>
+                    <tr>
+                        <td><?php echo $row['pass_id']; ?></td>
+                        <td><?php echo $row['title']; ?></td>
+                        <td><?php echo $row['firstname']; ?></td>
+                        <td><?php echo $row['lastname']; ?></td>
+                        <td id="email"><?php echo $row['email']; ?></td>
+                        <td><?php echo $row['tel']; ?></td>
+                        <td>Success</td>
+                        <td>
+                            <a href="" class="btn btn-success" onclick="sendEmail(); reset(); return false;">Send Email</a>
+                            <a href="passengers.php?delete=<?php echo $row['pass_id']; ?>" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
                 <?php
                 }
                 ?>
             </tbody>
         </table>
     </div>
-    
-    <!-- Delete Row -->
-    <?php
-        if(isset($_GET['delete'])){
-            $id = $_GET['delete'];
-            $mysql -> query("DELETE FROM passenger WHERE pass_id = $id") or die($mysql->error());
-        }
-    ?>
 
     <!-- Sending Email -->
+
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script>
-        function sendEmail(){
+        function sendEmail() {
             Email.send({
-                Host : "smtp.gmail.com",
-                Username : "jame@gmail.com",
-                Password : "password",
-                To : 'jams2020.t@gmail.com',
-                From :document.getElementById("email").value,
-                Subject : "This is the subject",
-                Body : "And this is the body"
+                Host: "smtp.gmail.com",
+                Username: "jame@gmail.com",
+                Password: "password",
+                To: 'jams2020.t@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "This is the subject",
+                Body: "And this is the body"
             }).then(
-            message => alert(message)
+                message => alert(message)
             );
         }
     </script>
