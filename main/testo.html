@@ -1,0 +1,30 @@
+<html>
+<body>
+    <h2>How to Auto Calculate Price in Javascript - www.pakainfo.com</h2>
+    <form name="frm-pin" method="post" action="pin-index-a.php">
+        <input type="hidden" name="mode" value="PinRequest" />
+        <label class="w3-text-green"><b>Number Of Items</b></label>
+        <select name="tot_pin_requested" onchange="calcular(this.value)" required>
+			<option value="" disabled selected>Select your option</option>
+			<option value="1">Mobile</option>
+			<option value="2">Pendrive</option>
+			<option value="3">LCD</option>
+			<option value="4">Computer</option>
+			<option value="5">Laptop</option>
+			<option value="6">Car</option>
+			<option value="7">Bike</option>
+			<option value="8">Iphone</option>
+			<option value="9">Home</option>
+			<option value="10">Khatri</option>
+		</select>
+        <label><b>Total Amount</b></label>
+        <input class="w3-input w3-border" name="item_price" id="item_price" type="text" readonly>
+        <script>
+            function calcular(val) {
+                var tot_price = val * 100;
+                /*prints the result*/
+                var results = document.getElementById('item_price');
+                results.value = tot_price;
+            }
+        </script>
+        <body>
