@@ -20,13 +20,16 @@ if(isset($_POST['update_flight']))
     if($query_run)
     {
         $_SESSION['status'] = "Data Updated Successfully";
-        header("Location: index.php");
+        $_SESSION['status_code'] = "success";
+        header("Location: boarding.php");
     }
     else
     {
         $_SESSION['status'] = "Not Updated";
-        header("Location: index.php");
+        $_SESSION['status_code'] = "FAIL";
+        header("Location: boarding.php");
     }
 }
 
-?>
+
+
