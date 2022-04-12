@@ -1,12 +1,3 @@
-<?php
-include "connect.php";
-
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $delete = mysqli_query($conn, "DELETE FROM datadel WHERE id = $id");
-}
-?>
-
 <html lang="en">
 
 <head>
@@ -44,26 +35,12 @@ if (isset($_GET['id'])) {
             </thead>
             <tbody>
                 <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $database = "airline";
+                include "connect.php";
 
-                // Create a connection 
-                $conn = mysqli_connect(
-                    $servername,
-                    $username,
-                    $password,
-                    $database
-                );
-                if ($conn) {
-                    //echo "success";
-                } else {
-                    die("Error" . mysqli_connect_error());
-                }
                 //Select database//
-                $sel = "SELECT * FROM passenger";
-                $query = $conn->query($sel);
+                $sql = "SELECT * FROM passenger";
+                $query = mysqli_query($conn, $sql);
+                 
                 while ($row = $query->fetch_assoc()) {
                 ?>
                     <tr>
@@ -76,7 +53,7 @@ if (isset($_GET['id'])) {
                         <td>Success</td>
                         <td>
                             <a href="" class="btn btn-success" onclick="sendEmail(); reset(); return false;">Send Email</a>
-                            <a href="passengers.php?delete=<?php echo $row['pass_id']; ?>" class="btn btn-danger">Delete</a>
+                            <a href="delete.php?id=<?php echo $row['pass_id']; ?>" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 <?php
