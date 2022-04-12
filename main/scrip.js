@@ -2,13 +2,18 @@
 function Oneway_display() {
     document.getElementById('roundtrip_select').style.display = 'none';
     document.getElementById('oneway_select').style.display = 'block';
-    document.getElementById('oneway_date').style.width = '30%'
-    document.getElementById('oneway_place_from').style.width = '30%'
-    document.getElementById('oneway_place_to').style.width = '30%'
+    document.getElementById('oneway_date').style.width = '30%';
+    document.getElementById('oneway_place_from').style.width = '30%';
+    document.getElementById('oneway_place_to').style.width = '30%';
+    document.getElementById('rT').classList.remove("active");
+    document.getElementById('oW').classList.add("active");
+
 }
 function RoundTrip_display() {
     document.getElementById('oneway_select').style.display = 'none';
     document.getElementById('roundtrip_select').style.display = 'block';
+    document.getElementById('rT').classList.add("active");
+    document.getElementById('oW').classList.remove("active");
 }
 
 // <------------------------Extra service------------------------->

@@ -40,7 +40,7 @@
 }
 
 .btn.roundTrip {
-    background-color: #B486FF;
+    background-color: #E1E1E1;
     border-radius: 60px 0px 0px 0px;
     color: #000;
     display: inline;
@@ -74,6 +74,10 @@
     cursor: pointer;
     outline: none;
     margin-left: -1%;
+}
+
+.btn.active {
+    background-color: #B486FF;
 }
 
 .path {
