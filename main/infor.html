@@ -86,7 +86,10 @@
                     <input type="text" class="Email" id="f-email" name="email" placeholder="&nbsp;&nbsp;Email">
                 </div>
                 <div class="row" id="rowMove">
-                    <div class="col-6">
+                    <div class="col-6" style="display: none;">
+                        <input type="text" id="get_trip" name="trip">
+                        <input type="text" id="flight" name="flight">
+                        <input type="text" id="flight2" name="flight2">
                     </div>
                     <div class="col-6">
                         <input type="submit" onclick="handleSubmit()" value="Next" class="btn next">
@@ -96,12 +99,12 @@
             <form action="selectFlight.php" method="post">
             <div class="row" id="rowMove" style="margin-top: -5%;">
                 <div class="col-6">
-                    <input type="submit" onclick="handleSubmit()" value="Previous" class="btn prev">
+                    <input type="submit" value="Previous" class="btn prev">
                 </div>
                 <div class="col-6" style="display: none;">
-                    <input type="text" id="get_trip" name="trip">
-                    <input type="text" id="flight" name="flight">
-                    <input type="text" id="flight2" name="flight2">
+                    <input type="text" id="pre_get_trip" name="trip">
+                    <input type="text" id="pre_flight" name="flight">
+                    <input type="text" id="pre_flight2" name="flight2">
                 </div>
             </form>
             </div>

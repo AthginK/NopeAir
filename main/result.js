@@ -1,11 +1,14 @@
 window.addEventListener('load', () => {
     const trip = localStorage.getItem('Trip');
     document.getElementById('get_trip').value = trip;
+    document.getElementById('pre_get_trip').value = trip;
     const flight = localStorage.getItem('flight');
     document.getElementById('flight').value = flight;
+    document.getElementById('pre_flight').value = flight;
     if (trip == 'rt') {
         const flight2 = localStorage.getItem('flight2');
         document.getElementById('flight2').value = flight2;
+        document.getElementById('pre_flight2').value = flight2;
     }
 
     const firstname = localStorage.getItem('firstname');
