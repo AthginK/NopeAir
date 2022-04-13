@@ -409,10 +409,49 @@ function handleSubmit () {
     return;
 }
 
+/*get flight chosen by user*/
+/*One Way*/
 function getFlight (id) {
-    localStorage.setItem("flight1", id);
+    var old = localStorage.getItem('flight');
+    if (old !== null) {
+        var old_flight = document.getElementById(old);
+        old_flight.classList.remove("activate");
+    }
+
+    var new_flight = document.getElementById(id);
+    new_flight.classList.add("activate");
+
+    localStorage.setItem("flight", id);
+    localStorage.setItem("Trip", 'ow');
 }
 
+/*Round Trip*/
+/*Depart*/
+function getFlight1 (id) {
+    var old = localStorage.getItem('flight1');
+    if (old !== null) {
+        var old_flight = document.getElementById(old);
+        old_flight.classList.remove("activate");
+    }
+
+    var new_flight = document.getElementById(id);
+    new_flight.classList.add("activate");
+
+    localStorage.setItem("flight1", id);
+    localStorage.setItem("Trip", 'rt');
+
+}
+
+/*return*/
 function getFlight2 (id) {
+    var old = localStorage.getItem('flight2');
+    if (old !== null) {
+        var old_flight = document.getElementById(old);
+        old_flight.classList.remove("activate");
+    }
+
+    var new_flight = document.getElementById(id);
+    new_flight.classList.add("activate");
+
     localStorage.setItem("flight2", id);
 }

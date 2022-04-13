@@ -100,7 +100,7 @@
                                     <div class='row'><img src='\image\aeroplane.svg'></div>
                                     <div class='row'>$time m</div>
                                 </div>
-                                <button id='$id' onclick='getFlight(this.id)' class='btn next price'>$price</button>
+                                <button id='$id' onclick='getFlight1(this.id)' class='btn next price'>$price</button>
                             </div>
                         </div>";
                     }
