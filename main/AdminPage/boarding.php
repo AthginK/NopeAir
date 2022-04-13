@@ -69,12 +69,12 @@
                     <td><?php echo $row['flight_time'];?></td>
                     <td><?php echo $row['airplane_id'];?></td>
                     <td><?php echo $row['price'];?></td>
-                    <td>Management</td>
+                    
                     <td>
                         <button name='flight_id' value='<?php echo $row['flight_id']?>' class="btn btn-warning">Edit</button>
                     </td>
                     <td>
-                        <a href="" class="btn btn-danger">Delete</a>
+                        <a href="delete_flight.php?id=<?php echo $row['flight_id']; ?>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             </form>
