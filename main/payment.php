@@ -18,6 +18,39 @@
     <title>NopeAir - Payment</title>
     <!--script-->
     <script type="text/javascript" src="result.js"></script>
+
+    <!--connect database-->
+    <?php
+
+        include 'connect.php';
+        $flight = $_POST['flight'];
+        $trip = $_POST['trip'];
+        $fname = $_POST['firstname'];
+        $lname = $_POST['lastname'];
+        $bill = $_POST['bill'];
+        
+        $sel = "SELECT * from flight WHERE flight_id = '$flight'";
+        $query = $conn -> query($sel);
+
+        while ($row = $query -> fetch_assoc()) {
+            $from = $row['from_place'];
+            $to =  $row['to_place'];
+            $date =  $row['flight_date'];
+        }
+
+        if ($trip == 'rt') {
+            $flight2 = $_POST['flight2'];
+
+            $sel = "SELECT * from flight WHERE flight_id = '$flight2'";
+            $query = $conn -> query($sel);
+
+            while ($row = $query -> fetch_assoc()) {
+                $return =  $row['flight_date'];
+            }
+        }
+        alert($bill)
+    ?>
+</head>
 </head>
 
 <body>

@@ -129,71 +129,71 @@ function SelectFirst() {
 //เปลี่ยนราคา
 //Baggage
 function DENoSelectBagg() {
-    document.getElementById('DEbaggPrice').innerHTML = "<b>0.00</b>";
+    document.getElementById('DEbaggPrice').innerHTML = "<b>0.00</b><input type='float' name='DEbagg' value0='.00' style='display: none;'>";
     document.getElementById('selectBaggDE').innerHTML = "No selection";
 }
 function DETwentyKGBagg() {
-    document.getElementById('DEbaggPrice').innerHTML = "<b>200.00</b>";
+    document.getElementById('DEbaggPrice').innerHTML = "<b>200.00</b><input type='float' name='DEbagg' value='200.00' style='display: none;'>";
     document.getElementById('selectBaggDE').innerHTML = "+20 kg Nope Baggage";
 }
 function DEThirtyKGBagg() {
-    document.getElementById('DEbaggPrice').innerHTML = "<b>300.00</b>";
+    document.getElementById('DEbaggPrice').innerHTML = "<b>300.00</b><input type='float' name='DEbagg' value='300.00' style='display: none;'>";
     document.getElementById('selectBaggDE').innerHTML = "+30 kg Nope Baggage";
 }
 function DEFortyKGBagg() {
-    document.getElementById('DEbaggPrice').innerHTML = "<b>400.00</b>";
+    document.getElementById('DEbaggPrice').innerHTML = "<b>400.00</b><input type='float' name='DEbagg' value='400.00' style='display: none;'>";
     document.getElementById('selectBaggDE').innerHTML = "+40 kg Nope Baggage";
 }
 
 function RENoSelectBagg() {
-    document.getElementById('REbaggPrice').innerHTML = "<b>0.00</b>";
+    document.getElementById('REbaggPrice').innerHTML = "<b>0.00</b><input type='float' name='REbagg' value0='.00' style='display: none;'>";
     document.getElementById('selectBaggRE').innerHTML = "No selection";
 }
 function RETwentyKGBagg() {
-    document.getElementById('REbaggPrice').innerHTML = "<b>200.00</b>";
+    document.getElementById('REbaggPrice').innerHTML = "<b>200.00</b><input type='float' name='REbagg' value='200.00' style='display: none;'>";
     document.getElementById('selectBaggRE').innerHTML = "+20 kg Nope Baggage";
 }
 function REThirtyKGBagg() {
-    document.getElementById('REbaggPrice').innerHTML = "<b>300.00</b>";
+    document.getElementById('REbaggPrice').innerHTML = "<b>300.00</b><input type='float' name='REbagg' value='300.00' style='display: none;'>";
     document.getElementById('selectBaggRE').innerHTML = "+30 kg Nope Baggage";
 }
 function REFortyKGBagg() {
-    document.getElementById('REbaggPrice').innerHTML = "<b>400.00</b>";
+    document.getElementById('REbaggPrice').innerHTML = "<b>400.00</b><input type='float' name='REbagg' value='400.00' style='display: none;'>";
     document.getElementById('selectBaggRE').innerHTML = "+40 kg Nope Baggage";
 }
 
 //Special Service
 function DENoSelectNopeSpe() {
-    document.getElementById('DEspecPrice').innerHTML = "<b>0.00</b>";
+    document.getElementById('DEspecPrice').innerHTML = "<b>0.00</b><input type='float' name='DEspec' value0='.00' style='display: none;'>";
     document.getElementById('selectSpeDE').innerHTML = "No selection";
 }
 function DETwentyKGNopeSpe() {
-    document.getElementById('DEspecPrice').innerHTML = "<b>200.00</b>";
+    document.getElementById('DEspecPrice').innerHTML = "<b>200.00</b><input type='float' name='DEspec' value='200.00' style='display: none;'>";
     document.getElementById('selectSpeDE').innerHTML = "+20 kg Nope Baggage";
 }
 function DEThirtyKGNopeSpe() {
-    document.getElementById('DEspecPrice').innerHTML = "<b>300.00</b>";
+    document.getElementById('DEspecPrice').innerHTML = "<b>300.00</b><input type='float' name='DEspec' value='300.00' style='display: none;'>";
     document.getElementById('selectSpeDE').innerHTML = "+30 kg Nope Baggage";
 }
 function DEFortyKGNopeSpe() {
-    document.getElementById('DEspecPrice').innerHTML = "<b>400.00</b>";
+    document.getElementById('DEspecPrice').innerHTML = "<b>400.00</b><input type='float' name='DEspec' value='400.00' style='display: none;'>";
     document.getElementById('selectSpeDE').innerHTML = "+40 kg Nope Baggage";
 }
 
 function RENoSelectNopeSpe() {
-    document.getElementById('REspecPrice').innerHTML = "<b>0.00</b>";
+    document.getElementById('REspecPrice').innerHTML = "<b>0.00</b><input type='float' name='REbagg' value0='.00' style='display: none;'>";
     document.getElementById('selectSpeRE').innerHTML = "No selection";
 }
 function RETwentyKGNopeSpe() {
-    document.getElementById('REspecPrice').innerHTML = "<b>200.00</b>";
+    document.getElementById('REspecPrice').innerHTML = "<b>200.00</b><input type='float' name='REbagg' value='200.00' style='display: none;'>";
     document.getElementById('selectSpeRE').innerHTML = "+20 kg Nope Baggage";
 }
 function REThirtyKGNopeSpe() {
-    document.getElementById('REspecPrice').innerHTML = "<b>300.00</b>";
+    document.getElementById('REspecPrice').innerHTML = "<b>300.00</b><input type='float' name='REbagg' value='300.00' style='display: none;'>";
     document.getElementById('selectSpeRE').innerHTML = "+30 kg Nope Baggage";
 }
 function REFortyKGNopeSpe() {
-    document.getElementById('REspecPrice').innerHTML = "<b>400.00</b>";
+    document.getElementById('REspecPrice').innerHTML = "<b>400.00</b><input type='float' name='REbagg' value='400.00' style='display: none;'>";
     document.getElementById('selectSpeRE').innerHTML = "+40 kg Nope Baggage";
 }
 
@@ -201,21 +201,25 @@ function REFortyKGNopeSpe() {
 function FirstYesDE() {
     var check = document.querySelector('input[name="nameDE"]:checked').value;
     document.getElementById('FirstPriceDE').innerHTML = check;
+    document.getElementById('FPDE').value = 200.00;
 }
 
 function FirstNoDE() {
     var check = document.querySelector('input[name="nameDE"]:checked').value;
     document.getElementById('FirstPriceDE').innerHTML = check;
+    document.getElementById('FPDE').value = 0.00;
 }
 
 function FirstYesRE() {
     var check = document.querySelector('input[name="nameRE"]:checked').value;
     document.getElementById('FirstPriceRE').innerHTML = check;
+    document.getElementById('FPRE').value = 200.00;
 }
 
 function FirstNoRE() {
     var check = document.querySelector('input[name="nameRE"]:checked').value;
     document.getElementById('FirstPriceRE').innerHTML = check;
+    document.getElementById('FPRE').value = 0.00;
 }
 
 // <--------------------Payment-------------------------->

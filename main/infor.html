@@ -14,6 +14,19 @@
     <!--script-->
     <script type="text/javascript" src="scrip.js"></script>
     <script type="text/javascript" src="result.js"></script>
+    <script>
+        const trip = localStorage.getItem('Trip');
+        document.getElementById('get_trip').value = trip;
+        document.getElementById('pre_get_trip').value = trip;
+        const flight = localStorage.getItem('flight');
+        document.getElementById('flight').value = flight;
+        document.getElementById('pre_flight').value = flight;
+        if (trip == 'rt') {
+            const flight2 = localStorage.getItem('flight2');
+            document.getElementById('flight2').value = flight2;
+            document.getElementById('pre_flight2').value = flight2;
+        }
+    </script>
 
     <title>NopeAir - Passengers Info</title>
 </head>

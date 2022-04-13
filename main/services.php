@@ -9,6 +9,18 @@
 
     <!-- Java script -->
     <script src="scrip.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            const trip = localStorage.getItem('Trip');
+            document.getElementById('get_trip').value = trip;
+            const flight = localStorage.getItem('flight');
+            document.getElementById('flight').value = flight;
+            if (trip == 'rt') {
+                const flight2 = localStorage.getItem('flight2');
+                document.getElementById('flight2').value = flight2;
+                document.getElementById('pre_flight2').value = flight2;
+            }})
+    </script>
 
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -16,7 +28,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <title>NopeAir - Extra Services</title>
-
+    
     <!--connect database-->
     <?php
 
@@ -100,7 +112,7 @@
                 </div>
             </div>
 
-            <div class="row" align="center">
+            <div class="row" text-align="center">
                 <div class="col-4">
                     <div class="box services">
                         <center>
@@ -138,7 +150,9 @@
                     </div>
                 </div>
             </div>
-            <!-- --------------------------------Seat------------------------------------ -->
+
+            <form action="pay_cal.php" method='post'>
+            <!----------------------------------Seat-------------------------------------->
             <div class="row" id="SeatRow" style="margin-top: 7%;">
                 <div class="SeatTriangleUp" id="seatUp"></div>
                 <div class="selectSeatShow" id="selectSeatShow">
@@ -152,9 +166,9 @@
        
                             <div class='seatInfo'>
                                 <h5 style='padding: 2% 0 0 2%;'><b>Return</b></h5>
-                                <p style='padding-left: 2%;'>$to - $from</p>
+                                <p style='padding-left: 2%;'><?php echo "$to - $from" ?></p>
                                 <center><button type='button' class='btn select'>Select</button></center>
-                            </div>";
+                            </div>
                
                         
                         <div class="row" style="margin: 5% 0 0 5%;">
@@ -276,7 +290,7 @@
                             </div>
                         </div>
                         <p style="padding-left: 2%;">Your price:</p>
-                        <p style="padding: 0 0 2% 2%;" id="DEbaggPrice"><b>0.00</b></p>
+                        <p style="padding: 0 0 2% 2%;" id="DEbaggPrice"><b>0.00</b><input type='float' name='DEbagg' value='.00' style='display: none;'></p>
                     </div>
                     <div class="serviceInfo">
                         <h5 style="padding: 2% 0 0 2%;"><b>Return</b></h5>
@@ -307,7 +321,7 @@
                             </div>
                         </div>
                         <p style="padding-left: 2%;">Your price:</p>
-                        <p style="padding: 0 0 2% 2%;" id="REbaggPrice"><b>0.00</b></p>
+                        <p style="padding: 0 0 2% 2%;" id="REbaggPrice"><b>0.00</b><input type='float' name='REbagg' value='.00' style='display: none;'></p>
                     </div>
                 </div>
             </div>
@@ -360,7 +374,7 @@
                             </div>
                         </div>
                         <p style="padding-left: 2%;">Your price:</p>
-                        <p style="padding: 0 0 2% 2%;" id="DEspecPrice"><b>0.00</b></p>
+                        <p style="padding: 0 0 2% 2%;" id="DEspecPrice"><b>0.00</b><input type='float' name='DEspec' value='.00' style='display: none;'></p>
                     </div>
                     <div class="serviceInfo">
                         <h5 style="padding: 2% 0 0 2%;"><b>Return</b></h5>
@@ -394,7 +408,7 @@
                             </div>
                         </div>
                         <p style="padding-left: 2%;">Your price:</p>
-                        <p style="padding: 0 0 2% 2%;" id="REspecPrice"><b>0.00</b></p>
+                        <p style="padding: 0 0 2% 2%;" id="REspecPrice"><b>0.00</b><input type='float' name='REspec' value='.00' style='display: none;'></p>
                     </div>
                 </div>
             </div>
@@ -450,7 +464,7 @@
                         <p style="padding-left: 2%;">Extra Service price:</p>
                         <p style="padding-left: 2%;"><b>200.00</b></p>
                         <p style="padding-left: 2%;">Your price:</p>
-                        <p style="padding: 0 0 2% 2%;" id="FirstPriceDE"><b>0.00</b></p>
+                        <p style="padding: 0 0 2% 2%;" id="FirstPriceDE"><b>0.00</b></p><input type='float' id='FPDE' name='FPDE' value='.00' style='display: none;'>
                     </div>
                     <div class="serviceInfo">
                         <h5 style="padding: 2% 0 0 2%;"><b>Return</b></h5>
@@ -483,7 +497,7 @@
                         <p style="padding-left: 2%;">Extra Service price:</p>
                         <p style="padding-left: 2%;"><b>200.00</b></p>
                         <p style="padding-left: 2%;">Your price:</p>
-                        <p style="padding: 0 0 2% 2%;" id="FirstPriceRE"><b>0.00</b></p>
+                        <p style="padding: 0 0 2% 2%;" id="FirstPriceRE"><b>0.00</b></p><input type='float' id='FPRE' name='FPRE' value='.00' style='display: none;'>
                     </div>
                 </div>
             </div>
@@ -494,13 +508,15 @@
             <a href="infor.html" class="prev">Previous</a>
         </div>
         <div class="col-6">
-            <a href="payment.html">
-                <button type="button" class="btn next">Next</button>
-            </a>
+            <button type="submit" class="btn next">Next</button>
+            <div style="display: none">
+                <input type="text" id="get_trip" name="trip">
+                <input type="text" id="flight" name="flight">
+                <input type="text" id="flight2" name="flight2">
+            </div>
         </div>
-
     </div>
-
+    </form>
 </body>
 
 </html>
