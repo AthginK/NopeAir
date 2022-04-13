@@ -62,8 +62,8 @@
 
             <h4><b><img src="\image\user.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Passengers</b></h4>
 
-
-            <form action="services.html" method="post">
+            <!--Input User Data-->
+            <form action="services.php" method="post">
                 <div class="box info">
                     <div class="dropdown">
                         <select class="btn titles" id="f-title" name="title">
@@ -85,19 +85,25 @@
                     <input type="text" class="MobilePhone" id="tel" name="tel" placeholder="&nbsp;&nbsp;Mobile Phone">
                     <input type="text" class="Email" id="f-email" name="email" placeholder="&nbsp;&nbsp;Email">
                 </div>
+
+                <!--Next-->
                 <div class="row" id="rowMove">
-                    <div class="col-6" style="display: none;">
-                        <input type="text" id="get_trip" name="trip">
-                        <input type="text" id="flight" name="flight">
-                        <input type="text" id="flight2" name="flight2">
+                    <div class="col-6">
+                        <div style="display: none;">
+                            <input type="text" id="get_trip" name="trip">
+                            <input type="text" id="flight" name="flight">
+                            <input type="text" id="flight2" name="flight2">
+                        </div>
                     </div>
                     <div class="col-6">
                         <input type="submit" onclick="handleSubmit()" value="Next" class="btn next">
                     </div>
                 </div>
             </form>
+
+            <!--Previos-->
             <form action="selectFlight.php" method="post">
-            <div class="row" id="rowMove" style="margin-top: -5%;">
+            <div class="row" id="rowMove" style="margin-top: -8%;">
                 <div class="col-6">
                     <input type="submit" value="Previous" class="btn prev">
                 </div>
