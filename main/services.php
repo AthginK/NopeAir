@@ -23,6 +23,8 @@
         include 'connect.php';
         $flight = $_POST['flight'];
         $trip = $_POST['trip'];
+        $fname = $_POST['firstname'];
+        $lname = $_POST['lastname'];
         
         $sel = "SELECT * from flight WHERE flight_id = '$flight'";
         $query = $conn -> query($sel);
@@ -253,7 +255,7 @@
                                 <hr>
                             </div>
                             <div class="col-3">
-                                <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
+                                <p><?php echo "$fname &nbsp;&nbsp;&nbsp; $lname"?></p>
                             </div>
                             <div class="col-3">
                                 <div class="dropdown">
@@ -284,7 +286,7 @@
                                 <hr>
                             </div>
                             <div class="col-3">
-                                <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
+                                <p><?php echo "$fname &nbsp;&nbsp;&nbsp; $lname"?></p>
                             </div>
                             <div class="col-3">
                                 <div class="dropdown">
@@ -334,7 +336,7 @@
                                 <hr>
                             </div>
                             <div class="col-3">
-                                <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
+                                <p><?php echo "$fname &nbsp;&nbsp;&nbsp; $lname"?></p>
                             </div>
                             <div class="col-3">
                                 <div class="dropdown">
@@ -368,7 +370,7 @@
                                 <hr>
                             </div>
                             <div class="col-3">
-                                <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
+                                <p><?php echo "$fname &nbsp;&nbsp;&nbsp; $lname"?></p>
                             </div>
                             <div class="col-3">
                                 <div class="dropdown">
@@ -425,7 +427,7 @@
                                 <hr>
                             </div>
                             <div class="col-3">
-                                <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
+                                <p><?php echo "$fname &nbsp;&nbsp;&nbsp; $lname"?></p>
                             </div>
                             <div class="col-2">
                                 <input type="radio" name="nameDE" style="height:16px; width:16px;" value="<b>200.00</b>"
@@ -458,7 +460,7 @@
                                 <hr>
                             </div>
                             <div class="col-3">
-                                <p>Firstname&nbsp;&nbsp;&nbsp;Lastname</p>
+                                <p><?php echo "$fname &nbsp;&nbsp;&nbsp; $lname"?></p>
                             </div>
                             <div class="col-2">
                                 <input type="radio" name="nameRE" style="height:16px; width:16px;" value="<b>200.00</b>"
