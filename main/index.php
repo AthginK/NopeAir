@@ -75,14 +75,14 @@
                     </span>
                 </div>
 
-                <form action="selectFlight_rT.php" method="post">
+                <form action="selectFlight.php" method="post">
                 <!--round trip-->
                 <div class="roundtrip_select" id="roundtrip_select" style="display: block;">
                     <div class="place">
                         <p class="dest">From</p>
                         
                         <!--select From-->
-                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='rT_from' onchange="calcular1(value)">
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='from' onchange="calcular1(value)">
 
                         <?php
                         while ($rows = $result1 -> fetch_assoc()){
@@ -100,7 +100,7 @@
                         <p class="dest">To</p>
 
                         <!--select To-->
-                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='rT_to' onchange="calcular2(value)">
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='to' onchange="calcular2(value)">
 
                         <?php
                         while ($rows = $result2 -> fetch_assoc()){
@@ -118,27 +118,28 @@
                     <div class="date">
                         <div class="departDate">
                             <p class="dateText">Departure</p>
-                            <input type="date" name='de_date' class="showDate">
+                            <input type="date" name='date' class="showDate">
                         </div>
                         <div class="returnDate">
                             <p class="dateText">Return</p>
                             <input type="date" name='re_date' class="showDate">
                         </div>
                     </div>
+                    <input type='text' style='display: none;' value='' name='flight'>
                     <span>
-                        <button type="submit" style='' class="btn search">Search Flights</button>
+                        <button type="submit" name='trip' value='rt' id='rt' onclick='getTrip(this.id)' class="btn search">Search Flights</button>
                     </span>       
                 </div>        
                 </form >
 
-                <form action="selectFlight_oW.php" method="post">
+                <form action="selectFlight.php" method="post">
                 <!--one way-->
                 <div class="oneway_select" id="oneway_select" style="display: none;">
                     <div class="place" id="oneway_place_from">
                         <p class="dest">From</p>
                     
                         <!--select From-->
-                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='oW_from' onchange="calcular3(value)">
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='from' onchange="calcular3(value)">
 
                             <?php
                             while ($rows = $result3 -> fetch_assoc()){
@@ -156,7 +157,7 @@
                         <p class="dest">To</p>
                         
                         <!--select To-->
-                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='oW_to' onchange="calcular4(value)">
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='to' onchange="calcular4(value)">
 
                         <?php
                         while ($rows = $result4 -> fetch_assoc()){
@@ -173,11 +174,12 @@
                     <div class="date" id="oneway_date">
                         <div class="departDate">
                             <p class="dateText">Departure</p>
-                            <input type="date" name='oW_date' class="showDate">
+                            <input type="date" name='date' class="showDate">
                         </div>
                     </div>
+                    <input type='text' style='display: none;' value='' name='flight'>
                     <span>
-                        <button type="submit" class="btn search ow">Search Flights</button>
+                        <button type="submit" name='trip' value='ow' id='ow' onclick='getTrip(this.id)' class="btn search ow">Search Flights</button>
                     </span>
                 </div>
                 </form>
@@ -185,6 +187,5 @@
         </div>
     </div>
 </body>
-
 
 </html>

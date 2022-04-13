@@ -17,18 +17,47 @@
     <?php
 
         include 'connect.php';
+        $flight = $_POST['flight'];
+        $trip = $_POST['trip'];
+        if ($flight !== '') {
+            
+            $sel = "SELECT * from flight WHERE flight_id = '$flight'";
+            $query = $conn -> query($sel);
 
-        $rtf =  $_POST['rT_from'];
-        $rtt =  $_POST['rT_to'];
-        $ded =  $_POST['de_date'];
-        $red =  $_POST['re_date'];
+            while ($row = $query -> fetch_assoc()) {
+                $from = $row['from_place'];
+                $to =  $row['to_place'];
+                $date =  $row['flight_date'];
+            }
+            
+            if ($trip == 'rt') {
+                $flight2 = $_POST['flight2'];
 
-        $sql1 = "SELECT * from flight WHERE from_place = '$rtf' AND to_place = '$rtt' AND flight_date = '$ded'";
-        $result1 = $conn -> query($sql1);
+                $sel = "SELECT * from flight WHERE flight_id = '$flight2'";
+                $query = $conn -> query($sel);
 
-        $sql2 = "SELECT * from flight WHERE from_place = '$rtt' AND to_place = '$rtf' AND flight_date = '$red'";
-        $result2 = $conn -> query($sql2);
+                while ($row = $query -> fetch_assoc()) {
+                    $return =  $row['flight_date'];
+                }
+            }
+        }
+        else {
+            $from =  $_POST['from'];
+            $to =  $_POST['to'];
+            $date =  $_POST['date'];
 
+            if ($trip == 'rt') {
+                $return =  $_POST['date'];
+            }
+        }
+        
+        $sql = "SELECT * from flight WHERE from_place = '$from' AND to_place = '$to' AND flight_date = '$date'";
+        $result = $conn -> query($sql);
+
+        if ($trip == 'rt') {
+            $sql2 = "SELECT * from flight WHERE from_place = '$to' AND to_place = '$from' AND flight_date = '$return'";
+            $result2 = $conn -> query($sql2);
+        }
     ?>
 
     <title>NopeAir - Select Flight</title>
@@ -85,7 +114,7 @@
 
             <!-- Flight Detail -->
                 <?php
-                    while ($rows = $result1 -> fetch_assoc()){
+                    while ($rows = $result -> fetch_assoc()){
                         $depart = $rows['departure'];
                         $arrive = $rows['arrival'];
                         $time = $rows['flight_time'];
@@ -100,7 +129,7 @@
                                     <div class='row'><img src='\image\aeroplane.svg'></div>
                                     <div class='row'>$time m</div>
                                 </div>
-                                <button id='$id' onclick='getFlight1(this.id)' class='btn next price'>$price</button>
+                                <button id='$id' onclick='getFlight(this.id)' class='btn next price'>$price</button>
                             </div>
                         </div>";
                     }
@@ -108,16 +137,17 @@
 
             <br><br>
 
-
-            <h4><b><img src="\image\airplane.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Return</b></h4>
-            <div class="row" style="margin-left: 3%;">
-                <div class="col-2">&nbsp;Departure</div>
-                <div class="col-2">Arrival</div>
-                <div class="col-2">Flight Information</div>
-            </div>
-
-            <!-- Flight Detail -->
             <?php
+                if ($trip == 'rt') {
+                    echo "<h4><b><img src='\image\airplane.svg' style='width: 40px;height: 40px;'>&nbsp;&nbsp;Return</b></h4>
+                        <div class='row' style='margin-left: 3%;'>
+                            <div class='col-2'>&nbsp;Departure</div>
+                            <div class='col-2'>Arrival</div>
+                            <div class='col-2'>Flight Information</div>
+                        </div>";
+            
+
+                    /*Flight Detail*/
                     while ($rows = $result2 -> fetch_assoc()){
                         $depart = $rows['departure'];
                         $arrive = $rows['arrival'];
@@ -137,7 +167,8 @@
                             </div>
                         </div>";
                     }
-                ?>
+                }
+            ?>
 
         </div>
     </div>

@@ -1,4 +1,12 @@
 window.addEventListener('load', () => {
+    const trip = localStorage.getItem('Trip');
+    document.getElementById('get_trip').value = trip;
+    const flight = localStorage.getItem('flight');
+    document.getElementById('flight').value = flight;
+    if (trip == 'rt') {
+        const flight2 = localStorage.getItem('flight2');
+        document.getElementById('flight2').value = flight2;
+    }
 
     const firstname = localStorage.getItem('firstname');
     const lastname = localStorage.getItem('lastname');
@@ -18,4 +26,5 @@ window.addEventListener('load', () => {
     document.getElementById('date_of_birth').innerHTML = date_of_birth;
     document.getElementById('title').innerHTML = title;
     document.getElementById('email').innerHTML = email;
+
 })

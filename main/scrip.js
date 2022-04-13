@@ -422,12 +422,10 @@ function getFlight (id) {
     new_flight.classList.add("activate");
 
     localStorage.setItem("flight", id);
-    localStorage.setItem("Trip", 'ow');
 }
 
-/*Round Trip*/
-/*Depart*/
-function getFlight1 (id) {
+/*Round Trip Depart OR One Way*/
+function getFlight (id) {
     var old = localStorage.getItem('flight1');
     if (old !== null) {
         var old_flight = document.getElementById(old);
@@ -438,11 +436,9 @@ function getFlight1 (id) {
     new_flight.classList.add("activate");
 
     localStorage.setItem("flight1", id);
-    localStorage.setItem("Trip", 'rt');
-
 }
 
-/*return*/
+/*Round Trip Return*/
 function getFlight2 (id) {
     var old = localStorage.getItem('flight2');
     if (old !== null) {
@@ -454,4 +450,8 @@ function getFlight2 (id) {
     new_flight.classList.add("activate");
 
     localStorage.setItem("flight2", id);
+}
+
+function getTrip (id) {
+    localStorage.setItem("Trip", id);
 }
