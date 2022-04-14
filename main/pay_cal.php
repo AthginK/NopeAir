@@ -43,6 +43,6 @@ $bill = $DEbagg + $REbagg + $DEspec + $REspec + $FPDE + $FPRE + $price + $repric
 <script>
     window.addEventListener('load', () => {
         document.getElementById('myform').submit()
-        
+        header('Location: payment.php');
     })
 </script>
