@@ -25,7 +25,7 @@
 
 
         if(mysqli_query($conn, $sql)){
-                header('Location: payment.php');
+                header('Location: http://localhost/main/NopeAir/main/success.html');
         } else{
             echo "ERROR: Hush! Sorry $sql. " 
                 . mysqli_error($conn);

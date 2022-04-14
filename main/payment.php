@@ -17,7 +17,30 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <title>NopeAir - Payment</title>
     <!--script-->
-    <script type="text/javascript" src="result.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', () => {
+
+            const firstname = localStorage.getItem('firstname');
+            const lastname = localStorage.getItem('lastname');
+            const date_of_birth = localStorage.getItem('date_of_birth');
+            const title = localStorage.getItem('title');
+            const email = localStorage.getItem('email');
+            const tel = localStorage.getItem('tel');
+
+            document.getElementById('f-firstname').value = firstname;
+            document.getElementById('f-lastname').value = lastname;
+            document.getElementById('f-date_of_birth').value = date_of_birth;
+            document.getElementById('f-title').value = title;
+            document.getElementById('f-email').value = email;
+            document.getElementById('tel').value = tel;
+            document.getElementById('firstname').value = firstname;
+            document.getElementById('lastname').value = lastname;
+            document.getElementById('date_of_birth').value = date_of_birth;
+            document.getElementById('title').value = title;
+            document.getElementById('email').value = email;
+
+        })
+    </script>
 
     <!--connect database-->
     <?php
@@ -247,14 +270,26 @@
             </div>
             <div class="row" id="rowMove">
                 <div class="col-6">
-                    <a href="services.html" class="prev">Previous</a>
                 </div>
                 <div class="col-6">
-                    <a href="success.html">
-                        <button type="button" class="btn next">Next</button>
-                    </a>
+                    <button type="submit" class="btn next">Next</button>
                 </div>
             </div>
+        </form>
+        <!--Previos-->
+        <form action="services.php" method="post">
+            <div class="row" id="rowMove" style="margin-top: -8%;">
+                <div class="col-6">
+                    <input type="submit" value="Previous" class="btn prev">
+                </div>
+                <div class="col-6" style="display: none;">
+                    <input type="text" class="form-control" name="firstname" id="f-firstname">
+                    <input type="text" class="form-control" name="lastname" id="f-lastname">
+                    <input type="text" id="pre_get_trip" name="trip">
+                    <input type="text" id="pre_flight" name="flight">
+                    <input type="text" id="pre_flight2" name="flight2">
+                </div>
+                </div>
         </form>
 </body>
 

@@ -48,11 +48,11 @@
                         <td><?php echo $row['title']; ?></td>
                         <td><?php echo $row['firstname']; ?></td>
                         <td><?php echo $row['lastname']; ?></td>
-                        <td id="email"><?php echo $row['email']; ?></td>
+                        <td><?php echo $row['email']; ?></td>
                         <td><?php echo $row['tel']; ?></td>
                         <td>Success</td>
                         <td>
-                            <a href="" class="btn btn-success" onclick="sendEmail(); reset(); return false;">Send Email</a>
+                            <a href="" class="btn btn-success" id='<?php echo $row['email']; ?>' onclick="sendEmail(this.id); reset(); return false;">Send Email</a>
                             <a href="delete_pass.php?id=<?php echo $row['pass_id']; ?>" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
@@ -68,11 +68,13 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script>
-        function sendEmail() {
+        function sendEmail(id) {
             Email.send({
-                SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
-                To : 'NopeAir@gmail.com',
-                From : document.getElementById("email").value,
+                Host : "smtp.elasticemail.com",
+                Username : "nopeair123@gmail.com",
+                Password : "A02D206E65BE6D1F8E0A7B9448DD2ED71880",
+                To : id,
+                From : 'nopeair123@gmail.com',
                 Subject : "This is the subject",
                 Body : "And this is the body"
             }).then(
