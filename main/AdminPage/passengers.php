@@ -70,15 +70,13 @@
     <script>
         function sendEmail() {
             Email.send({
-                Host: "smtp.gmail.com",
-                Username: "jame@gmail.com",
-                Password: "password",
-                To: 'jams2020.t@gmail.com',
-                From: document.getElementById("email").value,
-                Subject: "This is the subject",
-                Body: "And this is the body"
+                SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+                To : 'NopeAir@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "This is the subject",
+                Body : "And this is the body"
             }).then(
-                message => alert(message)
+            message => alert(message)
             );
         }
     </script>
