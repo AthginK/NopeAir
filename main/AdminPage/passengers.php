@@ -52,7 +52,7 @@
                         <td><?php echo $row['tel']; ?></td>
                         <td>Success</td>
                         <td>
-                            <a href="" class="btn btn-success" id='<?php echo $row['email']; ?>' onclick="sendEmail(this.id); reset(); return false;">Send Email</a>
+                            <a href="sendemail.php?id=<?php echo $row['email']; ?>" class="btn btn-success">Send Email</a>
                             <a href="delete_pass.php?id=<?php echo $row['pass_id']; ?>" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
@@ -62,26 +62,6 @@
             </tbody>
         </table>
     </div>
-
-    <!-- Sending Email -->
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-
-    <script>
-        function sendEmail(id) {
-            Email.send({
-                Host : "smtp.elasticemail.com",
-                Username : "nopeair123@gmail.com",
-                Password : "A02D206E65BE6D1F8E0A7B9448DD2ED71880",
-                To : id,
-                From : 'nopeair123@gmail.com',
-                Subject : "This is the subject",
-                Body : "And this is the body"
-            }).then(
-            message => alert(message)
-            );
-        }
-    </script>
 </body>
 
 </html>
