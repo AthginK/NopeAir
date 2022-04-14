@@ -15,11 +15,19 @@
             document.getElementById('get_trip').value = trip;
             const flight = localStorage.getItem('flight');
             document.getElementById('flight').value = flight;
+            const price = localStorage.getItem('price');
             if (trip == 'rt') {
                 const flight2 = localStorage.getItem('flight2');
+                const price2 = localStorage.getItem('price2');
                 document.getElementById('flight2').value = flight2;
                 document.getElementById('pre_flight2').value = flight2;
-            }})
+                fprice = parseFloat(price) + parseFloat(price2)
+                document.getElementById('flightPrice').innerHTML = 'Price: ' + fprice;
+            }
+            else {
+                document.getElementById('flightPrice').innerHTML = 'Price: ' + price;
+            }
+        })
     </script>
 
     <!--bootstrap-->
@@ -84,10 +92,10 @@
         <div class="container-fluid" id="info" style="padding: 0%;">
 
             <div class="flight info">
-                <div class="col-sm-3" id="flightFrom">From</div>
-                <div class="col-sm-3" id="flightTo">To</div>
+                <div class="col-sm-3" id="flightFrom">From: <?php echo "$from"?></div>
+                <div class="col-sm-3" id="flightTo">To: <?php echo "$to"?></div>
                 <div class="col-sm-3" id="flightPerson">Person</div>
-                <div class="col-sm-3" id="flightPrice">Price</div>
+                <div class="col-sm-3" id="flightPrice"></div>
             </div>
 
             <div class="root">
@@ -510,7 +518,7 @@
     </div>
     <div class="row" style="margin: 8% 0 2% 0;">
         <div class="col-6">
-            <a href="infor.html" class="prev">Previous</a>
+            
         </div>
         <div class="col-6">
             <button type="submit" class="btn next">Next</button>
@@ -523,6 +531,21 @@
             </div>
         </div>
     </div>
+    </form>
+
+    <!--Previos-->
+    <form action="infor.php" method="post">
+            <div class="row" id="rowMove" style="margin-top: -8%;">
+                <div class="col-6">
+                    <input type="submit" value="Previous" class="btn prev">
+                </div>
+                <div class="col-6" style="display: none;">
+                    <input type="text" id="pre_get_trip" name="trip">
+                    <input type="text" id="pre_flight" name="flight">
+                    <input type="text" id="pre_flight2" name="flight2">
+                    <input style='display: none' type="text" name='from' value='<?php echo $from; ?>'>
+                    <input style='display: none' type="text" name='to' value='<?php echo $to; ?>'>
+                </div>
     </form>
 </body>
 

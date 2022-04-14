@@ -15,17 +15,21 @@
     <script type="text/javascript" src="scrip.js"></script>
     <script type="text/javascript" src="result.js"></script>
     <script>
+        window.addEventListener('load', () => {
+        const price = localStorage.getItem('price');
         const trip = localStorage.getItem('Trip');
         document.getElementById('get_trip').value = trip;
-        document.getElementById('pre_get_trip').value = trip;
-        const flight = localStorage.getItem('flight');
-        document.getElementById('flight').value = flight;
-        document.getElementById('pre_flight').value = flight;
+
         if (trip == 'rt') {
-            const flight2 = localStorage.getItem('flight2');
-            document.getElementById('flight2').value = flight2;
-            document.getElementById('pre_flight2').value = flight2;
+            const price2 = localStorage.getItem('price2');
+            fprice = parseFloat(price) + parseFloat(price2)
+            document.getElementById('flightPrice').innerHTML ='Price: ' + fprice;
+        } else {
+            document.getElementById('flightPrice').innerHTML ='Price: ' + price;
         }
+
+    })
+
     </script>
 
     <title>NopeAir - Passengers Info</title>
@@ -55,10 +59,10 @@
         <div class="container-fluid" id="info" style="padding: 0%;">
 
             <div class="flight info">
-                <div class="col-sm-3" id="flightFrom">From</div>
-                <div class="col-sm-3" id="flightTo">To</div>
+                <div class="col-sm-3" id="flightFrom">From: <?php echo $_POST['from']; ?></div>
+                <div class="col-sm-3" id="flightTo">To: <?php echo $_POST['to']; ?></div>
                 <div class="col-sm-3" id="flightPerson">Person</div>
-                <div class="col-sm-3" id="flightPrice">Price</div>
+                <div class="col-sm-3" id="flightPrice"></div>
             </div>
 
             <div class="root">

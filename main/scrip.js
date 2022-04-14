@@ -426,6 +426,8 @@ function getFlight (id) {
     new_flight.classList.add("activate");
 
     localStorage.setItem("flight", id);
+    localStorage.setItem("price", new_flight.value);
+
 }
 
 /*Round Trip Return*/
@@ -440,6 +442,8 @@ function getFlight2 (id) {
     new_flight.classList.add("activate");
 
     localStorage.setItem("flight2", id);
+    localStorage.setItem("price2", new_flight.value);
+
 }
 
 function getTrip (id) {

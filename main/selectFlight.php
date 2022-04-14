@@ -87,8 +87,8 @@
         <div class="container-fluid" id="info" style="padding: 0%;">
 
             <div class="flight info">
-                <div class="col-sm-3" id="flightFrom">From</div>
-                <div class="col-sm-3" id="flightTo">To</div>
+                <div class="col-sm-3" id="flightFrom">From: <?php echo "$from"?></div>
+                <div class="col-sm-3" id="flightTo">To: <?php echo "$to"?></div>
                 <div class="col-sm-3" id="flightPerson">Person</div>
                 <div class="col-sm-3" id="flightPrice">Price</div>
             </div>
@@ -129,7 +129,7 @@
                                     <div class='row'><img src='\image\aeroplane.svg'></div>
                                     <div class='row'>$time m</div>
                                 </div>
-                                <button id='$id' onclick='getFlight(this.id)' class='btn next price'>$price</button>
+                                <button id='$id' value='$price' onclick='getFlight(this.id)' class='btn next price'>$price</button>
                             </div>
                         </div>";
                     }
@@ -163,7 +163,7 @@
                                     <div class='row'><img src='\image\aeroplane.svg'></div>
                                     <div class='row'>$time m</div>
                                 </div>
-                                <button id='$id' onclick='getFlight2(this.id)' class='btn next price'>$price</button>
+                                <button id='$id' value='$price' onclick='getFlight2(this.id)' class='btn next price'>$price</button>
                             </div>
                         </div>";
                     }
@@ -177,9 +177,11 @@
             <a href="index.php" class="prev">Previous</a>
         </div>
         <div class="col-6">
-            <a href="infor.html">
-                <button type="button" class="btn next">Next</button>
-            </a>
+            <form action="infor.php" method="post">
+                <input style='display: none' type="text" name='from' value='<?php echo $from; ?>'>
+                <input style='display: none' type="text" name='to' value='<?php echo $to; ?>'>
+                <button type="submit" class="btn next">Next</button>
+            </form>
         </div>
 
     </div>
