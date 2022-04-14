@@ -4,6 +4,8 @@
 include 'connect.php';
 $flight = $_POST['flight'];
 $trip = $_POST['trip'];
+$flight = $_POST['flight'];
+$trip = $_POST['trip'];
 $DEbagg = $_POST['DEbagg'];
 $REbagg = $_POST['REbagg'];
 $DEspec = $_POST['DEspec'];
@@ -36,13 +38,29 @@ $bill = $DEbagg + $REbagg + $DEspec + $REspec + $FPDE + $FPRE + $price + $repric
 
 ?>
 
-<form action="payment.html" method='post' id='myform'>
+<form action="payment.php" method='post' id='myform'>
     <input type="float" name='bill' value='<?php echo "$bill" ?>'>
+    <input type="float" name='flight' value='<?php echo "$flight" ?>'>
+    <input type="float" name='trip' value='<?php echo "$trip" ?>'>
+    <input type="float" name='DEbagg' value='<?php echo "$DEbagg" ?>'>
+    <input type="float" name='REbagg' value='<?php echo "$REbagg" ?>'>
+    <input type="float" name='DEspec' value='<?php echo "$DEspec" ?>'>
+    <input type="float" name='REspec' value='<?php echo "$REspec" ?>'>
+    <input type="float" name='price' value='<?php echo "$price" ?>'>
+    <input type="float" name='FPDE' value='<?php echo "$FPDE" ?>'>
+    <input type="float" name='FPRE' value='<?php echo "$FPRE" ?>'>
+    <?php
+        if ($trip == 'rt') {
+            echo 
+                "<input type='float' name='flight2' value='<?php echo '$flight2'>
+                <input type='float' name='reprice' value='<?php echo '$reprice' ?>'";
+        }
+    ?>
 </form>
 
 <script>
     window.addEventListener('load', () => {
         document.getElementById('myform').submit()
-        header('Location: payment.php');
+
     })
 </script>

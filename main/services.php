@@ -513,6 +513,8 @@
                 <input type="text" id="get_trip" name="trip">
                 <input type="text" id="flight" name="flight">
                 <input type="text" id="flight2" name="flight2">
+                <input type="text" name="firstname" value='<?php echo"$fname" ?>'>
+                <input type="text" name="lastname" value='<?php echo"$lname" ?>'>
             </div>
         </div>
     </div>

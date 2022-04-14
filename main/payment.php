@@ -25,8 +25,6 @@
         include 'connect.php';
         $flight = $_POST['flight'];
         $trip = $_POST['trip'];
-        $fname = $_POST['firstname'];
-        $lname = $_POST['lastname'];
         $bill = $_POST['bill'];
         
         $sel = "SELECT * from flight WHERE flight_id = '$flight'";
@@ -48,7 +46,6 @@
                 $return =  $row['flight_date'];
             }
         }
-        alert($bill)
     ?>
 </head>
 </head>
@@ -79,7 +76,7 @@
                 <div class="col-sm-3" id="flightFrom">From</div>
                 <div class="col-sm-3" id="flightTo">To</div>
                 <div class="col-sm-3" id="flightPerson">Person</div>
-                <div class="col-sm-3" id="flightPrice">Price</div>
+                <div class="col-sm-3" id="flightPrice">Price<?php echo "<p>$bill</p>"?></div>
             </div>
 
             <div class="root">

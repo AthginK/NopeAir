@@ -414,7 +414,7 @@ function handleSubmit () {
 }
 
 /*get flight chosen by user*/
-/*One Way*/
+/*Round Trip Depart OR One Way*/
 function getFlight (id) {
     var old = localStorage.getItem('flight');
     if (old !== null) {
@@ -426,20 +426,6 @@ function getFlight (id) {
     new_flight.classList.add("activate");
 
     localStorage.setItem("flight", id);
-}
-
-/*Round Trip Depart OR One Way*/
-function getFlight (id) {
-    var old = localStorage.getItem('flight1');
-    if (old !== null) {
-        var old_flight = document.getElementById(old);
-        old_flight.classList.remove("activate");
-    }
-
-    var new_flight = document.getElementById(id);
-    new_flight.classList.add("activate");
-
-    localStorage.setItem("flight1", id);
 }
 
 /*Round Trip Return*/
