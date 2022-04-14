@@ -2,10 +2,10 @@
     use PHPMailer\PHPMailer\PHPMailer;
 
     include("connect.php");
-    $email = $_GET['email'];
-    $name = $_GET['firstname'];
+    $email = $_POST['email'];
+    $name = $_POST['firstname'];
 
-    if(isset( $_GET['email']) && $_GET['firstname']){
+    if(isset( $_POST['email']) && $_POST['firstname']){
         require_once "PHPMailer/PHPMailer.php";
         require_once "PHPMailer/SMTP.php";
         require_once "PHPMailer/Exception.php";

@@ -166,7 +166,7 @@
                         <?php if ($trip == 'rt') { echo "
                         <div class='seatInfo'>
                             <h5 style='padding: 2% 0 0 2%;'><b>Return</b></h5>
-                            <p style='padding-left: 2%;'><?php echo '$to - $from' ?></p>
+                            <p style='padding-left: 2%;'>";}?><?php if ($trip == 'rt') { echo "$to - $from</p>
                             <center><button type='button' class='btn select'>Select</button></center>
                         </div>";}?>
                
@@ -297,11 +297,11 @@
                         <h5 style="padding: 2% 0 0 2%;"><b>Return</b></h5>
                         <div class="row" style="padding-left: 2%;">
                             <div class="col-6">
-                                <p><?php echo "$to - $from" ?></p>
-                                <hr>
-                            </div>
-                            <div class="col-3">
-                                <p><?php echo "$fname &nbsp;&nbsp;&nbsp; $lname"?></p>
+                                <p>';}?><?php if ($trip == 'rt') { echo "$to - $from";}?><?php if ($trip == 'rt') { echo '</p>
+                                    <hr>
+                                </div>
+                                <div class="col-3">
+                                    <p>';}?><?php if ($trip == 'rt') { echo "$fname &nbsp;&nbsp;&nbsp; $lname";}?><?php if ($trip == 'rt') { echo '</p>
                             </div>
                             <div class="col-3">
                                 <div class="dropdown">
@@ -383,11 +383,11 @@
                         <h5 style="padding: 2% 0 0 2%;"><b>Return</b></h5>
                         <div class="row" style="padding-left: 2%;">
                             <div class="col-6">
-                                <p><?php echo "$to - $from" ?></p>
+                                <p>';}?><?php if ($trip == 'rt') { echo "$to - $from";}?><?php if ($trip == 'rt') { echo '</p>
                                 <hr>
                             </div>
                             <div class="col-3">
-                                <p><?php echo "$fname &nbsp;&nbsp;&nbsp; $lname"?></p>
+                                <p>';}?><?php if ($trip == 'rt') { echo "$fname &nbsp;&nbsp;&nbsp; $lname";}?><?php if ($trip == 'rt') { echo '</p>
                             </div>
                             <div class="col-3">
                                 <div class="dropdown">
@@ -475,11 +475,11 @@
                         <h5 style="padding: 2% 0 0 2%;"><b>Return</b></h5>
                         <div class="row" style="padding-left: 2%;">
                             <div class="col-5">
-                                <p><?php echo "$to - $from" ?></p>
+                                <p>';}?><?php if ($trip == 'rt') { echo "$to - $from";}?><?php if ($trip == 'rt') { echo '</p>
                                 <hr>
                             </div>
                             <div class="col-3">
-                                <p><?php echo "$fname &nbsp;&nbsp;&nbsp; $lname"?></p>
+                                <p>';}?><?php if ($trip == 'rt') { echo "$fname &nbsp;&nbsp;&nbsp; $lname";}?><?php if ($trip == 'rt') { echo '</p>
                             </div>
                             <div class="col-2">
                                 <input type="radio" name="nameRE" style="height:16px; width:16px;" value="<b>200.00</b>"

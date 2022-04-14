@@ -52,8 +52,12 @@
                         <td><?php echo $row['tel']; ?></td>
                         <td>Success</td>
                         <td>
-                            <a href="sendemail.php?id=<?php echo $row['email']; ?>" class="btn btn-success">Send Email</a>
-                            <a href="delete_pass.php?id=<?php echo $row['pass_id']; ?>" class="btn btn-danger">Delete</a>
+                            <form action="sendemail.php" method="post">
+                                <input style='display: none;' type="text" name='email' value='<?php echo $row['email'];?>'>
+                                <input style='display: none;' type="text" name='firstname' value='<?php echo $row['firstname'];?>'>
+                                <button type='submit' class="btn btn-success">Send Email</button>
+                                <a href="delete_pass.php?id=<?php echo $row['pass_id']; ?>" class="btn btn-danger">Delete</a>
+                            </form>
                         </td>
                     </tr>
                 <?php

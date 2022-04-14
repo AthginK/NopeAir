@@ -52,9 +52,16 @@ $bill = $DEbagg + $REbagg + $DEspec + $REspec + $FPDE + $FPRE + $price + $repric
     <?php
         if ($trip == 'rt') {
             echo 
-                "<input type='float' name='flight2' value='<?php echo '$flight2'>
-                <input type='float' name='reprice' value='<?php echo '$reprice' ?>'";
-        }
+                "<input type='float' name='flight2'";}
+        if ($trip == 'rt') {
+            echo 
+                "value='$flight2'>";}
+        if ($trip == 'rt') {
+            echo 
+                "<input type='float' name='reprice'";}
+        if ($trip == 'rt') {
+            echo 
+                "value='$reprice'>";}
     ?>
 </form>
 

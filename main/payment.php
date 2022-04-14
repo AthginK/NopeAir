@@ -107,10 +107,10 @@
         <div class="container-fluid" id="info" style="padding: 0%;">
 
             <div class="flight info">
-                <div class="col-sm-3" id="flightFrom">From</div>
-                <div class="col-sm-3" id="flightTo">To</div>
+                <div class="col-sm-3" id="flightFrom">From: <?php echo "$from"?></div>
+                <div class="col-sm-3" id="flightTo">To: <?php echo "$to"?></div>
                 <div class="col-sm-3" id="flightPerson">Person</div>
-                <div class="col-sm-3" id="flightPrice">Price<?php echo "<p>$bill</p>"?></div>
+                <div class="col-sm-3" id="flightPrice">Price: <?php echo "$bill"?></div>
             </div>
 
             <div class="root">
@@ -271,13 +271,17 @@
             </div>
         </div>
         <form action="insert.php" method="post">
-            <div class="form-group" style="display: none;">
+            <div class="form-group" style="display: ;">
                 <input type="number" class="form-control" name="title" id="f-title">
                 <input type="text" class="form-control" name="firstname" id="f-firstname">
                 <input type="text" class="form-control" name="lastname" id="f-lastname">
                 <input type="text" class="form-control" name="email" id="f-email">
                 <input type="text" class="form-control" name="tel" id="f-tel">
                 <input type="date" class="form-control" name="date_of_birth" id="f-date_of_birth">
+                <input type="float" class="form-control" name="bill" value='<?php echo $bill;?>'>
+                <input type="text" class="form-control" name="flight" value='<?php echo $flight;?>'>
+                <?php if ($trip == 'rt') { echo '
+                <input type="text" class="form-control" name="flight2"';}?><?php if ($trip == 'rt') { echo "value='$flight2'";}?>
             </div>
             <div class="row" id="rowMove">
                 <div class="col-6">
