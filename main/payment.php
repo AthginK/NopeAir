@@ -27,17 +27,28 @@
             const email = localStorage.getItem('email');
             const tel = localStorage.getItem('tel');
 
+            document.getElementById('firstname').innerHTML = firstname;
+            document.getElementById('lastname').innerHTML = lastname;
+            document.getElementById('date_of_birth').innerHTML = date_of_birth;
+            document.getElementById('title').innerHTML = title;
+            document.getElementById('email').innerHTML = email;
             document.getElementById('f-firstname').value = firstname;
             document.getElementById('f-lastname').value = lastname;
             document.getElementById('f-date_of_birth').value = date_of_birth;
             document.getElementById('f-title').value = title;
             document.getElementById('f-email').value = email;
-            document.getElementById('tel').value = tel;
-            document.getElementById('firstname').value = firstname;
-            document.getElementById('lastname').value = lastname;
-            document.getElementById('date_of_birth').value = date_of_birth;
-            document.getElementById('title').value = title;
-            document.getElementById('email').value = email;
+            document.getElementById('f-tel').value = tel;
+            document.getElementById('pre-firstname').value = firstname;
+            document.getElementById('pre-lastname').value = lastname;
+
+            const trip = localStorage.getItem('Trip');
+            document.getElementById('pre_get_trip').value = trip;
+            const flight = localStorage.getItem('flight');
+            document.getElementById('pre_flight').value = flight;
+            if (trip == 'rt') {
+                const flight2 = localStorage.getItem('flight2');
+                document.getElementById('pre_flight2').value = flight2;
+            }
 
         })
     </script>
@@ -265,7 +276,7 @@
                 <input type="text" class="form-control" name="firstname" id="f-firstname">
                 <input type="text" class="form-control" name="lastname" id="f-lastname">
                 <input type="text" class="form-control" name="email" id="f-email">
-                <input type="text" class="form-control" name="tel" id="tel">
+                <input type="text" class="form-control" name="tel" id="f-tel">
                 <input type="date" class="form-control" name="date_of_birth" id="f-date_of_birth">
             </div>
             <div class="row" id="rowMove">
@@ -283,8 +294,8 @@
                     <input type="submit" value="Previous" class="btn prev">
                 </div>
                 <div class="col-6" style="display: none;">
-                    <input type="text" class="form-control" name="firstname" id="f-firstname">
-                    <input type="text" class="form-control" name="lastname" id="f-lastname">
+                    <input type="text" class="form-control" name="firstname" id="pre-firstname">
+                    <input type="text" class="form-control" name="lastname" id="pre-lastname">
                     <input type="text" id="pre_get_trip" name="trip">
                     <input type="text" id="pre_flight" name="flight">
                     <input type="text" id="pre_flight2" name="flight2">
