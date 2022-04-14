@@ -163,12 +163,12 @@
                             <p style="padding-left: 2%;"><?php echo "$from - $to" ?></p>
                             <center><button type="button" class="btn select">Select</button></center>
                         </div>
-       
-                            <div class='seatInfo'>
-                                <h5 style='padding: 2% 0 0 2%;'><b>Return</b></h5>
-                                <p style='padding-left: 2%;'><?php echo "$to - $from" ?></p>
-                                <center><button type='button' class='btn select'>Select</button></center>
-                            </div>
+                        <?php if ($trip == 'rt') { echo "
+                        <div class='seatInfo'>
+                            <h5 style='padding: 2% 0 0 2%;'><b>Return</b></h5>
+                            <p style='padding-left: 2%;'><?php echo '$to - $from' ?></p>
+                            <center><button type='button' class='btn select'>Select</button></center>
+                        </div>";}?>
                
                         
                         <div class="row" style="margin: 5% 0 0 5%;">
@@ -292,6 +292,7 @@
                         <p style="padding-left: 2%;">Your price:</p>
                         <p style="padding: 0 0 2% 2%;" id="DEbaggPrice"><b>0.00</b><input type='float' name='DEbagg' value='.00' style='display: none;'></p>
                     </div>
+                    <?php if ($trip == 'rt') { echo'
                     <div class="serviceInfo">
                         <h5 style="padding: 2% 0 0 2%;"><b>Return</b></h5>
                         <div class="row" style="padding-left: 2%;">
@@ -321,8 +322,8 @@
                             </div>
                         </div>
                         <p style="padding-left: 2%;">Your price:</p>
-                        <p style="padding: 0 0 2% 2%;" id="REbaggPrice"><b>0.00</b><input type='float' name='REbagg' value='.00' style='display: none;'></p>
-                    </div>
+                        <p style="padding: 0 0 2% 2%;" id="REbaggPrice"><b>0.00</b><input type="float" name="REbagg" value=".00" style="display: none;"></p>
+                    </div>';}?>
                 </div>
             </div>
             <!-- --------------------------------Special Service------------------------------------ -->
@@ -376,6 +377,8 @@
                         <p style="padding-left: 2%;">Your price:</p>
                         <p style="padding: 0 0 2% 2%;" id="DEspecPrice"><b>0.00</b><input type='float' name='DEspec' value='.00' style='display: none;'></p>
                     </div>
+                    
+                    <?php if ($trip == 'rt') { echo'
                     <div class="serviceInfo">
                         <h5 style="padding: 2% 0 0 2%;"><b>Return</b></h5>
                         <div class="row" style="padding-left: 2%;">
@@ -408,10 +411,11 @@
                             </div>
                         </div>
                         <p style="padding-left: 2%;">Your price:</p>
-                        <p style="padding: 0 0 2% 2%;" id="REspecPrice"><b>0.00</b><input type='float' name='REspec' value='.00' style='display: none;'></p>
-                    </div>
+                        <p style="padding: 0 0 2% 2%;" id="REspecPrice"><b>0.00</b><input type="float" name="REspec" value=".00" style="display: none;"></p>
+                    </div>';}?>
                 </div>
             </div>
+
             <!-- --------------------------------Nope First------------------------------------ -->
             <div class="row" style="margin-top: 10%;" text-align="center">
                 <div class="col-4">
@@ -466,6 +470,7 @@
                         <p style="padding-left: 2%;">Your price:</p>
                         <p style="padding: 0 0 2% 2%;" id="FirstPriceDE"><b>0.00</b></p><input type='float' id='FPDE' name='FPDE' value='.00' style='display: none;'>
                     </div>
+                    <?php if ($trip == 'rt') { echo '
                     <div class="serviceInfo">
                         <h5 style="padding: 2% 0 0 2%;"><b>Return</b></h5>
                         <div class="row" style="padding-left: 2%;">
@@ -497,8 +502,8 @@
                         <p style="padding-left: 2%;">Extra Service price:</p>
                         <p style="padding-left: 2%;"><b>200.00</b></p>
                         <p style="padding-left: 2%;">Your price:</p>
-                        <p style="padding: 0 0 2% 2%;" id="FirstPriceRE"><b>0.00</b></p><input type='float' id='FPRE' name='FPRE' value='.00' style='display: none;'>
-                    </div>
+                        <p style="padding: 0 0 2% 2%;" id="FirstPriceRE"><b>0.00</b></p><input type="float" id="FPRE" name="FPRE" value=".00" style="display: none;">
+                    </div>';}?>
                 </div>
             </div>
         </div>
