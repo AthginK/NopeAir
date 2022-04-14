@@ -18,36 +18,19 @@
         $email = $_POST['email'];
         $tel = $_POST['tel'];
         $date_of_birth = $_POST['date_of_birth'];
-        $bill = $_POST['bill']
-        $flight = $_POST['flight']
+        $bill = $_POST['bill'];
+        $flight = $_POST['flight'];
+        $trip = $_POST['trip'];
+        if ($trip == 'rt') {
+                $flight2 = $_POST['flight2'];
+        }
 
-                
         // SQL script for performing insert query execution
         $sql = "INSERT INTO passenger (title, firstname, lastname, email, tel, date_of_birth)
         VALUES ('$title', '$firstname', '$lastname', '$email', '$tel', '$date_of_birth')";
 
-        $sel = "SELECT * from flight WHERE flight_id = '$flight'";
-        $query = $conn -> query($sel);
-
-        while ($row = $query -> fetch_assoc()) {
-                $from = $row['from_place'];
-                $to =  $row['to_place'];
-                $date =  $row['flight_date'];
-        }
-
-        if ($trip == 'rt') {
-                $flight2 = $_POST['flight2'];
-
-                $sel = "SELECT * from flight WHERE flight_id = '$flight2'";
-                $query = $conn -> query($sel);
-
-        while ($row = $query -> fetch_assoc()) {
-                $return =  $row['flight_date'];
-        }
-}
-
-        if(mysqli_query($conn, $sql)){
-                header('Location: http://localhost/main/NopeAir/main/success.html');
+        if(mysqli_query($conn, $sql)) {
+                echo "Success $sql. ";
         } else{
             echo "ERROR: Hush! Sorry $sql. " 
                 . mysqli_error($conn);
@@ -57,6 +40,27 @@
         mysqli_close($conn);
         ?>
 
+        <form action="insert_bill.php" id='myform' method="post">
+            <div class="form-group">
+                <input type="number" style="display: none;" class="form-control" name="title" value='<?php echo $title;?>'>
+                <input type="text" style="display: none;" class="form-control" name="firstname" value='<?php echo $firstname;?>'>
+                <input type="text" style="display: none;" class="form-control" name="lastname" value='<?php echo $lastname;?>'>
+                <input type="text" style="display: none;" class="form-control" name="email" value='<?php echo $email;?>'>
+                <input type="text" style="display: none;" class="form-control" name="tel" value='<?php echo $tel;?>'>
+                <input type="date" style="display: none;" class="form-control" name="date_of_birth" value='<?php echo $date_of_birth;?>'>
+                <input type="float" style="display: none;" class="form-control" name="bill" value='<?php echo $bill;?>'>
+                <input type="text" style="display: none;" class="form-control" name="flight" value='<?php echo $flight;?>'>
+                <input type="text" style="display: none;" class="form-control" name="trip" value='<?php echo $trip;?>'>
+                <?php if ($trip == 'rt') { echo '
+                <input type="text" style="display: none;" class="form-control" name="flight2"';}?><?php if ($trip == 'rt') { echo "value='$flight2'";}?>
+            </div>
+        </form>
 </body>
-  
+        <script>
+                window.addEventListener('load', () => {
+                        document.getElementById('myform').submit()
+
+                })
+        </script>
+
 </html>
