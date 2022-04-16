@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS-->
     <link href="style.css" rel="stylesheet">
-    <link href="/seat/TEST/style.css" rel="stylesheet">
+    <link href="seatstyle.css" rel="stylesheet">
     <!-- Java script -->
     <script src="scrip.js"></script>
-    <script src="/seat/TEST/script.js"></script>
+    <script src="seatscript.js"></script>
     <script>
         window.addEventListener('load', () => {
             const trip = localStorage.getItem('Trip');
