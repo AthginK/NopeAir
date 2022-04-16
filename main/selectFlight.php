@@ -180,7 +180,7 @@
             <form action="infor.php" method="post">
                 <input style='display: none' type="text" name='from' value='<?php echo $from; ?>'>
                 <input style='display: none' type="text" name='to' value='<?php echo $to; ?>'>
-                <button type="submit" class="btn next">Next</button>
+                <button type="submit" id='next' disabled='true' class="btn next">Next</button>
             </form>
         </div>
 

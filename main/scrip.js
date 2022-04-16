@@ -500,6 +500,14 @@ function getFlight(id) {
     localStorage.setItem("flight", id);
     localStorage.setItem("price", new_flight.value);
 
+    var next = document.getElementById('next');
+    if (next.classList == 'btn next active2') {
+        next.disabled = false;
+    }
+    else {
+        next.classList.add('active');
+    }
+
 }
 
 /*Round Trip Return*/
@@ -517,6 +525,14 @@ function getFlight2(id) {
 
     localStorage.setItem("flight2", id);
     localStorage.setItem("price2", new_flight.value);
+    
+    var next = document.getElementById('next');
+    if (next.classList == 'btn next active') {
+        next.disabled = false;
+    }
+    else {
+        next.classList.add('active2');
+    }
 
 }
 
