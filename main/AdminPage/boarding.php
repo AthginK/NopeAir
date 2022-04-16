@@ -19,7 +19,7 @@
 <body>
 <body>
     <div class="container">
-        <h1>BOARDING</h1>
+        <h1>BOARDING<a href="add_flight.html" style='margin-left: 74%' class="btn btn-success">Add</a></h1>
         <table class="table">
             <thead>
                 <tr>

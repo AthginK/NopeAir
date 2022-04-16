@@ -55,11 +55,11 @@
                 {
             ?>
                         <form action="code.php" method="POST">
-                            <input type="hidden" name="edit_board" value="<?php echo $row['flight_id'] ?>">
+                            <input type="hidden" name="flight_id" value="<?php echo $row['flight_id'] ?>">
                             
                             <div class="form-group mb-3">
                                 <label for="">From</label>
-                                <input type="text" name="edit_form" value="<?php echo $row['from_place'] ?>" class="form-control" >
+                                <input type="text" name="from_place" value="<?php echo $row['from_place'] ?>" class="form-control" >
                             </div>
                             
                             <div class="form-group mb-3">
@@ -111,3 +111,4 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>

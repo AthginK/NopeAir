@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
             
             if(($user['username'] == $username) && 
                 ($user['password'] == $password)) {
-                    header("Location: http://localhost/main/NopeAir/main/AdminPage/index.html");
+                    header("Location: adminselect.html");
             }
             else {
                 echo "<script language='javascript'>";
