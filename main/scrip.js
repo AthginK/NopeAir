@@ -317,20 +317,37 @@ function calcular1(val) {
     var country = val
     if (country == 'Bangkok') {
         var cc = 'BKK, Thailand';
+        var to = document.getElementById('to_Bangkok');
+        document.getElementById('to_Chiang Mai').style.display = 'block';
+        document.getElementById('to_Phuket').style.display = 'block';
+        document.getElementById('to_Hat Yai').style.display = 'block';
     }
     else if (country == 'Chiang Mai') {
         var cc = 'CNX, Thailand';
+        var to = document.getElementById('to_Chiang Mai');
+        document.getElementById('to_Bangkok').style.display = 'block';
+        document.getElementById('to_Phuket').style.display = 'block';
+        document.getElementById('to_Hat Yai').style.display = 'block';
     }
     else if (country == 'Phuket') {
         var cc = 'HKT, Thailand';
+        var to = document.getElementById('to_Phuket');
+        document.getElementById('to_Chiang Mai').style.display = 'block';
+        document.getElementById('to_Bangkok').style.display = 'block';
+        document.getElementById('to_Hat Yai').style.display = 'block';
     }
     else if (country == 'Hat Yai') {
         var cc = 'HDY, Thailand';
+        var to = document.getElementById('to_Hat Yai');
+        document.getElementById('to_Chiang Mai').style.display = 'block';
+        document.getElementById('to_Phuket').style.display = 'block';
+        document.getElementById('to_Bangkok').style.display = 'block';
     };
 
     /*prints the result*/
     var results = document.getElementById('FromCountry');
     results.innerHTML = cc;
+    to.style.display = 'none';
 }
 
 /* Show country code & city (RoundTrip TO)*/
@@ -338,19 +355,37 @@ function calcular2(val) {
     var country = val
     if (country == 'Bangkok') {
         var cc = 'BKK, Thailand';
+        var to = document.getElementById('from_Bangkok');
+        document.getElementById('from_Chiang Mai').style.display = 'block';
+        document.getElementById('from_Phuket').style.display = 'block';
+        document.getElementById('from_Hat Yai').style.display = 'block';
     }
     else if (country == 'Chiang Mai') {
         var cc = 'CNX, Thailand';
+        var to = document.getElementById('from_Chiang Mai');
+        document.getElementById('from_Bangkok').style.display = 'block';
+        document.getElementById('from_Phuket').style.display = 'block';
+        document.getElementById('from_Hat Yai').style.display = 'block';
     }
     else if (country == 'Phuket') {
         var cc = 'HKT, Thailand';
+        var to = document.getElementById('from_Phuket');
+        document.getElementById('from_Chiang Mai').style.display = 'block';
+        document.getElementById('from_Bangkok').style.display = 'block';
+        document.getElementById('from_Hat Yai').style.display = 'block';
     }
     else if (country == 'Hat Yai') {
         var cc = 'HDY, Thailand';
+        var to = document.getElementById('from_Hat Yai');
+        document.getElementById('from_Chiang Mai').style.display = 'block';
+        document.getElementById('from_Phuket').style.display = 'block';
+        document.getElementById('from_Bangkok').style.display = 'block';
     };
+
     /*prints the result*/
     var results = document.getElementById('ToCountry');
     results.innerHTML = cc;
+    to.style.display = 'none';
 }
 
 /* Show country code & city (OneWay FROM)*/
@@ -358,20 +393,37 @@ function calcular3(val) {
     var country = val
     if (country == 'Bangkok') {
         var cc = 'BKK, Thailand';
+        var to = document.getElementById('OWto_Bangkok');
+        document.getElementById('OWto_Chiang Mai').style.display = 'block';
+        document.getElementById('OWto_Phuket').style.display = 'block';
+        document.getElementById('OWto_Hat Yai').style.display = 'block';
     }
     else if (country == 'Chiang Mai') {
         var cc = 'CNX, Thailand';
+        var to = document.getElementById('OWto_Chiang Mai');
+        document.getElementById('OWto_Bangkok').style.display = 'block';
+        document.getElementById('OWto_Phuket').style.display = 'block';
+        document.getElementById('OWto_Hat Yai').style.display = 'block';
     }
     else if (country == 'Phuket') {
         var cc = 'HKT, Thailand';
+        var to = document.getElementById('OWto_Phuket');
+        document.getElementById('OWto_Chiang Mai').style.display = 'block';
+        document.getElementById('OWto_Bangkok').style.display = 'block';
+        document.getElementById('OWto_Hat Yai').style.display = 'block';
     }
     else if (country == 'Hat Yai') {
         var cc = 'HDY, Thailand';
+        var to = document.getElementById('OWto_Hat Yai');
+        document.getElementById('OWto_Chiang Mai').style.display = 'block';
+        document.getElementById('OWto_Phuket').style.display = 'block';
+        document.getElementById('OWto_Bangkok').style.display = 'block';
     };
 
     /*prints the result*/
-    var results = document.getElementById('FromCountry2');
+    var results = document.getElementById('FromCountry');
     results.innerHTML = cc;
+    to.style.display = 'none';
 }
 
 /* Show country code & city (OneWay TO)*/
@@ -379,19 +431,37 @@ function calcular4(val) {
     var country = val
     if (country == 'Bangkok') {
         var cc = 'BKK, Thailand';
+        var to = document.getElementById('OWfrom_Bangkok');
+        document.getElementById('OWfrom_Chiang Mai').style.display = 'block';
+        document.getElementById('OWfrom_Phuket').style.display = 'block';
+        document.getElementById('OWfrom_Hat Yai').style.display = 'block';
     }
     else if (country == 'Chiang Mai') {
         var cc = 'CNX, Thailand';
+        var to = document.getElementById('OWfrom_Chiang Mai');
+        document.getElementById('OWfrom_Bangkok').style.display = 'block';
+        document.getElementById('OWfrom_Phuket').style.display = 'block';
+        document.getElementById('OWfrom_Hat Yai').style.display = 'block';
     }
     else if (country == 'Phuket') {
         var cc = 'HKT, Thailand';
+        var to = document.getElementById('OWfrom_Phuket');
+        document.getElementById('OWfrom_Chiang Mai').style.display = 'block';
+        document.getElementById('OWfrom_Bangkok').style.display = 'block';
+        document.getElementById('OWfrom_Hat Yai').style.display = 'block';
     }
     else if (country == 'Hat Yai') {
         var cc = 'HDY, Thailand';
+        var to = document.getElementById('OWfrom_Hat Yai');
+        document.getElementById('OWfrom_Chiang Mai').style.display = 'block';
+        document.getElementById('OWfrom_Phuket').style.display = 'block';
+        document.getElementById('OWfrom_Bangkok').style.display = 'block';
     };
+
     /*prints the result*/
-    var results = document.getElementById('ToCountry2');
+    var results = document.getElementById('ToCountry');
     results.innerHTML = cc;
+    to.style.display = 'none';
 }
 
 /*get user data*/

@@ -46,13 +46,13 @@
                 if(mysqli_query($conn, $sql2)){
                         if ($trip == 'rt') {
                                 if(mysqli_query($conn, $sql3)){
-                                        header('Location: http://localhost/main/NopeAir/main/success.html');
+                                        header('Location: success.html');
                                 } else {
                                         echo "ERROR: Hush! Sorry $sql. " 
                                                 . mysqli_error($conn);
                                 }
                         } else {
-                                header('Location: http://localhost/main/NopeAir/main/success.html');
+                                header('Location: success.html');
                         }
                 }
         } else{

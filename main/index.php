@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <title>NopeAir</title>
 </head>
 
@@ -82,47 +83,48 @@
                         <p class="dest">From</p>
                         
                         <!--select From-->
-                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='from' onchange="calcular1(value)">
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='from' onchange="calcular1(value)" required>
+                            <option value="" disabled selected style='display: none'>Origin</option>
 
                         <?php
                         while ($rows = $result1 -> fetch_assoc()){
                             $from_place = $rows['from_place'];
-                            echo "<option class='prov' value='$from_place'>$from_place</option>";
+                            echo "<option class='prov' id='from_$from_place' value='$from_place'>$from_place</option>";
                         }
                         ?>
 
                         </select>
                         <!--<p class="h1 prov" id="FromProv"><b>Bangkok</b></p>-->
-                        <p class="country" id="FromCountry">BKK, Thailand</p>
+                        <p class="country" id="FromCountry"></p>
 
                     </div>
                     <div class="place">
                         <p class="dest">To</p>
 
                         <!--select To-->
-                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='to' onchange="calcular2(value)">
-
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='to' onchange="calcular2(value)" required>
+                            <option value="" disabled selected style='display: none'>Destination</option>
                         <?php
                         while ($rows = $result2 -> fetch_assoc()){
                             $to_place = $rows['to_place'];
-                            echo "<option class='prov' value='$to_place'>$to_place</option>";
+                            echo "<option class='prov' id='to_$to_place' value='$to_place'>$to_place</option>";
                         }
                         ?>
 
                         </select>
 
                         <!--<p class="h1 prov" id="ToProv"><b>Tokyo</b></p>-->
-                        <p class="country" id="ToCountry">CNX, Thailand</p>
+                        <p class="country" id="ToCountry"></p>
                     </div>
 
                     <div class="date">
                         <div class="departDate">
                             <p class="dateText">Departure</p>
-                            <input type="date" name='date' class="showDate">
+                            <input type="date" name='date' class="showDate" required>
                         </div>
                         <div class="returnDate">
                             <p class="dateText">Return</p>
-                            <input type="date" name='re_date' class="showDate">
+                            <input type="date" name='re_date' class="showDate" required>
                         </div>
                     </div>
                     <input type='text' style='display: none;' value='' name='flight'>
@@ -139,42 +141,44 @@
                         <p class="dest">From</p>
                     
                         <!--select From-->
-                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='from' onchange="calcular3(value)">
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='from' onchange="calcular3(value)" required>
+                            <option value="" disabled selected style='display: none'>Origin</option>
 
                             <?php
                             while ($rows = $result3 -> fetch_assoc()){
                                 $from_place = $rows['from_place'];
-                                echo "<option class='prov' value='$from_place'>$from_place</option>";
+                                echo "<option class='prov' id='OWfrom_$from_place' value='$from_place'>$from_place</option>";
                             }
                             ?>
 
                         </select>
                         
                         <!--<p class="h1 prov" id="FromProv"><b>Bangkok</b></p>-->
-                        <p class="country" id="FromCountry2">BKK, Thailand</p>
+                        <p class="country" id="FromCountry2"></p>
                     </div>
                     <div class="place" id="oneway_place_to">
                         <p class="dest">To</p>
                         
                         <!--select To-->
-                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='to' onchange="calcular4(value)">
+                        <select class="btn-lg prov" style="font-size: 40px; font-weight: bold" name='to' onchange="calcular4(value)" required>
+                            <option value="" disabled selected style='display: none'>Destination</option>
 
                         <?php
                         while ($rows = $result4 -> fetch_assoc()){
                             $to_place = $rows['to_place'];
-                            echo "<option class='prov' value='$to_place'>$to_place</option>";
+                            echo "<option class='prov' id='OWto_$to_place' value='$to_place'>$to_place</option>";
                         }
                         ?>
 
                         </select>
 
                         <!--<p class="h1 prov" id="ToProv"><b>Tokyo</b></p>-->
-                        <p class="country" id="ToCountry2">CNX, Thailand</p>
+                        <p class="country" id="ToCountry2"></p>
                     </div>
                     <div class="date" id="oneway_date">
                         <div class="departDate">
                             <p class="dateText">Departure</p>
-                            <input type="date" name='date' class="showDate">
+                            <input type="date" id='ow-date' name='date' class="showDate" required>
                         </div>
                     </div>
                     <input type='text' style='display: none;' value='' name='flight'>
@@ -187,5 +191,12 @@
         </div>
     </div>
 </body>
+
+    <script>
+        var today = new Date().toISOString().split('T')[0];
+        document.getElementsByName("date")[0].setAttribute('min', today);
+        document.getElementsByName("re_date")[0].setAttribute('min', today);
+        document.getElementById("ow-date").setAttribute('min', today);
+    </script>
 
 </html>
