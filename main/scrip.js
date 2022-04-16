@@ -315,87 +315,87 @@ function qrShow() {
 /* Show country code & city (RoundTrip FROM)*/
 function calcular1(val) {
     var country = val
-if (country == 'Bangkok') {
-    var cc = 'BKK, Thailand';
-}
-else if (country == 'Chiang Mai') {
-    var cc = 'CNX, Thailand';
-}
-else if (country == 'Phuket') {
-    var cc = 'HKT, Thailand';
-}
-else if (country == 'Hat Yai') {
-    var cc = 'HDY, Thailand';
-};
+    if (country == 'Bangkok') {
+        var cc = 'BKK, Thailand';
+    }
+    else if (country == 'Chiang Mai') {
+        var cc = 'CNX, Thailand';
+    }
+    else if (country == 'Phuket') {
+        var cc = 'HKT, Thailand';
+    }
+    else if (country == 'Hat Yai') {
+        var cc = 'HDY, Thailand';
+    };
 
-/*prints the result*/
-var results = document.getElementById('FromCountry');
-results.innerHTML = cc;
+    /*prints the result*/
+    var results = document.getElementById('FromCountry');
+    results.innerHTML = cc;
 }
 
 /* Show country code & city (RoundTrip TO)*/
 function calcular2(val) {
-var country = val
-if (country == 'Bangkok') {
-    var cc = 'BKK, Thailand';
-}
-else if (country == 'Chiang Mai') {
-    var cc = 'CNX, Thailand';
-}
-else if (country == 'Phuket') {
-    var cc = 'HKT, Thailand';
-}
-else if (country == 'Hat Yai') {
-    var cc = 'HDY, Thailand';
-};
-/*prints the result*/
-var results = document.getElementById('ToCountry');
-results.innerHTML = cc;
+    var country = val
+    if (country == 'Bangkok') {
+        var cc = 'BKK, Thailand';
+    }
+    else if (country == 'Chiang Mai') {
+        var cc = 'CNX, Thailand';
+    }
+    else if (country == 'Phuket') {
+        var cc = 'HKT, Thailand';
+    }
+    else if (country == 'Hat Yai') {
+        var cc = 'HDY, Thailand';
+    };
+    /*prints the result*/
+    var results = document.getElementById('ToCountry');
+    results.innerHTML = cc;
 }
 
 /* Show country code & city (OneWay FROM)*/
 function calcular3(val) {
     var country = val
-if (country == 'Bangkok') {
-    var cc = 'BKK, Thailand';
-}
-else if (country == 'Chiang Mai') {
-    var cc = 'CNX, Thailand';
-}
-else if (country == 'Phuket') {
-    var cc = 'HKT, Thailand';
-}
-else if (country == 'Hat Yai') {
-    var cc = 'HDY, Thailand';
-};
+    if (country == 'Bangkok') {
+        var cc = 'BKK, Thailand';
+    }
+    else if (country == 'Chiang Mai') {
+        var cc = 'CNX, Thailand';
+    }
+    else if (country == 'Phuket') {
+        var cc = 'HKT, Thailand';
+    }
+    else if (country == 'Hat Yai') {
+        var cc = 'HDY, Thailand';
+    };
 
-/*prints the result*/
-var results = document.getElementById('FromCountry2');
-results.innerHTML = cc;
+    /*prints the result*/
+    var results = document.getElementById('FromCountry2');
+    results.innerHTML = cc;
 }
 
 /* Show country code & city (OneWay TO)*/
 function calcular4(val) {
-var country = val
-if (country == 'Bangkok') {
-    var cc = 'BKK, Thailand';
-}
-else if (country == 'Chiang Mai') {
-    var cc = 'CNX, Thailand';
-}
-else if (country == 'Phuket') {
-    var cc = 'HKT, Thailand';
-}
-else if (country == 'Hat Yai') {
-    var cc = 'HDY, Thailand';
-};
-/*prints the result*/
-var results = document.getElementById('ToCountry2');
-results.innerHTML = cc;
+    var country = val
+    if (country == 'Bangkok') {
+        var cc = 'BKK, Thailand';
+    }
+    else if (country == 'Chiang Mai') {
+        var cc = 'CNX, Thailand';
+    }
+    else if (country == 'Phuket') {
+        var cc = 'HKT, Thailand';
+    }
+    else if (country == 'Hat Yai') {
+        var cc = 'HDY, Thailand';
+    };
+    /*prints the result*/
+    var results = document.getElementById('ToCountry2');
+    results.innerHTML = cc;
 }
 
 /*get user data*/
-function handleSubmit () {
+function handleSubmit() {
     const firstname = document.getElementById('f-firstname').value;
     const lastname = document.getElementById('f-lastname').value;
     const date_of_birth = document.getElementById('f-date_of_birth').value;
@@ -415,11 +415,13 @@ function handleSubmit () {
 
 /*get flight chosen by user*/
 /*Round Trip Depart OR One Way*/
-function getFlight (id) {
+function getFlight(id) {
     var old = localStorage.getItem('flight');
     if (old !== null) {
         var old_flight = document.getElementById(old);
-        old_flight.classList.remove("activate");
+        if (old_flight !== null) {
+            old_flight.classList.remove("activate");
+        }
     }
 
     var new_flight = document.getElementById(id);
@@ -431,11 +433,13 @@ function getFlight (id) {
 }
 
 /*Round Trip Return*/
-function getFlight2 (id) {
+function getFlight2(id) {
     var old = localStorage.getItem('flight2');
     if (old !== null) {
         var old_flight = document.getElementById(old);
-        old_flight.classList.remove("activate");
+        if (old_flight !== null) {
+            old_flight.classList.remove("activate");
+        }
     }
 
     var new_flight = document.getElementById(id);
@@ -446,6 +450,6 @@ function getFlight2 (id) {
 
 }
 
-function getTrip (id) {
+function getTrip(id) {
     localStorage.setItem("Trip", id);
 }

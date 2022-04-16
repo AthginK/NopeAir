@@ -516,7 +516,7 @@
             </div>
         </div>
     </div>
-    <div class="row" style="margin: 8% 0 2% 0;">
+    <div class="row" style="margin: 9% 0 2% 0;">
         <div class="col-6">
             
         </div>
@@ -535,7 +535,7 @@
 
     <!--Previos-->
     <form action="infor.php" method="post">
-            <div class="row" id="rowMove" style="margin-top: -8%;">
+            <div class="row" id="rowMove" style="margin-top: -6.5%;">
                 <div class="col-6">
                     <input type="submit" value="Previous" class="btn prev">
                 </div>
