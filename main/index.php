@@ -120,11 +120,11 @@
                     <div class="date">
                         <div class="departDate">
                             <p class="dateText">Departure</p>
-                            <input type="date" id='Date' name='date' class="showDate" onclick="check_date1()" required>
+                            <input type="date" id='Date' name='date' class="showDate" value='' onchange='change_return()' required>
                         </div>
                         <div class="returnDate">
                             <p class="dateText">Return</p>
-                            <input type="date" id='reDate' name='re_date' onclick="check_date2()" class="showDate" required>
+                            <input type="date" id='reDate' name='re_date' class="showDate" value='' onclick="check_date2()" required>
                         </div>
                     </div>
                     <input type='text' style='display: none;' value='' name='flight'>
@@ -199,21 +199,6 @@
         var redate = document.getElementsByName("re_date")
         redate[0].setAttribute('min', today);
         document.getElementById("ow-date").setAttribute('min', today);
-    </script>
-
-    <script>
-        function check_date1() {
-            var date = document.getElementsByName("date");
-            var redate = document.getElementById("reDate").value;
-            date[0].setAttribute('max', redate);
-        }
-
-        function check_date2() {
-            var redate = document.getElementById("reDate");
-            var date = document.getElementById("Date").value;
-            redate.min = date;
-
-        }
     </script>
 
 </html>
