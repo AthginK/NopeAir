@@ -15,11 +15,15 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
             
             if(($user['username'] == $username) && 
                 ($user['password'] == $password)) {
-                    header("Location: adminselect.html");
+                    echo "<script language='javascript'>";
+                    echo "localStorage.setItem('login_status', 'Pass');";
+                    echo "window.location.href='adminselect.html';";
+                    echo "</script>";
             }
             else {
                 echo "<script language='javascript'>";
-                echo "alert('WRONG INFORMATION ')";
+                echo "localStorage.setItem('login_status', 'Wrong');";
+                echo "window.location.href='login.html';";
                 echo "</script>";
                 die();
             }

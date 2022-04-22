@@ -487,6 +487,7 @@ function handleSubmit() {
 /*Round Trip Depart OR One Way*/
 function getFlight(id) {
     var old = localStorage.getItem('flight');
+    var Trip = localStorage.getItem('Trip');
     if (old !== null) {
         var old_flight = document.getElementById(old);
         if (old_flight !== null) {
@@ -506,6 +507,10 @@ function getFlight(id) {
     }
     else {
         next.classList.add('active');
+    }
+
+    if (Trip == 'ow') {
+        next.disabled = false;
     }
 
 }
