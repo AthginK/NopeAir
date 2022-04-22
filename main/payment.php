@@ -32,10 +32,10 @@
             document.getElementById('date_of_birth').innerHTML = date_of_birth;
             document.getElementById('title').innerHTML = title;
             document.getElementById('email').innerHTML = email;
+            document.getElementById('f-title').value = title;
             document.getElementById('f-firstname').value = firstname;
             document.getElementById('f-lastname').value = lastname;
             document.getElementById('f-date_of_birth').value = date_of_birth;
-            document.getElementById('f-title').value = title;
             document.getElementById('f-email').value = email;
             document.getElementById('f-tel').value = tel;
             document.getElementById('pre-firstname').value = firstname;
@@ -272,7 +272,7 @@
         </div>
         <form action="insert.php" method="post">
             <div class="form-group">
-                <input type="number" style="display: none;" class="form-control" name="title" id="f-title">
+                <input type="text" style="display: none;" class="form-control" name="title" id="f-title">
                 <input type="text" style="display: none;" class="form-control" name="firstname" id="f-firstname">
                 <input type="text" style="display: none;" class="form-control" name="lastname" id="f-lastname">
                 <input type="text" style="display: none;" class="form-control" name="email" id="f-email">

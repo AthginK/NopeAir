@@ -23,14 +23,15 @@
 
         //Email Settings
         $mail->isHTML(true);
-        $mail->setFrom($email, $name);
+        $mail->setFrom($email, 'NopeAir');
         $mail->addAddress($email); // Send to mail
-        $mail->Subject ="This is Subject";
-        $mail->Body = "This is Body";
+        $mail->Subject ="Your Plane Ticket";
+        $mail->Body = "Thank You for trust us to serve you.";
 
         if($mail->send()) {
             $status = "success";
             $response = "Email is sent";
+            header("location:passengers.php");
         } else {
             $status = "failed";
             $response = "Something is wrong" . $mail->ErrorInfo;

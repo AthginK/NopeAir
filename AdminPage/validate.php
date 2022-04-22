@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
             else {
                 echo "<script language='javascript'>";
                 echo "localStorage.setItem('login_status', 'Wrong');";
-                echo "window.location.href='login.html';";
+                echo "window.location.href='index.html';";
                 echo "</script>";
                 die();
             }
