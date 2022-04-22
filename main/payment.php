@@ -125,7 +125,7 @@
                 </div>
             </div><br>
 
-            <h4><b><img src="\image\user.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Passengers</b></h4>
+            <h4><b><img src="http://localhost/NopeAir/image/user.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Passengers</b></h4>
 
             <div class="box payment passenger">
                 <div class="row">
@@ -161,10 +161,10 @@
 
             </div>
 
-            <h4><b><img src="\image\payment.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Payments</b></h4>
+            <h4><b><img src="http://localhost/NopeAir/image/payment.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Payments</b></h4>
 
             <div class="box payment method" onclick="creditShow()" id="creditBox">
-                <p class="payMethod">CREDIT / DEBIT CARD<img src="\image\downward-arrow.svg"
+                <p class="payMethod">CREDIT / DEBIT CARD<img src="http://localhost/NopeAir/image/downward-arrow.svg"
                         style="width: 15px;height: 15px;float: right;margin-right: 2%;"></p>
             </div>
 
@@ -238,13 +238,13 @@
             </div>
 
             <div class="box payment method" onclick="atmShow()" id="atmBox">
-                <p class="payMethod">COUNTER PAYMENT / ATM<img src="\image\downward-arrow.svg"
+                <p class="payMethod">COUNTER PAYMENT / ATM<img src="http://localhost/NopeAir/image/downward-arrow.svg"
                         style="width: 15px;height: 15px;float: right;margin-right: 2%;"></p>
             </div>
 
             <div class="atmShow" id="atmShow">
                 <p>You have selected counter / atm payment</p>
-                <img src="\image\barcode.gif"><br><br>
+                <img src="http://localhost/NopeAir/image/barcode.gif"><br><br>
                 <p>Conditions</p>
                 <ul>• Maximum 3 transactions/day/phone number.</ul>
                 <ul>• Service fee to be collected by mobile operator.</ul>
@@ -256,13 +256,13 @@
             </div>
 
             <div class="box payment method" onclick="qrShow()" id="qrBox">
-                <p class="payMethod">QR PAYMENT<img src="\image\downward-arrow.svg"
+                <p class="payMethod">QR PAYMENT<img src="http://localhost/NopeAir/image/downward-arrow.svg"
                         style="width: 15px;height: 15px;float: right;margin-right: 2%;"></p>
             </div>
 
             <div class="qrShow" id="qrShow">
                 <p>You have selected QR payment</p>
-                <img src="\image\qr.svg" style="height: 300px;width: 300px;"><br><br>
+                <img src="http://localhost/NopeAir/image/qr.svg" style="height: 300px;width: 300px;"><br><br>
                 <p>Conditions</p>
                 <ul>• Maximum 3 transactions/day/phone number.</ul>
                 <ul>• For payment in Thailand with THB currency only.</ul>

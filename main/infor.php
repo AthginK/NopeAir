@@ -77,7 +77,7 @@
                 </div>
             </div><br>
 
-            <h4><b><img src="\image\user.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Passengers</b></h4>
+            <h4><b><img src="http://localhost/NopeAir/image/user.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Passengers</b></h4>
 
             <!--Input User Data-->
             <form action="services.php" method="post">

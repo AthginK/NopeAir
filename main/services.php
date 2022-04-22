@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS-->
     <link href="style.css" rel="stylesheet">
-    <link href="seatstyle.css" rel="stylesheet">
+
     <!-- Java script -->
     <script src="scrip.js"></script>
-    <script src="seatscript.js"></script>
     <script>
         window.addEventListener('load', () => {
             const trip = localStorage.getItem('Trip');
@@ -113,7 +112,7 @@
 
             <div class="row">
                 <div class="col-1">
-                    <img src="\image\services.svg" style="width: 40px;height: 40px;">
+                    <img src="http://localhost/NopeAir/image/services.svg" style="width: 40px;height: 40px;">
                 </div>
                 <div class="col-11" style="margin-left: -5%;">
                     <h4><b>&nbsp;&nbsp;Extra Services<br></b></h4>
@@ -125,7 +124,7 @@
                 <div class="col-4">
                     <div class="box services">
                         <center>
-                            <img src="\image\seats.svg" style="width: 50%;height: 50%;margin-top: 4%;">
+                            <img src="http://localhost/NopeAir/image/seats.svg" style="width: 50%;height: 50%;margin-top: 4%;">
                             <h4 style="margin-top: 0%;"><b>Seat Selection</b></h4>
                             <p style="margin-top: 4%;font-size: 14px;">Advanced seat selection for your comfort.<br>
                                 Select our Nope Premium Seat for extra services</p>
@@ -137,7 +136,7 @@
                 <div class="col-4">
                     <div class="box services">
                         <center>
-                            <img src="\image\travel-luggage.svg" style="width: 50%;height: 50%;margin-top: 4%;">
+                            <img src="http://localhost/NopeAir/image/travel-luggage.svg" style="width: 50%;height: 50%;margin-top: 4%;">
                             <h4 style="margin-top: 0%;"><b>Nope Baggage</b></h4>
                             <p style="margin-top: 4%;font-size: 14px;">1 x +15 kg Nope Baggage (DMK-CNX),<br>
                                 1 x +15 kg Nope Baggage (CNX-DMK)</p>
@@ -149,7 +148,7 @@
                 <div class="col-4">
                     <div class="box services">
                         <center>
-                            <img src="\image\track-bicycle.svg" style="width: 50%;height: 50%;margin-top: 4%;">
+                            <img src="http://localhost/NopeAir/image/track-bicycle.svg" style="width: 50%;height: 50%;margin-top: 4%;">
                             <h4 style="margin-top: 0%;"><b>Nope Special Baggage</b></h4>
                             <p style="margin-top: 4%;font-size: 14px;">Bike, special baggage and items
                                 that<br>require special handling.</p>
@@ -260,298 +259,6 @@
                     </div>
                     <div class="col-7">
                         <h4><b>Seat Selection</b></h4>
-                        <!--Seat-->
-    <div class="movie-container">
-      <p id="movie">
-        <p value="10">Pick your seat</option>
-        
-        </p>
-    </div>
-
-    <ul class="showcase">
-      <li>
-        <div class="seat"></div>
-        <small>N/A</small>
-      </li>
-      <li>
-        <div class="seat selected"></div>
-        <small>Selected</small>
-      </li>
-      <li>
-        <div class="seat occupied"></div>
-        <small>Occupied</small>
-      </li>
-    </ul>
-
-    <div class="container">
-      
-
-      <!--1-5-->
- 
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat occupied"></div>
-        <div class="seat occupied"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat occupied"></div>
-        <div class="seat occupied"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat "></div>
-        <div class="seat occupied"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <!--6-10-->
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat occupied"></div>
-        <div class="seat occupied"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat occupied"></div>
-        <div class="seat "></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat "></div>
-        <div class="seat occupied"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <!--11-15-->
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat "></div>
-        <div class="seat "></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat "></div>
-        <div class="seat "></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat "></div>
-        <div class="seat occupied"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <!--16-20-->
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat "></div>
-        <div class="seat "></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <!--21-25-->
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat "></div>
-        <div class="seat "></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat "></div>
-        <div class="seat "></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      <div class="row">
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat "></div>
-        <div class="seat "></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-        <div class="seat"></div>
-      </div>
-      
-    </div>
-    </div>
-
-    <p class="text">
-      You have selected <span id="count">0</span> seats for a price of $<span
-        id="total"
-        >0</span
-      >
-    </p>
                     </div>
                 </div>
             </div>
@@ -577,7 +284,7 @@
                                     <span>
                                         <button class="btn baggage" type="button" id="selectBaggDE"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            No selection <img src="\image\downward-arrow.svg"
+                                            No selection <img src="http://localhost/NopeAir/image/downward-arrow.svg"
                                                 style="width: 15px;height: 15px;">
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -609,7 +316,7 @@
                                     <span>
                                         <button class="btn baggage" type="button" id="selectBaggRE"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            No selection <img src="\image\downward-arrow.svg"
+                                            No selection <img src="http://localhost/NopeAir/image/downward-arrow.svg"
                                                 style="width: 15px;height: 15px;">
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -659,7 +366,7 @@
                                     <span>
                                         <button class="btn baggage" type="button" id="selectSpeDE"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            No selection <img src="\image\downward-arrow.svg"
+                                            No selection <img src="http://localhost/NopeAir/image/downward-arrow.svg"
                                                 style="width: 15px;height: 15px;">
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -695,7 +402,7 @@
                                     <span>
                                         <button class="btn baggage" type="button" id="selectSpeRE"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            No selection <img src="\image\downward-arrow.svg"
+                                            No selection <img src="http://localhost/NopeAir/image/downward-arrow.svg"
                                                 style="width: 15px;height: 15px;">
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -722,7 +429,7 @@
                 <div class="col-4">
                     <div class="box services">
                         <center>
-                            <img src="\image\number-one.svg" style="width: 50%;height: 50%;margin-top: 4%;">
+                            <img src="http://localhost/NopeAir/image/number-one.svg" style="width: 50%;height: 50%;margin-top: 4%;">
                             <h4 style="margin-top: 2%;"><b>Nope First</b></h4>
                             <p style="margin-top: 4%;font-size: 14px;">Be the first to board and enjoy
                                 relaxing<br>moment onboard with Nope First</p>

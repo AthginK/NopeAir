@@ -105,7 +105,7 @@
                 </div>
             </div><br>
 
-            <h4><b><img src="\image\airplane.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Depart</b></h4>
+            <h4><b><img src="http://localhost/NopeAir/image/aeroplane.svg" style="width: 40px;height: 40px;">&nbsp;&nbsp;Depart</b></h4>
             <div class="row" style="margin-left: 3%;">
                 <div class="col-2">&nbsp;Departure</div>
                 <div class="col-2">Arrival</div>
@@ -123,10 +123,10 @@
                         echo "
                         <div class='box flight'>
                             <div class='row' style='margin-left: 3%; padding: 1.5% 0% 0% 0%;'>
-                                <div class='col-2'>$depart&nbsp;&nbsp;<img src='\image\iconmonstr-arrow-right-thin.svg'></div>
+                                <div class='col-2'>$depart&nbsp;&nbsp;<img src='http://localhost/NopeAir/image/iconmonstr-arrow-right-thin.svg' style='padding-left: 30%'></div>
                                 <div class='col-2'>$arrive</div>
                                 <div class='col-2' style='margin-left: 1%;'>
-                                    <div class='row'><img src='\image\aeroplane.svg'></div>
+                                    <div class='row'><img src='http://localhost/NopeAir/image/aeroplane.svg' style='width: 40px; height: 40px; margin-top: -5%'></div>
                                     <div class='row'>$time m</div>
                                 </div>
                                 <button id='$id' value='$price' onclick='getFlight(this.id)' class='btn next price'>$price</button>
@@ -139,7 +139,7 @@
 
             <?php
                 if ($trip == 'rt') {
-                    echo "<h4><b><img src='\image\airplane.svg' style='width: 40px;height: 40px;'>&nbsp;&nbsp;Return</b></h4>
+                    echo "<h4><b><img src='http://localhost/NopeAir/image/aeroplane.svg' style='width: 40px;height: 40px;'>&nbsp;&nbsp;Return</b></h4>
                         <div class='row' style='margin-left: 3%;'>
                             <div class='col-2'>&nbsp;Departure</div>
                             <div class='col-2'>Arrival</div>
@@ -157,10 +157,10 @@
                         echo "
                         <div class='box flight'>
                             <div class='row' style='margin-left: 3%; padding: 1.5% 0% 0% 0%;'>
-                                <div class='col-2'>$depart&nbsp;&nbsp;<img src='\image\iconmonstr-arrow-right-thin.svg'></div>
+                                <div class='col-2'>$depart&nbsp;&nbsp;<img src='http://localhost/NopeAir/image/iconmonstr-arrow-right-thin.svg' style='padding-left: 30%'></div>
                                 <div class='col-2'>$arrive</div>
                                 <div class='col-2' style='margin-left: 1%;'>
-                                    <div class='row'><img src='\image\aeroplane.svg'></div>
+                                    <div class='row'><img src='http://localhost/NopeAir/image/aeroplane.svg' style='width: 40px; height: 40px; margin-top: -5%'></div>
                                     <div class='row'>$time m</div>
                                 </div>
                                 <button id='$id' value='$price' onclick='getFlight2(this.id)' class='btn next price'>$price</button>
