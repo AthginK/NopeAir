@@ -4,70 +4,50 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #242333;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: 'Lato', sans-serif;
-  margin: 0;
+.seat-selection, .seat_re-selection {
+  text-align: center;
+  padding: auto;
 }
 
-.movie-container {
-  margin: 20px 0;
+.seat-container, .seat_re-container_re {
+  display: none;
 }
 
-.movie-container select {
-  background-color: #fff;
-  border: 0;
-  border-radius: 5px;
-  font-size: 14px;
-  margin-left: 10px;
-  padding: 5px 15px 5px 15px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
+.real-container{
+  margin: 3% 28%;
 }
 
-.container {
-  perspective: 1000px;
-  margin-bottom: 30px;
-}
-
-.seat {
-  background-color: #444451;
-  height: 12px;
-  width: 15px;
+.seat, .seat_re {
+  background-color: #586cff;
+  height: 22px;
+  width: 30px;
   margin: 3px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.seat.selected {
-  background-color: #6feaf6;
+.seat.selected, .seat_re.selected {
+  background-color: #f5ff8a;
 }
 
-.seat.occupied {
+.seat.occupied, .seat_re.occupied {
   background-color: #fff;
 }
 
-.seat:nth-of-type(2) {
+.seat:nth-of-type(2), .seat_re:nth-of-type(2) {
   margin-right: 18px;
 }
 
-.seat:nth-last-of-type(2) {
+.seat:nth-last-of-type(2), .seat_re:nth-last-of-type(2) {
   margin-left: 18px;
 }
 
-.seat:not(.occupied):hover {
+.seat:not(.occupied):hover, .seat_re:not(.occupied):hover {
   cursor: pointer;
   transform: scale(1.2);
 }
 
-.showcase .seat:not(.occupied):hover {
+.showcase .seat:not(.occupied):hover, .showcase .seat_re:not(.occupied):hover {
   cursor: default;
   transform: scale(1);
 }
@@ -97,19 +77,11 @@ body {
   display: flex;
 }
 
-.screen {
-  background-color: #fff;
-  height: 70px;
-  width: 100%;
-  margin: 15px 0;
-  transform: rotateX(-45deg);
-  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
-}
-
 p.text {
   margin: 5px 0;
+  text-align: center;
 }
 
 p.text span {
-  color: #6feaf6;
+  color: #8000FF;
 }

@@ -1,17 +1,17 @@
-const container = document.querySelector('.container');
+const container = document.querySelector('.seat_container');
 const seats = document.querySelectorAll('.row .seat:not(.occupied)');
 const count = document.getElementById('count');
 const total = document.getElementById('total');
-const movieSelect = document.getElementById('movie');
+const seatSelect = document.getElementById('seat');
 
 populateUI();
 
-let ticketPrice = +movieSelect.value;
+let ticketPrice = +seatSelect.value;
 
-// Save selected movie index and price
-function setMovieData(movieIndex, moviePrice) {
-  localStorage.setItem('selectedMovieIndex', movieIndex);
-  localStorage.setItem('selectedMoviePrice', moviePrice);
+// Save selected seat index and price
+function setseatData(seatIndex, seatPrice) {
+  localStorage.setItem('selectedseatIndex', seatIndex);
+  localStorage.setItem('selectedseatPrice', seatPrice);
 }
 
 // Update total and count
@@ -26,8 +26,9 @@ function updateSelectedCount() {
 
   count.innerText = selectedSeatsCount;
   total.innerText = selectedSeatsCount * ticketPrice;
+  document.getElementById('seat_price').value = selectedSeatsCount * ticketPrice;
   
-  setMovieData(movieSelect.selectedIndex, movieSelect.value);
+  setseatData(seatSelect.selectedIndex, seatSelect.value);
 }
 
 // Get data from localstorage and populate UI
@@ -42,17 +43,17 @@ function populateUI() {
     });
   }
 
-  const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+  const selectedseatIndex = localStorage.getItem('selectedseatIndex');
 
-  if (selectedMovieIndex !== null) {
-    movieSelect.selectedIndex = selectedMovieIndex;
+  if (selectedseatIndex !== null) {
+    seatSelect.selectedIndex = selectedseatIndex;
   }
 }
 
-// Movie select event
-movieSelect.addEventListener('change', e => {
+// seat select event
+seatSelect.addEventListener('change', e => {
   ticketPrice = +e.target.value;
-  setMovieData(e.target.selectedIndex, e.target.value);
+  setseatData(e.target.selectedIndex, e.target.value);
   updateSelectedCount();
 });
 
@@ -70,3 +71,74 @@ container.addEventListener('click', e => {
 
 // Initial count and total set
 updateSelectedCount();
+
+
+// Return
+const container_re = document.querySelector('.seat_container_re');
+const seats_re = document.querySelectorAll('.row .seat_re:not(.occupied)');
+const count_re = document.getElementById('count_re');
+const total_re = document.getElementById('total_re');
+const seatSelect_re = document.getElementById('seat_re');
+
+populateUI_re();
+
+let ticketPrice_re = +seatSelect_re.value;
+
+function setseatData_re(seatIndex_re, seatPrice_re) {
+  localStorage.setItem('selectedseatIndex_re', seatIndex_re);
+  localStorage.setItem('selectedseatPrice_re', seatPrice_re);
+}
+
+function updateSelectedCount_re() {
+  const selectedSeats_re = document.querySelectorAll('.row .seat_re.selected');
+
+  const seatsIndex_re = [...selectedSeats_re].map(seat => [...seats_re].indexOf(seat));
+
+  localStorage.setItem('selectedSeats_re', JSON.stringify(seatsIndex_re));
+
+  const selectedSeatsCount_re = selectedSeats_re.length;
+
+  count_re.innerText = selectedSeatsCount_re;
+  total_re.innerText = selectedSeatsCount_re * ticketPrice_re;
+  document.getElementById('seat_price_re').value = selectedSeatsCount_re * ticketPrice_re;
+
+  setseatData_re(seatSelect_re.selectedIndex_re, seatSelect_re.value);
+}
+
+function populateUI_re() {
+  const selectedSeats_re = JSON.parse(localStorage.getItem('selectedSeats_re'));
+
+  if (selectedSeats_re !== null && selectedSeats_re.length > 0) {
+    seats_re.forEach((seat, index) => {
+      if (selectedSeats_re.indexOf(index) > -1) {
+        seat.classList.add('selected');
+      }
+    });
+  }
+
+  const selectedseatIndex_re = localStorage.getItem('selectedseatIndex_re');
+
+  if (selectedseatIndex_re !== null) {
+    seatSelect_re.selectedIndex_re = selectedseatIndex_re;
+  }
+}
+
+seatSelect_re.addEventListener('change', e => {
+  ticketPrice_re = +e.target.value;
+  setseatData_re(e.target.selectedIndex_re, e.target.value);
+  updateSelectedCount_re();
+});
+
+container_re.addEventListener('click', e => {
+
+  if (
+    e.target.classList.contains('seat_re') &&
+    !e.target.classList.contains('occupied')
+  ) {
+    e.target.classList.toggle('selected');
+
+    updateSelectedCount_re();
+  }
+});
+
+updateSelectedCount_re();

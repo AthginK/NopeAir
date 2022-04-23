@@ -255,9 +255,13 @@
     padding: 0.5% 0% 0% 0%;
 }
 
-.btn.next.price.activate {
+.btn.next.price.activate, .btn.select.activate {
     background-color: black;
     color: #B486FF;
+}
+
+.remove{
+    display: none;
 }
 
 .Firstname,
@@ -714,13 +718,7 @@ i {
     border-radius: 15px;
 }
 
-.nopePreFont {
-    width: 40px;
-    height: 40px;
-    background-color: #000a55;
-    border-radius: 5px;
-    float: left;
-}
+
 .nopeHappy {
     width: 40px;
     height: 40px;
@@ -735,13 +733,7 @@ i {
     border-radius: 5px;
     float: left;
 }
-.nopePre {
-    width: 40px;
-    height: 40px;
-    background-color: #0017c9;
-    border-radius: 5px;
-    float: left;
-}
+
 .nopeBooked {
     width: 40px;
     height: 40px;

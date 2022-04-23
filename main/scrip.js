@@ -178,7 +178,7 @@ function check_date2() {
 function change_return() {
     var date = document.getElementById("Date").value;
     var redate = document.getElementById("reDate");
-    if (date > redate.value) {
+    if (date > redate.value && redate.value !== '') {
         redate.value = date;
     }
 }
@@ -376,6 +376,22 @@ function SelectFirst() {
         document.getElementById('FirstRow').style.margin = '7% 0 0 0';
     }
 }
+
+//Seat Selection
+function display_seat(id) {
+    var btn = document.getElementById(id);
+    btn.classList.toggle('activate');
+    if (id == 'btn_seat') {
+        document.getElementById('btn_seat_return').classList.remove('activate')
+        document.getElementById('seat_depart').classList.toggle('remove')
+        document.getElementById('seat_return').classList.add('remove')
+    } else if (id == 'btn_seat_return') {
+        document.getElementById('btn_seat').classList.remove('activate')
+        document.getElementById('seat_depart').classList.add('remove')
+        document.getElementById('seat_return').classList.toggle('remove')
+    }
+}
+
 //เปลี่ยนราคา
 //Baggage
 function DENoSelectBagg() {

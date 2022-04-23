@@ -25,6 +25,9 @@
                 $flight2 = $_POST['flight2'];
         }
 
+        $sel = "SELECT * from flight WHERE flight_id = '$flight'";
+        $query = $conn -> query($sel);
+        
         // SQL script for performing insert query execution
         $sql = "INSERT INTO passenger (title, firstname, lastname, email, tel, date_of_birth)
         VALUES ('$title', '$firstname', '$lastname', '$email', '$tel', '$date_of_birth')";

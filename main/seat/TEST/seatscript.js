@@ -1,72 +1,68 @@
-const container = document.querySelector('.container');
-const seats = document.querySelectorAll('.row .seat:not(.occupied)');
-const count = document.getElementById('count');
-const total = document.getElementById('total');
-const movieSelect = document.getElementById('movie');
+const container_re = document.querySelector('.seat_container_re');
+const seats_re = document.querySelectorAll('.row .seat_re:not(.occupied)');
+const count_re = document.getElementById('count_re');
+const total_re = document.getElementById('total_re');
+const seatSelect_re = document.getElementById('seat_re');
 
-populateUI();
+populateUI_re();
 
-let ticketPrice = +movieSelect.value;
+let ticketPrice_re = +seatSelect_re.value;
 
-// Save selected movie index and price
-function setMovieData(movieIndex, moviePrice) {
-  localStorage.setItem('selectedMovieIndex', movieIndex);
-  localStorage.setItem('selectedMoviePrice', moviePrice);
+function setseatData_re(seatIndex_re, seatPrice_re) {
+    localStorage.setItem('selectedseatIndex_re', seatIndex_re);
+    localStorage.setItem('selectedseatPrice_re', seatPrice_re);
 }
 
-// Update total and count
-function updateSelectedCount() {
-  const selectedSeats = document.querySelectorAll('.row .seat.selected');
+function updateSelectedCount_re() {
+    const selectedSeats_re = document.querySelectorAll('.row .seat_re.selected');
 
-  const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
+    const seatsIndex_re = [...selectedSeats_re].map(seat => [...seats_re].indexOf(seat));
 
-  localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
+    localStorage.setItem('selectedSeats_re', JSON.stringify(seatsIndex_re));
 
-  const selectedSeatsCount = selectedSeats.length;
+    const selectedSeatsCount_re = selectedSeats_re.length;
 
-  count.innerText = selectedSeatsCount;
-  total.innerText = selectedSeatsCount * ticketPrice;
-  
-  setMovieData(movieSelect.selectedIndex, movieSelect.value);
+    count_re.innerText = selectedSeatsCount_re;
+    total_re.innerText = selectedSeatsCount_re * ticketPrice_re;
+    document.getElementById('seat_price_re').value = selectedSeatsCount_re * ticketPrice_re;
+
+    setseatData_re(seatSelect_re.selectedIndex_re, seatSelect_re.value);
 }
 
-// Get data from localstorage and populate UI
-function populateUI() {
-  const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
+function populateUI_re() {
+    const selectedSeats_re = JSON.parse(localStorage.getItem('selectedSeats_re'));
 
-  if (selectedSeats !== null && selectedSeats.length > 0) {
-    seats.forEach((seat, index) => {
-      if (selectedSeats.indexOf(index) > -1) {
-        seat.classList.add('selected');
-      }
-    });
-  }
+    if (selectedSeats_re !== null && selectedSeats_re.length > 0) {
+        seats_re.forEach((seat, index) => {
+            if (selectedSeats_re.indexOf(index) > -1) {
+                seat.classList.add('selected');
+            }
+        });
+    }
 
-  const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+    const selectedseatIndex_re = localStorage.getItem('selectedseatIndex_re');
 
-  if (selectedMovieIndex !== null) {
-    movieSelect.selectedIndex = selectedMovieIndex;
-  }
+    if (selectedseatIndex_re !== null) {
+        seatSelect_re.selectedIndex_re = selectedseatIndex_re;
+    }
 }
 
-// Movie select event
-movieSelect.addEventListener('change', e => {
-  ticketPrice = +e.target.value;
-  setMovieData(e.target.selectedIndex, e.target.value);
-  updateSelectedCount();
+seatSelect_re.addEventListener('change', e => {
+    ticketPrice_re = +e.target.value;
+    setseatData_re(e.target.selectedIndex_re, e.target.value);
+    updateSelectedCount_re();
 });
 
-// Seat click event
-container.addEventListener('click', e => {
-  if (
-    e.target.classList.contains('seat') &&
-    !e.target.classList.contains('occupied')
-  ) {
-    e.target.classList.toggle('selected');
+container_re.addEventListener('click', e => {
 
-    updateSelectedCount();
-  }
+    if (
+        e.target.classList.contains('seat_re') &&
+        !e.target.classList.contains('occupied')
+    ) {
+        e.target.classList.toggle('selected');
+
+        updateSelectedCount_re();
+    }
 });
 
-// Initial count and total set
-updateSelectedCount();
+updateSelectedCount_re();

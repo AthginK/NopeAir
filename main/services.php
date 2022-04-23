@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS-->
     <link href="style.css" rel="stylesheet">
+    <link href="seatstyle.css" rel="stylesheet">
 
     <!-- Java script -->
     <script src="scrip.js"></script>
@@ -138,8 +139,8 @@
                         <center>
                             <img src="http://localhost/NopeAir/image/travel-luggage.svg" style="width: 50%;height: 50%;margin-top: 4%;">
                             <h4 style="margin-top: 0%;"><b>Nope Baggage</b></h4>
-                            <p style="margin-top: 4%;font-size: 14px;">1 x +15 kg Nope Baggage (DMK-CNX),<br>
-                                1 x +15 kg Nope Baggage (CNX-DMK)</p>
+                            <p style="margin-top: 4%;font-size: 14px;">1 x +15 kg Nope Baggage,<br>
+                                1 x +15 kg Nope Baggage</p>
                             <button type="button" class="btn services" onclick="SelectBaggage()"
                                 id="BaggageBtn">Edit</button>
                         </center>
@@ -165,100 +166,621 @@
                 <div class="SeatTriangleUp" id="seatUp"></div>
                 <div class="selectSeatShow" id="selectSeatShow">
                     <h4 style="margin: 2% 0 0 3%;"><b>Seat Selection</b></h4>
-                    <div class="col-5">
-                        <div class="seatInfo">
-                            <h5 style="padding: 2% 0 0 2%;"><b>Depart</b></h5>
-                            <p style="padding-left: 2%;"><?php echo "$from - $to" ?></p>
-                            <center><button type="button" class="btn select">Select</button></center>
-                        </div>
-                        <?php if ($trip == 'rt') { echo "
-                        <div class='seatInfo'>
-                            <h5 style='padding: 2% 0 0 2%;'><b>Return</b></h5>
-                            <p style='padding-left: 2%;'>";}?><?php if ($trip == 'rt') { echo "$to - $from</p>
-                            <center><button type='button' class='btn select'>Select</button></center>
-                        </div>";}?>
-               
-                        
-                        <div class="row" style="margin: 5% 0 0 5%;">
-                            <div class="col-6">
-                                <div class="row">
-                                    <div class="col-2">
-                                        <div class="nopePreFont"></div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="seatInfo">
+                                <h5 style="padding: 2% 0 0 2%;"><b>Depart</b></h5>
+                                <p style="padding-left: 2%;"><?php echo "$from - $to" ?></p>
+                                <p class="text">Selected <span id="count">0</span> seats for a price: <span id="total">0</span></p>
+                                <center><button type="button" id='btn_seat' onclick='display_seat(this.id)' class="btn select activate">Select</button></center>
+                            </div>
+                            <?php if ($trip == 'rt') { echo "
+                            <div class='seatInfo'>
+                                <h5 style='padding: 2% 0 0 2%;'><b>Return</b></h5>
+                                <p style='padding-left: 2%;'>";}?><?php if ($trip == 'rt') { echo "$to - $from</p>
+                                <p class='text'>Selected <span id='count_re'>0</span> seat_res for a price: <span id='total_re'>0</span></p>
+                                <center><button type='button' id='btn_seat_return' onclick='display_seat(this.id)' class='btn select'>Select</button></center>
+                            </div>";}?>
+                
+                            
+                            <div class="row" style="margin: 5% 0 0 5%;">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="nopeHappy"></div>
+                                        </div>
+                                        <div class="col-10" style="font-size: 14px;">
+                                            <p><b>Nope Happy Seat</b><br>250</p>
+                                        </div>
                                     </div>
-                                    <div class="col-10" style="font-size: 14px;">
-                                        <p><b>Nope Premium Seat Front Row</b><br>500.00</p>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="nopeBooked"></div>
+                                        </div>
+                                        <div class="col-10" style="font-size: 14px;">
+                                            <p><b>Booked Seat</b></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="row">
-                                    <div class="col-2">
-                                        <div class="nopePre"></div>
-                                    </div>
-                                    <div class="col-10" style="font-size: 14px;">
-                                        <p><b>Nope Premium Seat</b><br>300.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row" style="margin: 2% 0 0 5%;">
-                            <div class="col-6">
-                                <div class="row">
-                                    <div class="col-2">
-                                        <div class="nopeHappy"></div>
+                            <div class="row" style="margin: 2% 0 5% 5%;">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="nopeSelect"></div>
+                                        </div>
+                                        <div class="col-10" style="font-size: 14px;">
+                                            <p><b>Selected Seat</b></p>
+                                        </div>
                                     </div>
-                                    <div class="col-10" style="font-size: 14px;">
-                                        <p><b>Nope Happy Seat</b><br>Free</p>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="nopeBlock"></div>
+                                        </div>
+                                        <div class="col-10" style="font-size: 14px;">
+                                            <p><b>Unavailable Seat</b></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="row">
-                                    <div class="col-2">
-                                        <div class="nopeBooked"></div>
-                                    </div>
-                                    <div class="col-10" style="font-size: 14px;">
-                                        <p><b>Booked Seat</b></p>
+                            <p style="margin-left: 5%;"><b>Seat Description</b></p>
+                            <p style="margin-left: 5%;"><b>Nope Air's in-flight seats are divided into 3 types, namely
+                                    Private Seat (unoccupied
+                                    seat), Nope Premium Seat and Nope Happy Seat.</b></p>
+                            <p style="margin-left: 5%;">Note: <b>Private Seat</b> is seat with no-one sitting next to you.
+                                We guarantee that the
+                                seats next to you are adjacent to each other in the same row and side. No one else
+                                will sit with you. For example, selecting seat no. 2C, there will be no-one seating next
+                                to you at seat no. 2B.</p>
+                        </div>
+                        <div class="col-6">
+                            <div id='seat_depart' class="seat-selection">
+                                <h4><b>Seat Selection</b></h4>
+                                <h5><?php echo "$from - $to" ?></h5>
+                                <div class="seat-container">
+                                    <select id="seat">
+                                        <option value="250"></option>
+                                    </select>
+                                </div>
+                                <div class="real-container">
+                                    <div class="container seat_container">
+                                        <!--1-5-->
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat occupied"></div>
+                                            <div class="seat occupied"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat occupied"></div>
+                                            <div class="seat occupied"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat "></div>
+                                            <div class="seat occupied"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <!--6-10-->
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat occupied"></div>
+                                            <div class="seat occupied"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat occupied"></div>
+                                            <div class="seat "></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat "></div>
+                                            <div class="seat occupied"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <!--11-15-->
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat "></div>
+                                            <div class="seat "></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat "></div>
+                                            <div class="seat "></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat "></div>
+                                            <div class="seat occupied"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <!--16-20-->
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat "></div>
+                                            <div class="seat "></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <!--21-25-->
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat "></div>
+                                            <div class="seat "></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat "></div>
+                                            <div class="seat "></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat "></div>
+                                            <div class="seat "></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                            <div class="seat"></div>
+                                        </div>
                                     </div>
                                 </div>
+                            
+                                <input style='display: none;' type="float" id='seat_price' name='seat'>
+                            </div>
+             
+                            <div id='seat_return' class="seat-selection remove">
+                                <h4><b>Seat Selection</b></h4>
+                                <h5><?php echo "$to - $from" ?></h5>
+                                <div class="seat-container">
+                                    <select id="seat_re">
+                                        <option value="250"></option>
+                                    </select>
+                                </div>
+                                <div class="real-container">
+                                    <div class="container seat_container_re">
+                                        <!--1-5-->
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re occupied"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re "></div>
+                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <!--6-10-->
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re "></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re "></div>
+                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <!--11-15-->
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re "></div>
+                                            <div class="seat_re "></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re "></div>
+                                            <div class="seat_re "></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re "></div>
+                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <!--16-20-->
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re "></div>
+                                            <div class="seat_re "></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <!--21-25-->
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re "></div>
+                                            <div class="seat_re "></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re "></div>
+                                            <div class="seat_re "></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re "></div>
+                                            <div class="seat_re "></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <input style='display: none;' type="float" id='seat_price_re' name='seat_re'>
                             </div>
                         </div>
-
-                        <div class="row" style="margin: 2% 0 5% 5%;">
-                            <div class="col-6">
-                                <div class="row">
-                                    <div class="col-2">
-                                        <div class="nopeSelect"></div>
-                                    </div>
-                                    <div class="col-10" style="font-size: 14px;">
-                                        <p><b>Selected Seat</b></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="row">
-                                    <div class="col-2">
-                                        <div class="nopeBlock"></div>
-                                    </div>
-                                    <div class="col-10" style="font-size: 14px;">
-                                        <p><b>Unavailable Seat</b></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <p style="margin-left: 5%;"><b>Seat Description</b></p>
-                        <p style="margin-left: 5%;"><b>Nope Air's in-flight seats are divided into 3 types, namely
-                                Private Seat (unoccupied
-                                seat), Nope Premium Seat and Nope Happy Seat.</b></p>
-                        <p style="margin-left: 5%;">Note: <b>Private Seat</b> is seat with no-one sitting next to you.
-                            We guarantee that the
-                            seats next to you are adjacent to each other in the same row and side. No one else
-                            will sit with you. For example, selecting seat no. 2C, there will be no-one seating next
-                            to you at seat no. 2B.</p>
-                    </div>
-                    <div class="col-7">
-                        <h4><b>Seat Selection</b></h4>
                     </div>
                 </div>
             </div>
@@ -547,6 +1069,7 @@
                     <input style='display: none' type="text" name='to' value='<?php echo $to; ?>'>
                 </div>
     </form>
+    <script src="seatscript.js"></script>
 </body>
 
 </html>
