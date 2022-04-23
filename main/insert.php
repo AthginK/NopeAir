@@ -25,24 +25,47 @@
                 $flight2 = $_POST['flight2'];
         }
 
-        $sel = "SELECT * from flight WHERE flight_id = '$flight'";
+        $sel = "SELECT * from passenger";
         $query = $conn -> query($sel);
-        
+
         // SQL script for performing insert query execution
         $sql = "INSERT INTO passenger (title, firstname, lastname, email, tel, date_of_birth)
         VALUES ('$title', '$firstname', '$lastname', '$email', '$tel', '$date_of_birth')";
 
-        if(mysqli_query($conn, $sql)) {
-                echo "Success $sql. ";
-        } else{
-            echo "ERROR: Hush! Sorry $sql. " 
-                . mysqli_error($conn);
+        // Passenger Check
+        if (mysqli_num_rows($query)==0) {
+                if(mysqli_query($conn, $sql)) {
+                        echo "Success $sql. ";
+                } else{
+                echo "ERROR: Hush! Sorry $sql. " 
+                        . mysqli_error($conn);
+                }
+        } else {
+                while ($pass = $query -> fetch_assoc()) {
+                        if(($pass['title'] == $title) &&
+                        ($pass['firstname'] == $firstname) &&
+                        ($pass['lastname'] == $lastname) &&
+                        ($pass['tel'] == $tel) &&
+                        ($pass['email'] == $email) && 
+                        ($pass['date_of_birth'] == $date_of_birth)) {
+                        echo "Already be a Passenger";
+                        } else {
+                                if(mysqli_query($conn, $sql)) {
+                                        echo "Success $sql. ";
+                                } else{
+                                echo "ERROR: Hush! Sorry $sql. " 
+                                        . mysqli_error($conn);
+                                }
+                        }
+                }
+
         }
-          
+
         // Close connection
         mysqli_close($conn);
         ?>
 
+        <!-- Sent Data -->
         <form action="insert_bill.php" id='myform' method="post">
             <div class="form-group">
                 <input type="number" style="display: none;" class="form-control" name="title" value='<?php echo $title;?>'>
