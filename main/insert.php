@@ -21,6 +21,7 @@
         $bill = $_POST['bill'];
         $flight = $_POST['flight'];
         $trip = $_POST['trip'];
+        $Already = FALSE;
         if ($trip == 'rt') {
                 $flight2 = $_POST['flight2'];
         }
@@ -49,16 +50,20 @@
                         ($pass['email'] == $email) && 
                         ($pass['date_of_birth'] == $date_of_birth)) {
                         echo "Already be a Passenger";
-                        } else {
-                                if(mysqli_query($conn, $sql)) {
-                                        echo "Success $sql. ";
-                                } else{
-                                echo "ERROR: Hush! Sorry $sql. " 
-                                        . mysqli_error($conn);
-                                }
+                        $Already = TRUE;
+                        break;
                         }
                 }
 
+        }
+
+        if ($Already==FALSE) {
+                if(mysqli_query($conn, $sql)) {
+                        echo "Success $sql. ";
+                } else{
+                echo "ERROR: Hush! Sorry $sql. " 
+                        . mysqli_error($conn);
+                }
         }
 
         // Close connection
