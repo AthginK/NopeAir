@@ -61,7 +61,9 @@ seatSelect.addEventListener('change', e => {
 container.addEventListener('click', e => {
   if (
     e.target.classList.contains('seat') &&
-    !e.target.classList.contains('occupied')
+    !e.target.classList.contains('occupied') &&
+    localStorage.getItem('selectedSeats') == '[]' ||
+    e.target.classList.contains('selected')
   ) {
     e.target.classList.toggle('selected');
 
@@ -133,7 +135,9 @@ container_re.addEventListener('click', e => {
 
   if (
     e.target.classList.contains('seat_re') &&
-    !e.target.classList.contains('occupied')
+    !e.target.classList.contains('occupied') &&
+    localStorage.getItem('selectedSeats_re') == '[]' ||
+    e.target.classList.contains('selected')
   ) {
     e.target.classList.toggle('selected');
 

@@ -7,14 +7,14 @@ $trip = $_POST['trip'];
 $flight = $_POST['flight'];
 $trip = $_POST['trip'];
 $DEbagg = $_POST['DEbagg'];
-$REbagg = $_POST['REbagg'];
+$REbagg = 0;
 $DEspec = $_POST['DEspec'];
-$REspec = $_POST['REspec'];
+$REspec = 0;
 $FPDE = $_POST['FPDE'];
-$FPRE = $_POST['FPRE'];
+$FPRE = 0;
 $reprice = 0;
 $seat = $_POST['seat'];
-$seat_re = $_POST['seat_re'];
+$seat_re = 0;
 
 
 $sql = "SELECT * from flight WHERE flight_id = '$flight'";
@@ -25,6 +25,10 @@ while ($rows = $result -> fetch_assoc()) {
 }
 
 if ($trip == 'rt') {
+    $REbagg = $_POST['REbagg'];
+    $REspec = $_POST['REspec'];
+    $FPRE = $_POST['FPRE'];
+    $seat_re = $_POST['seat_re'];
     $flight2 = $_POST['flight2'];
 
     $sel = "SELECT * from flight WHERE flight_id = '$flight2'";

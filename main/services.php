@@ -178,7 +178,7 @@
                             <div class='seatInfo'>
                                 <h5 style='padding: 2% 0 0 2%;'><b>Return</b></h5>
                                 <p style='padding-left: 2%;'>";}?><?php if ($trip == 'rt') { echo "$to - $from</p>
-                                <p class='text'>Selected <span id='count_re'>0</span> seat_res for a price: <span id='total_re'>0</span></p>
+                                <p class='text'>Selected <span id='count_re'>0</span> seats for a price: <span id='total_re'>0</span></p>
                                 <center><button type='button' id='btn_seat_return' onclick='display_seat(this.id)' class='btn select'>Select</button></center>
                             </div>";}?>
                 
@@ -254,8 +254,8 @@
                                             <div class="seat"></div>
                                             <div class="seat"></div>
                                             <div class="seat"></div>
-                                            <div class="seat"></div>
-                                            <div class="seat"></div>
+                                            <div class="seat occupied"></div>
+                                            <div class="seat occupied"></div>
                                             <div class="seat"></div>
                                             <div class="seat"></div>
                                             <div class="seat"></div>
@@ -291,14 +291,14 @@
                                             <div class="seat"></div>
                                         </div>
                                         <div class="row">
-                                            <div class="seat"></div>
+                                            <div class="seat occupied"></div>
                                             <div class="seat"></div>
                                             <div class="seat"></div>
                                             <div class="seat "></div>
                                             <div class="seat occupied"></div>
                                             <div class="seat"></div>
                                             <div class="seat"></div>
-                                            <div class="seat"></div>
+                                            <div class="seat occupied"></div>
                                         </div>
                                         <!--6-10-->
                                         <div class="row">
@@ -586,8 +586,8 @@
                                             <div class="seat_re"></div>
                                             <div class="seat_re"></div>
                                             <div class="seat_re"></div>
-                                            <div class="seat_re occupied"></div>
-                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re"></div>
+                                            <div class="seat_re"></div>
                                             <div class="seat_re"></div>
                                             <div class="seat_re"></div>
                                             <div class="seat_re"></div>
@@ -635,10 +635,10 @@
                                         </div>
                                         <div class="row">
                                             <div class="seat_re"></div>
+                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re occupied"></div>
                                             <div class="seat_re"></div>
                                             <div class="seat_re"></div>
-                                            <div class="seat_re "></div>
-                                            <div class="seat_re "></div>
                                             <div class="seat_re"></div>
                                             <div class="seat_re"></div>
                                             <div class="seat_re"></div>
@@ -658,10 +658,10 @@
                                             <div class="seat_re"></div>
                                             <div class="seat_re"></div>
                                             <div class="seat_re"></div>
-                                            <div class="seat_re"></div>
-                                            <div class="seat_re"></div>
-                                            <div class="seat_re"></div>
-                                            <div class="seat_re"></div>
+                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re occupied"></div>
+                                            <div class="seat_re occupied"></div>
                                         </div>
                                         <div class="row">
                                             <div class="seat_re"></div>

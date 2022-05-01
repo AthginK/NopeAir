@@ -2,8 +2,18 @@
     use PHPMailer\PHPMailer\PHPMailer;
 
     include("connect.php");
-    $email = $_POST['email'];
+    $title = $_POST['title'];
     $name = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email = $_POST['email'];
+    $tel = $_POST['tel'];
+    $from = $_POST['from'];
+    $to = $_POST['to'];
+    $date = $_POST['date'];
+    $departure = $_POST['departure'];
+    $arrival = $_POST['arrival'];
+    $time = $_POST['time'];
+    $airplane = $_POST['airplane'];
 
     if(isset( $_POST['email']) && $_POST['firstname']){
         require_once "PHPMailer/PHPMailer.php";
@@ -26,7 +36,9 @@
         $mail->setFrom($email, 'NopeAir');
         $mail->addAddress($email); // Send to mail
         $mail->Subject ="Your Plane Ticket";
-        $mail->Body = "Thank You for trust us to serve you.";
+        $mail->Body = "Name: $title $name $lastname Tel. $tel
+        | From: $from | To: $to | Date: $date | Depart at $departure | Arrive at $arrival |
+        Flight Time: $time | Airplane: $airplane";
 
         if($mail->send()) {
             $status = "success";

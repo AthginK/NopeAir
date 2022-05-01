@@ -52,10 +52,14 @@
                         <td><?php echo $row['tel']; ?></td>
                         <td>Success</td>
                         <td>
-                            <form action="sendemail.php" method="post">
-                                <input style='display: none;' type="text" name='email' value='<?php echo $row['email'];?>'>
+                            <form action="pass_flight.php" method="post">
+                                <input style='display: none;' type="text" name='id' value='<?php echo $row['pass_id'];?>'>
                                 <input style='display: none;' type="text" name='firstname' value='<?php echo $row['firstname'];?>'>
-                                <button type='submit' class="btn btn-success">Send Email</button>
+                                <input style='display: none;' type="text" name='lastname' value='<?php echo $row['lastname'];?>'>
+                                <input style='display: none;' type="text" name='title' value='<?php echo $row['title'];?>'>
+                                <input style='display: none;' type="text" name='email' value='<?php echo $row['email'];?>'>
+                                <input style='display: none;' type="text" name='tel' value='<?php echo $row['tel'];?>'>
+                                <button type='submit' class="btn btn-success">Details</button>
                                 <a href="delete_pass.php?id=<?php echo $row['pass_id']; ?>" class="btn btn-danger">Delete</a>
                             </form>
                         </td>
