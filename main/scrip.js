@@ -395,7 +395,7 @@ function display_seat(id) {
 //เปลี่ยนราคา
 //Baggage
 function DENoSelectBagg() {
-    document.getElementById('DEbaggPrice').innerHTML = "<b>0.00</b><input type='float' name='DEbagg' value0='.00' style='display: none;'>";
+    document.getElementById('DEbaggPrice').innerHTML = "<b>0.00</b><input type='float' name='DEbagg' value='0.00' style='display: none;'>";
     document.getElementById('selectBaggDE').innerHTML = "No selection";
 }
 function DETwentyKGBagg() {
@@ -412,7 +412,7 @@ function DEFortyKGBagg() {
 }
 
 function RENoSelectBagg() {
-    document.getElementById('REbaggPrice').innerHTML = "<b>0.00</b><input type='float' name='REbagg' value0='.00' style='display: none;'>";
+    document.getElementById('REbaggPrice').innerHTML = "<b>0.00</b><input type='float' name='REbagg' value='0.00' style='display: none;'>";
     document.getElementById('selectBaggRE').innerHTML = "No selection";
 }
 function RETwentyKGBagg() {
@@ -430,7 +430,7 @@ function REFortyKGBagg() {
 
 //Special Service
 function DENoSelectNopeSpe() {
-    document.getElementById('DEspecPrice').innerHTML = "<b>0.00</b><input type='float' name='DEspec' value0='.00' style='display: none;'>";
+    document.getElementById('DEspecPrice').innerHTML = "<b>0.00</b><input type='float' name='DEspec' value='0.00' style='display: none;'>";
     document.getElementById('selectSpeDE').innerHTML = "No selection";
 }
 function DETwentyKGNopeSpe() {
@@ -447,7 +447,7 @@ function DEFortyKGNopeSpe() {
 }
 
 function RENoSelectNopeSpe() {
-    document.getElementById('REspecPrice').innerHTML = "<b>0.00</b><input type='float' name='REbagg' value0='.00' style='display: none;'>";
+    document.getElementById('REspecPrice').innerHTML = "<b>0.00</b><input type='float' name='REbagg' value='0.00' style='display: none;'>";
     document.getElementById('selectSpeRE').innerHTML = "No selection";
 }
 function RETwentyKGNopeSpe() {
